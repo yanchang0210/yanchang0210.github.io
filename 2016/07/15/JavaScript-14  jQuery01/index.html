@@ -1,0 +1,744 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="Litten的博客" type="application/atom+xml" />
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.1" />
+
+
+
+
+
+
+<meta name="description" content="jQuery介绍 JavaScript框架库（也叫函数库）：就是一个js文件，这个文件中封装了很多兼容的代码，封装了常用的函数 常用的JavaScript框架库：Prototype、YUI(网络反响一般)、Dojo、ExtJS、jQuery等 jQuery是框架库中的一种，jQuery并不能把所有的浏览器兼容问题全部解决,浏览器兼容不仅是JS还有CSS  jQuery优点 write less,">
+<meta name="keywords" content="前端,js,jquery,javascript,html5,开发者,程序猿,程序媛,极客,编程,代码,开源,IT网站,Developer,Programmer,Coder,Geek,html,css,css3,用户体验">
+<meta property="og:type" content="article">
+<meta property="og:title" content="jQuery 介绍">
+<meta property="og:url" content="//litten.me/2016/07/15/JavaScript-14  jQuery01/index.html">
+<meta property="og:site_name" content="Litten的博客">
+<meta property="og:description" content="jQuery介绍 JavaScript框架库（也叫函数库）：就是一个js文件，这个文件中封装了很多兼容的代码，封装了常用的函数 常用的JavaScript框架库：Prototype、YUI(网络反响一般)、Dojo、ExtJS、jQuery等 jQuery是框架库中的一种，jQuery并不能把所有的浏览器兼容问题全部解决,浏览器兼容不仅是JS还有CSS  jQuery优点 write less,">
+<meta property="og:updated_time" content="2017-06-03T13:47:56.831Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="jQuery 介绍">
+<meta name="twitter:description" content="jQuery介绍 JavaScript框架库（也叫函数库）：就是一个js文件，这个文件中封装了很多兼容的代码，封装了常用的函数 常用的JavaScript框架库：Prototype、YUI(网络反响一般)、Dojo、ExtJS、jQuery等 jQuery是框架库中的一种，jQuery并不能把所有的浏览器兼容问题全部解决,浏览器兼容不仅是JS还有CSS  jQuery优点 write less,">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="//litten.me/2016/07/15/JavaScript-14  jQuery01/"/>
+
+
+
+
+
+  <title>jQuery 介绍 | Litten的博客</title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Litten的博客</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">胆小认生，不易相处</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Archives
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            Tags
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="//litten.me/2016/07/15/JavaScript-14  jQuery01/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Litten">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Litten的博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">jQuery 介绍</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-07-15T00:00:00+08:00">
+                2016-07-15
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h3 id="jQuery介绍"><a href="#jQuery介绍" class="headerlink" title="jQuery介绍"></a>jQuery介绍</h3><ul>
+<li>JavaScript框架库（也叫函数库）：就是一个js文件，这个文件中封装了很多兼容的代码，封装了常用的函数</li>
+<li>常用的JavaScript框架库：Prototype、YUI(网络反响一般)、Dojo、ExtJS、jQuery等</li>
+<li>jQuery是框架库中的一种，jQuery并不能把所有的浏览器兼容问题全部解决,浏览器兼容不仅是JS还有CSS </li>
+<li>jQuery优点<ul>
+<li>write less, do more</li>
+<li>体积小，使用简单方便，链式编程，隐式迭代，插件丰富，开源，免费</li>
+<li>体积小，使用简单方便，链式编程，隐式迭代，插件丰富，开源，免费</li>
+</ul>
+</li>
+<li>jQuery中的顶级对象是$，或者是jQuery；<h3 id="页面加载事件"><a href="#页面加载事件" class="headerlink" title="页面加载事件"></a>页面加载事件</h3></li>
+<li>window.onload=function(){};DOM中页面加载的事件,只能一次</li>
+<li>$(window).load(function(){})把DOM对象转jQuery对象做页面记载</li>
+<li>$(document).read(function(){})jQuery中的页面加载(把DOM转jQuery)</li>
+<li>jQuery(function(){})jQuery中的加载事件</li>
+<li>$(function(){})jQuery中页面事件<h3 id="jQuery对象和DOM对象"><a href="#jQuery对象和DOM对象" class="headerlink" title="jQuery对象和DOM对象"></a>jQuery对象和DOM对象</h3></li>
+<li>jQuery对象只能调用jQuery中的方法</li>
+<li>DOM对象只能调用DOM中的属性或者方法</li>
+<li>jQuery对象和DOM对象互转 <ul>
+<li>jQuery文件中不能很全面的封装JS的代码(未必通过jQuery来解决所有兼容问题),所以,在写jQuery代码实现功能的时候,有可能通过jQuery无法实现,这个时候就需要通过原生的JS来来实现,由于,jQuery对象只能调用jQuery的方法,所以,需要把jQuery对象转换成DOM对象来实现功能,那么有的时候,通过原生的JS实现功能后,还需要其他的功能,那么,此时DOM对象还需要再次的转换成jQuery对象继续编程</li>
+<li>jQUery对象!=(不等于)DOM对象<h3 id="选择器"><a href="#选择器" class="headerlink" title="选择器"></a>选择器</h3></li>
+</ul>
+</li>
+<li>常用的选择器<ul>
+<li>id选择器  $(“#id的值”)</li>
+<li>标签选择器  $(“标签的名字”)</li>
+<li>类选择器  $(“.类样式的名字”)</li>
+</ul>
+</li>
+<li>其他选择器<ul>
+<li>标签+类选择器  $(“li.cls”)</li>
+<li>多条件选择器  $(“p,span,div”)</li>
+<li>层级选择器  <ul>
+<li>$(“div p”) 获取的是div中所有的p标签<ul>
+<li>$(“div *”)：获取div里所有的元素</li>
+</ul>
+</li>
+<li>$(“div&gt;p”) 获取的是div中直接的子元素</li>
+<li>$(“div~p”) 获取的是div后面的所有的兄弟元素</li>
+<li>$(“div+p”) 获取的是div后面的紧邻着的一个兄弟元素</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>索引选择器<ul>
+<li>:eq(索引)  获取的指定索引位置的元素</li>
+<li>:lt(索引)  获取的是索引小于目标索引的所有的元素</li>
+<li>:gt(索引)  获取的是索引大于目标索引的所有的元素</li>
+<li>注意：获取索引大于5小于3的元素是可实现的，获取大于5的元素后，所获取的元素的索引从0开始<h3 id="常用方法"><a href="#常用方法" class="headerlink" title="常用方法"></a>常用方法</h3></li>
+</ul>
+</li>
+<li>如果括号内不写内容表示的是获取,如果写内容表示设置</li>
+<li>.text()  innerText</li>
+<li>.html()  innerHTML</li>
+<li>.val()  和value属性一样</li>
+<li>.css()  设置元素样式的方法</li>
+<li>:odd()  :odd奇数的选择器—但是给用户看的时候是偶数行</li>
+<li>:even  :even偶数的选择器–但是给用户看的时候是奇数行</li>
+<li>.siblings() 获取所有的兄弟元素</li>
+<li>.find()  查找元素，如果在括号中写内容就是查找指定的元素</li>
+<li>.clone();克隆后的元素样式保留,也可以继续设置样式</li>
+</ul>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/07/12/JavaScript-13  JS进阶和特效03/" rel="next" title="正则表达式">
+                <i class="fa fa-chevron-left"></i> 正则表达式
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/07/15/JavaScript-15 jQuery02/" rel="prev" title="jQuery 常用操作">
+                jQuery 常用操作 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.gif"
+               alt="Litten" />
+          <p class="site-author-name" itemprop="name">Litten</p>
+           
+              <p class="site-description motion-element" itemprop="description">华中科技大学09级，就职于腾讯SNG。擅长各项前端技能，深入研究移动端开发与前端性能。非专业视觉设计师。此为博客一枚。</p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives">
+                <span class="site-state-item-count">21</span>
+                <span class="site-state-item-name">posts</span>
+              </a>
+            </div>
+          
+
+          
+
+          
+
+        </nav>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#jQuery介绍"><span class="nav-number">1.</span> <span class="nav-text">jQuery介绍</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#页面加载事件"><span class="nav-number">2.</span> <span class="nav-text">页面加载事件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#jQuery对象和DOM对象"><span class="nav-number">3.</span> <span class="nav-text">jQuery对象和DOM对象</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#选择器"><span class="nav-number">4.</span> <span class="nav-text">选择器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#常用方法"><span class="nav-number">5.</span> <span class="nav-text">常用方法</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Litten</span>
+</div>
+
+
+<div class="powered-by">
+  Powered by <a class="theme-link" href="https://hexo.io">Hexo</a>
+</div>
+
+<div class="theme-info">
+  Theme -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Pisces
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.1"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.1"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.1"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.1"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

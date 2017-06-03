@@ -1,0 +1,742 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="Litten的博客" type="application/atom+xml" />
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.1" />
+
+
+
+
+
+
+<meta name="description" content="jQuery样式操作问题 DOM中不能获取元素的属性值 jQuery中可以获取属性的值，$(),括号里如果只写属性，获取的是属性的值 通过类样式操作元素 .addclass(“类样式的名字”)方法为元素添加类样式，可以在该方法中添加多个类样式，中间用空格隔开 .removeclass(“类样式的名字”)方法为元素删除类样式，可以在该方法中删除多个类样式，中间用空格隔开，如果该方法内部没有参数，则删">
+<meta name="keywords" content="前端,js,jquery,javascript,html5,开发者,程序猿,程序媛,极客,编程,代码,开源,IT网站,Developer,Programmer,Coder,Geek,html,css,css3,用户体验">
+<meta property="og:type" content="article">
+<meta property="og:title" content="jQuery 常用操作">
+<meta property="og:url" content="//litten.me/2016/07/15/JavaScript-15 jQuery02/index.html">
+<meta property="og:site_name" content="Litten的博客">
+<meta property="og:description" content="jQuery样式操作问题 DOM中不能获取元素的属性值 jQuery中可以获取属性的值，$(),括号里如果只写属性，获取的是属性的值 通过类样式操作元素 .addclass(“类样式的名字”)方法为元素添加类样式，可以在该方法中添加多个类样式，中间用空格隔开 .removeclass(“类样式的名字”)方法为元素删除类样式，可以在该方法中删除多个类样式，中间用空格隔开，如果该方法内部没有参数，则删">
+<meta property="og:updated_time" content="2017-06-03T13:48:31.204Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="jQuery 常用操作">
+<meta name="twitter:description" content="jQuery样式操作问题 DOM中不能获取元素的属性值 jQuery中可以获取属性的值，$(),括号里如果只写属性，获取的是属性的值 通过类样式操作元素 .addclass(“类样式的名字”)方法为元素添加类样式，可以在该方法中添加多个类样式，中间用空格隔开 .removeclass(“类样式的名字”)方法为元素删除类样式，可以在该方法中删除多个类样式，中间用空格隔开，如果该方法内部没有参数，则删">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="//litten.me/2016/07/15/JavaScript-15 jQuery02/"/>
+
+
+
+
+
+  <title>jQuery 常用操作 | Litten的博客</title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Litten的博客</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">胆小认生，不易相处</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Archives
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            Tags
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="//litten.me/2016/07/15/JavaScript-15 jQuery02/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Litten">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Litten的博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">jQuery 常用操作</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-07-15T00:00:00+08:00">
+                2016-07-15
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h3 id="jQuery样式操作问题"><a href="#jQuery样式操作问题" class="headerlink" title="jQuery样式操作问题"></a>jQuery样式操作问题</h3><ul>
+<li>DOM中不能获取元素的属性值</li>
+<li>jQuery中可以获取属性的值，$(),括号里如果只写属性，获取的是属性的值</li>
+<li>通过类样式操作元素<ul>
+<li>.addclass(“类样式的名字”)方法为元素添加类样式，可以在该方法中添加多个类样式，中间用空格隔开</li>
+<li>.removeclass(“类样式的名字”)方法为元素删除类样式，可以在该方法中删除多个类样式，中间用空格隔开，如果该方法内部没有参数，则删除的是全部的类样式</li>
+<li>.hasClass方法 判断当前元素是否应用了指定的类样式,返回值是布尔类型</li>
+<li>.toggleClass（“类样式的名字”）切换类样式  （开关灯案例）<h3 id="链式编程"><a href="#链式编程" class="headerlink" title="链式编程"></a>链式编程</h3></li>
+</ul>
+</li>
+<li>只有当前调用该方法的是一个对象才能继续链式编程<br>  对象调用方法后,如果返回的还是调用该方法的对象,那么可以继续的链式编程</li>
+<li>如果对象调用方法后,返回的不是对象,那么此时就不能链式编程了</li>
+<li>什么时候返回的是对象,什么时候不是<ul>
+<li>不太严禁的总结:对象调用方法的时候,进行了设置,那么一般返回的都是对象,如果是获取,那么一般返回的都是获取的内容而不是对象<h3 id="方法补充"><a href="#方法补充" class="headerlink" title="方法补充"></a>方法补充</h3></li>
+</ul>
+</li>
+<li>.next() 获取当前元素下一个兄弟元素</li>
+<li>.nextAll() 获取当前元素下面所有的兄弟元素</li>
+<li>.prev() 获取当前元素前一个兄弟元素</li>
+<li>.prevtAll() 获取当前元素前面所有的兄弟元素</li>
+<li>.siblings() 获取当前元素的所有兄弟元素，不包括自己</li>
+<li>.end() 修复断链方法</li>
+<li>.last() 获取最后一个元素</li>
+<li>:last 获取最后一个元素<h3 id="动画的方法"><a href="#动画的方法" class="headerlink" title="动画的方法"></a>动画的方法</h3></li>
+<li>.show()方法 显示</li>
+<li>.hide()方法 隐藏</li>
+<li>.slideDown()方法 滑出–显示</li>
+<li>.shideUp()方法 滑入–隐藏</li>
+<li>.fadeIn()方法 淡出–显示</li>
+<li>.fadeout()方法 淡入–隐藏</li>
+<li>参数问题<ul>
+<li>参数可以是一个数字，可以是一个字符串（slow,normal,fast）</li>
+<li>参数也可以是两个，第一个是数字或字符串，第二个是一个函数</li>
+</ul>
+</li>
+<li>animate<ul>
+<li>参数1：键值对</li>
+<li>参数2：时间</li>
+<li>参数3：函数</li>
+</ul>
+</li>
+<li>.stop() 停止当前的动画<h3 id="arguments-callee"><a href="#arguments-callee" class="headerlink" title="arguments.callee"></a>arguments.callee</h3></li>
+<li>主要是递归，可以调用所在的函数，注意：新版本的标准中不是很推荐使用<h3 id="动态的创建元素"><a href="#动态的创建元素" class="headerlink" title="动态的创建元素"></a>动态的创建元素</h3></li>
+<li>.html(“<p>这是一个p</p>“）)</li>
+<li>.append()添加方法，追加 $(“div”).append($(“<p>哈哈</p>“))</li>
+<li>.appendTo()被添加 $(“<p>哈哈</p>“).appendTo($(“div”))<h3 id="清空"><a href="#清空" class="headerlink" title="清空"></a>清空</h3></li>
+<li>.html(“”);清空</li>
+<li>.empty();清空</li>
+<li>.remove();自杀了—当前元素移除了<h3 id="表单val-方法的使用"><a href="#表单val-方法的使用" class="headerlink" title="表单val()方法的使用"></a>表单val()方法的使用</h3></li>
+<li>textarea文本域, 可以使用.val方法也可以使用.text方法</li>
+<li>在DOM中如果是获取文本域的内容,使用value属性，如果是设置文本域的内容,最好使用innerText</li>
+<li>jQuery中设置和获取文本域的内容最好使用text()方法</li>
+<li>设置某个下拉框选中<ul>
+<li>.val()方法针对下拉框的内容选中的时候,方法中传入的是某个option的value属性值<ul>
+<li>$(“#s1”).val(4)</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/07/15/JavaScript-14  jQuery01/" rel="next" title="jQuery 介绍">
+                <i class="fa fa-chevron-left"></i> jQuery 介绍
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/07/20/JavaScript-16 jQuery03/" rel="prev" title="jQuery 事件">
+                jQuery 事件 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.gif"
+               alt="Litten" />
+          <p class="site-author-name" itemprop="name">Litten</p>
+           
+              <p class="site-description motion-element" itemprop="description">华中科技大学09级，就职于腾讯SNG。擅长各项前端技能，深入研究移动端开发与前端性能。非专业视觉设计师。此为博客一枚。</p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives">
+                <span class="site-state-item-count">21</span>
+                <span class="site-state-item-name">posts</span>
+              </a>
+            </div>
+          
+
+          
+
+          
+
+        </nav>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#jQuery样式操作问题"><span class="nav-number">1.</span> <span class="nav-text">jQuery样式操作问题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#链式编程"><span class="nav-number">2.</span> <span class="nav-text">链式编程</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#方法补充"><span class="nav-number">3.</span> <span class="nav-text">方法补充</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#动画的方法"><span class="nav-number">4.</span> <span class="nav-text">动画的方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#arguments-callee"><span class="nav-number">5.</span> <span class="nav-text">arguments.callee</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#动态的创建元素"><span class="nav-number">6.</span> <span class="nav-text">动态的创建元素</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#清空"><span class="nav-number">7.</span> <span class="nav-text">清空</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#表单val-方法的使用"><span class="nav-number">8.</span> <span class="nav-text">表单val()方法的使用</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Litten</span>
+</div>
+
+
+<div class="powered-by">
+  Powered by <a class="theme-link" href="https://hexo.io">Hexo</a>
+</div>
+
+<div class="theme-info">
+  Theme -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Pisces
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.1"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.1"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.1"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.1"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
