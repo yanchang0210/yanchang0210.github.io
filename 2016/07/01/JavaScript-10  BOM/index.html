@@ -93,13 +93,16 @@
 
 
 
+<meta name="description" content="概述 BOM Browser Object Model  浏览器对象模型 顶级对象 BOM中的顶级对象:window，window对象在代码是可以省略的window下的方法下面的方法返回的是新窗口的对象 window.open(url,target,param); url 要打开的地址 target新窗口的位置 _blank  _self  _parent(父框架) param 新窗口的一些设置">
 <meta property="og:type" content="article">
-<meta property="og:title" content="test_my_site">
-<meta property="og:url" content="http://yoursite.com/2017/06/04/test-my-site/index.html">
+<meta property="og:title" content="BOM">
+<meta property="og:url" content="http://yoursite.com/2016/07/01/JavaScript-10  BOM/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:updated_time" content="2017-06-03T17:10:57.200Z">
+<meta property="og:description" content="概述 BOM Browser Object Model  浏览器对象模型 顶级对象 BOM中的顶级对象:window，window对象在代码是可以省略的window下的方法下面的方法返回的是新窗口的对象 window.open(url,target,param); url 要打开的地址 target新窗口的位置 _blank  _self  _parent(父框架) param 新窗口的一些设置">
+<meta property="og:updated_time" content="2017-06-03T13:44:32.406Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="test_my_site">
+<meta name="twitter:title" content="BOM">
+<meta name="twitter:description" content="概述 BOM Browser Object Model  浏览器对象模型 顶级对象 BOM中的顶级对象:window，window对象在代码是可以省略的window下的方法下面的方法返回的是新窗口的对象 window.open(url,target,param); url 要打开的地址 target新窗口的位置 _blank  _self  _parent(父框架) param 新窗口的一些设置">
 
 
 
@@ -127,13 +130,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/06/04/test-my-site/"/>
+  <link rel="canonical" href="http://yoursite.com/2016/07/01/JavaScript-10  BOM/"/>
 
 
 
 
 
-  <title>test_my_site | Hexo</title>
+  <title>BOM | Hexo</title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="">
@@ -253,7 +256,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/06/04/test-my-site/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/07/01/JavaScript-10  BOM/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="John Doe">
@@ -270,7 +273,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">test_my_site</h1>
+          <h1 class="post-title" itemprop="name headline">BOM</h1>
         
 
         <div class="post-meta">
@@ -282,8 +285,8 @@
               
                 <span class="post-meta-item-text">Veröffentlicht am</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-06-04T01:10:57+08:00">
-                2017-06-04
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-07-01T00:00:00+08:00">
+                2016-07-01
               </time>
             
 
@@ -317,7 +320,61 @@
       
 
       
-        
+        <h3 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h3><blockquote>
+<p>BOM Browser Object Model  浏览器对象模型</p>
+<h3 id="顶级对象"><a href="#顶级对象" class="headerlink" title="顶级对象"></a>顶级对象</h3><ul>
+<li>BOM中的顶级对象:window，window对象在代码是可以省略的<h3 id="window下的方法"><a href="#window下的方法" class="headerlink" title="window下的方法"></a>window下的方法</h3>下面的方法返回的是新窗口的对象</li>
+<li>window.open(url,target,param);<ul>
+<li>url 要打开的地址</li>
+<li>target新窗口的位置 _blank  _self  _parent(父框架)</li>
+<li>param 新窗口的一些设置</li>
+</ul>
+</li>
+<li>window.close()该方法可以关闭新窗口<h3 id="location对象"><a href="#location对象" class="headerlink" title="location对象"></a>location对象</h3>window.location location相当于浏览器地址栏可以将url解析成独立的片段</li>
+<li>location对象的属性<ul>
+<li>href</li>
+<li>hash   返回url中#后面的内容，包含#</li>
+<li>host    主机名，包括端口</li>
+<li>hostname   主机名</li>
+<li>pathname     url中的路径部分</li>
+<li>protocol    协议 一般是http、https</li>
+<li>search         查询字符串</li>
+</ul>
+</li>
+<li>location对象的方法<ul>
+<li>location.href:跳转页面(没有后退)<ul>
+<li>location.assign()    改变浏览器地址栏的地址，并记录到历史中。设置location.href  就会调用assign()。一般使用location.href 进行页面之间的跳转。都有后退的,如果是页面直接加载的时候进行跳转,href和assign方法都看不到后退</li>
+<li>location.replace()    替换浏览器地址栏的地址，不会记录到历史中</li>
+<li>location.reload()    重新加载<h3 id="navigator对象"><a href="#navigator对象" class="headerlink" title="navigator对象"></a>navigator对象</h3>window.navigator 的一些属性可以获取客户端(浏览器)的一些信息</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>navigator对象的方法<ul>
+<li>userAgent</li>
+<li>platform<h3 id="history对象-历史记录"><a href="#history对象-历史记录" class="headerlink" title="history对象:历史记录"></a>history对象:历史记录</h3></li>
+</ul>
+</li>
+<li>后退<ul>
+<li>history.back()</li>
+<li>history.go(-1)</li>
+</ul>
+</li>
+<li>前进<ul>
+<li>history.forward()</li>
+<li>history.go(1)<h3 id="页面的加载事件-三个"><a href="#页面的加载事件-三个" class="headerlink" title="页面的加载事件:三个"></a>页面的加载事件:三个</h3></li>
+</ul>
+</li>
+<li>非常重要的:onload事件:页面内容全部加载完毕，不常用；</li>
+<li>onunload关闭后触发,IE8支持</li>
+<li>onbeforeunload关闭前触发,IE8支持<h3 id="计时器-两个"><a href="#计时器-两个" class="headerlink" title="计时器(两个)"></a>计时器(两个)</h3></li>
+<li>setInterval();参数:1,函数  2,时间,毫秒,该方法返回的是该计时器的id</li>
+<li>clearInterval(定时器的id);清理计时器</li>
+<li>setTimeout也是定时执行，但是不像setInterval那样是重复的定时执行只执行一次，</li>
+<li>clearTimeout(timeId)也是清除定时器。</li>
+</ul>
+</blockquote>
+
       
     </div>
 
@@ -353,8 +410,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/06/04/hello-world/" rel="next" title="Hello World">
-                <i class="fa fa-chevron-left"></i> Hello World
+              <a href="/2016/06/28/JavaScript-09  DOM04/" rel="next" title="字符串及数组方法">
+                <i class="fa fa-chevron-left"></i> 字符串及数组方法
               </a>
             
           </div>
@@ -363,8 +420,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2017/06/04/README/" rel="prev" title="">
-                 <i class="fa fa-chevron-right"></i>
+              <a href="/2016/07/05/JavaScript-11  Js进阶和特效01/" rel="prev" title="offset scroll和client">
+                offset scroll和client <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -412,8 +469,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            Inhaltsverzeichnis
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            Übersicht
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/avatar.gif"
@@ -457,6 +523,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#概述"><span class="nav-number">1.</span> <span class="nav-text">概述</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#顶级对象"><span class="nav-number">2.</span> <span class="nav-text">顶级对象</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#window下的方法"><span class="nav-number">3.</span> <span class="nav-text">window下的方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#location对象"><span class="nav-number">4.</span> <span class="nav-text">location对象</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#navigator对象"><span class="nav-number">5.</span> <span class="nav-text">navigator对象</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#history对象-历史记录"><span class="nav-number">6.</span> <span class="nav-text">history对象:历史记录</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#页面的加载事件-三个"><span class="nav-number">7.</span> <span class="nav-text">页面的加载事件:三个</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#计时器-两个"><span class="nav-number">8.</span> <span class="nav-text">计时器(两个)</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       

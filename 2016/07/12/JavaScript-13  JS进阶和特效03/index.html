@@ -93,13 +93,16 @@
 
 
 
+<meta name="description" content="概念 正则表达式:首先是一个表达式(可能是单个的元字符组成,也可能是多个的元字符组成),有一定规则,也叫规则表达式。正则表达式的作用:就是用来匹配字符串的。 基本原字符 \b表示单词的边界 [ .]  干掉元字符原来的意义， { } 表示的是前面的表达式出现的次数 $ 以什么结束 [^]  取反取非 ^   以什么开头 \W 特殊符号  [^a-zA-Z__ ] \w 非特殊符号，包括__（下划线">
 <meta property="og:type" content="article">
-<meta property="og:title" content="test_my_site">
-<meta property="og:url" content="http://yoursite.com/2017/06/04/test-my-site/index.html">
+<meta property="og:title" content="正则表达式">
+<meta property="og:url" content="http://yoursite.com/2016/07/12/JavaScript-13  JS进阶和特效03/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:updated_time" content="2017-06-03T17:10:57.200Z">
+<meta property="og:description" content="概念 正则表达式:首先是一个表达式(可能是单个的元字符组成,也可能是多个的元字符组成),有一定规则,也叫规则表达式。正则表达式的作用:就是用来匹配字符串的。 基本原字符 \b表示单词的边界 [ .]  干掉元字符原来的意义， { } 表示的是前面的表达式出现的次数 $ 以什么结束 [^]  取反取非 ^   以什么开头 \W 特殊符号  [^a-zA-Z__ ] \w 非特殊符号，包括__（下划线">
+<meta property="og:updated_time" content="2017-06-03T13:47:30.899Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="test_my_site">
+<meta name="twitter:title" content="正则表达式">
+<meta name="twitter:description" content="概念 正则表达式:首先是一个表达式(可能是单个的元字符组成,也可能是多个的元字符组成),有一定规则,也叫规则表达式。正则表达式的作用:就是用来匹配字符串的。 基本原字符 \b表示单词的边界 [ .]  干掉元字符原来的意义， { } 表示的是前面的表达式出现的次数 $ 以什么结束 [^]  取反取非 ^   以什么开头 \W 特殊符号  [^a-zA-Z__ ] \w 非特殊符号，包括__（下划线">
 
 
 
@@ -127,13 +130,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/06/04/test-my-site/"/>
+  <link rel="canonical" href="http://yoursite.com/2016/07/12/JavaScript-13  JS进阶和特效03/"/>
 
 
 
 
 
-  <title>test_my_site | Hexo</title>
+  <title>正则表达式 | Hexo</title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="">
@@ -253,7 +256,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/06/04/test-my-site/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/07/12/JavaScript-13  JS进阶和特效03/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="John Doe">
@@ -270,7 +273,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">test_my_site</h1>
+          <h1 class="post-title" itemprop="name headline">正则表达式</h1>
         
 
         <div class="post-meta">
@@ -282,8 +285,8 @@
               
                 <span class="post-meta-item-text">Veröffentlicht am</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-06-04T01:10:57+08:00">
-                2017-06-04
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-07-12T00:00:00+08:00">
+                2016-07-12
               </time>
             
 
@@ -317,7 +320,41 @@
       
 
       
-        
+        <h3 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h3><blockquote>
+<p>正则表达式:首先是一个表达式(可能是单个的元字符组成,也可能是多个的元字符组成),有一定规则,也叫规则表达式。正则表达式的作用:就是用来匹配字符串的。</p>
+<h3 id="基本原字符"><a href="#基本原字符" class="headerlink" title="基本原字符"></a>基本原字符</h3><ul>
+<li>\b表示单词的边界</li>
+<li>[ .]  干掉元字符原来的意义，</li>
+<li>{ } 表示的是前面的表达式出现的次数</li>
+<li>$ 以什么结束</li>
+<li>[^]  取反取非</li>
+<li>^   以什么开头</li>
+<li>\W 特殊符号  [^a-zA-Z__ ]</li>
+<li>\w 非特殊符号，包括__（下划线）</li>
+<li>\S 非空白符号</li>
+<li>\s 空白符号</li>
+<li>\D 非数字中的一个</li>
+<li>\d 所有数字中的一个</li>
+<li>？<ul>
+<li>表示的是该符号前面的第一个表达式出现了零次到1次</li>
+<li>第二种作用：阻止贪婪模式</li>
+</ul>
+</li>
+<li>*表示的是该符号前面的第一个表达式出现了零次到多次</li>
+<li>+表示的是该符号前面的第一个表达式出现了1次到多次</li>
+<li>（ ）  提升优先级别，分组（指的是从左到右）；</li>
+<li>|  或者，在正则表达式中的优先级别是最低的</li>
+<li>[ ] 表示的是范围  [0-9]  指0——9中的一个数字</li>
+<li>.  表示的是除了\n以外的任意一个字符（字符串）<h3 id="正则表达式创建"><a href="#正则表达式创建" class="headerlink" title="正则表达式创建"></a>正则表达式创建</h3></li>
+<li>var reg=new Regxp(/正则表达式/)</li>
+<li>var reg=/正则表达式/</li>
+<li>.text（）方法    ：验证正则表达式和字符串是否匹配，返回值布尔值<h3 id="正则表达式其他使用方式"><a href="#正则表达式其他使用方式" class="headerlink" title="正则表达式其他使用方式"></a>正则表达式其他使用方式</h3></li>
+<li>exec方法是正则表达式对象的一个方法，用来超找指定字符串，返回值是一个数组（找到的对象，索引，整个原字符串）；</li>
+<li>button获取鼠标的键值</li>
+<li>which既能获取鼠标的键值又能获取键盘的键值<h3 id="回车实现文本框跳转"><a href="#回车实现文本框跳转" class="headerlink" title="回车实现文本框跳转"></a>回车实现文本框跳转</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//获取所有的文本框</span></div><div class="line"><span class="keyword">var</span> inputs=<span class="built_in">document</span>.getElementsByTagName(<span class="string">"input"</span>);</div><div class="line"><span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">0</span>;i&lt;inputs.length;i++)&#123;</div><div class="line">    inputs[i].onkeydown=<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">        <span class="keyword">if</span>(<span class="built_in">window</span>.event.keyCode==<span class="number">13</span>)&#123;</div><div class="line">            <span class="built_in">window</span>.event.keyCode=<span class="number">9</span>;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></li>
+</ul>
+</blockquote>
+
       
     </div>
 
@@ -353,8 +390,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/06/04/hello-world/" rel="next" title="Hello World">
-                <i class="fa fa-chevron-left"></i> Hello World
+              <a href="/2016/07/08/JavaScript-12  Js进阶和特效02/" rel="next" title="事件">
+                <i class="fa fa-chevron-left"></i> 事件
               </a>
             
           </div>
@@ -363,8 +400,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2017/06/04/README/" rel="prev" title="">
-                 <i class="fa fa-chevron-right"></i>
+              <a href="/2016/07/15/JavaScript-14  jQuery01/" rel="prev" title="jQuery 介绍">
+                jQuery 介绍 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -412,8 +449,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            Inhaltsverzeichnis
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            Übersicht
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/avatar.gif"
@@ -457,6 +503,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#概念"><span class="nav-number">1.</span> <span class="nav-text">概念</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#基本原字符"><span class="nav-number">2.</span> <span class="nav-text">基本原字符</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#正则表达式创建"><span class="nav-number">3.</span> <span class="nav-text">正则表达式创建</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#正则表达式其他使用方式"><span class="nav-number">4.</span> <span class="nav-text">正则表达式其他使用方式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#回车实现文本框跳转"><span class="nav-number">5.</span> <span class="nav-text">回车实现文本框跳转</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       

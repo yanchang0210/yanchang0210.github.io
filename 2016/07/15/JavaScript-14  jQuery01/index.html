@@ -93,13 +93,16 @@
 
 
 
+<meta name="description" content="jQuery介绍 JavaScript框架库（也叫函数库）：就是一个js文件，这个文件中封装了很多兼容的代码，封装了常用的函数 常用的JavaScript框架库：Prototype、YUI(网络反响一般)、Dojo、ExtJS、jQuery等 jQuery是框架库中的一种，jQuery并不能把所有的浏览器兼容问题全部解决,浏览器兼容不仅是JS还有CSS  jQuery优点 write less,">
 <meta property="og:type" content="article">
-<meta property="og:title" content="test_my_site">
-<meta property="og:url" content="http://yoursite.com/2017/06/04/test-my-site/index.html">
+<meta property="og:title" content="jQuery 介绍">
+<meta property="og:url" content="http://yoursite.com/2016/07/15/JavaScript-14  jQuery01/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:updated_time" content="2017-06-03T17:10:57.200Z">
+<meta property="og:description" content="jQuery介绍 JavaScript框架库（也叫函数库）：就是一个js文件，这个文件中封装了很多兼容的代码，封装了常用的函数 常用的JavaScript框架库：Prototype、YUI(网络反响一般)、Dojo、ExtJS、jQuery等 jQuery是框架库中的一种，jQuery并不能把所有的浏览器兼容问题全部解决,浏览器兼容不仅是JS还有CSS  jQuery优点 write less,">
+<meta property="og:updated_time" content="2017-06-03T13:47:56.831Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="test_my_site">
+<meta name="twitter:title" content="jQuery 介绍">
+<meta name="twitter:description" content="jQuery介绍 JavaScript框架库（也叫函数库）：就是一个js文件，这个文件中封装了很多兼容的代码，封装了常用的函数 常用的JavaScript框架库：Prototype、YUI(网络反响一般)、Dojo、ExtJS、jQuery等 jQuery是框架库中的一种，jQuery并不能把所有的浏览器兼容问题全部解决,浏览器兼容不仅是JS还有CSS  jQuery优点 write less,">
 
 
 
@@ -127,13 +130,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/06/04/test-my-site/"/>
+  <link rel="canonical" href="http://yoursite.com/2016/07/15/JavaScript-14  jQuery01/"/>
 
 
 
 
 
-  <title>test_my_site | Hexo</title>
+  <title>jQuery 介绍 | Hexo</title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="">
@@ -253,7 +256,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/06/04/test-my-site/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/07/15/JavaScript-14  jQuery01/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="John Doe">
@@ -270,7 +273,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">test_my_site</h1>
+          <h1 class="post-title" itemprop="name headline">jQuery 介绍</h1>
         
 
         <div class="post-meta">
@@ -282,8 +285,8 @@
               
                 <span class="post-meta-item-text">Veröffentlicht am</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-06-04T01:10:57+08:00">
-                2017-06-04
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-07-15T00:00:00+08:00">
+                2016-07-15
               </time>
             
 
@@ -317,7 +320,69 @@
       
 
       
-        
+        <h3 id="jQuery介绍"><a href="#jQuery介绍" class="headerlink" title="jQuery介绍"></a>jQuery介绍</h3><ul>
+<li>JavaScript框架库（也叫函数库）：就是一个js文件，这个文件中封装了很多兼容的代码，封装了常用的函数</li>
+<li>常用的JavaScript框架库：Prototype、YUI(网络反响一般)、Dojo、ExtJS、jQuery等</li>
+<li>jQuery是框架库中的一种，jQuery并不能把所有的浏览器兼容问题全部解决,浏览器兼容不仅是JS还有CSS </li>
+<li>jQuery优点<ul>
+<li>write less, do more</li>
+<li>体积小，使用简单方便，链式编程，隐式迭代，插件丰富，开源，免费</li>
+<li>体积小，使用简单方便，链式编程，隐式迭代，插件丰富，开源，免费</li>
+</ul>
+</li>
+<li>jQuery中的顶级对象是$，或者是jQuery；<h3 id="页面加载事件"><a href="#页面加载事件" class="headerlink" title="页面加载事件"></a>页面加载事件</h3></li>
+<li>window.onload=function(){};DOM中页面加载的事件,只能一次</li>
+<li>$(window).load(function(){})把DOM对象转jQuery对象做页面记载</li>
+<li>$(document).read(function(){})jQuery中的页面加载(把DOM转jQuery)</li>
+<li>jQuery(function(){})jQuery中的加载事件</li>
+<li>$(function(){})jQuery中页面事件<h3 id="jQuery对象和DOM对象"><a href="#jQuery对象和DOM对象" class="headerlink" title="jQuery对象和DOM对象"></a>jQuery对象和DOM对象</h3></li>
+<li>jQuery对象只能调用jQuery中的方法</li>
+<li>DOM对象只能调用DOM中的属性或者方法</li>
+<li>jQuery对象和DOM对象互转 <ul>
+<li>jQuery文件中不能很全面的封装JS的代码(未必通过jQuery来解决所有兼容问题),所以,在写jQuery代码实现功能的时候,有可能通过jQuery无法实现,这个时候就需要通过原生的JS来来实现,由于,jQuery对象只能调用jQuery的方法,所以,需要把jQuery对象转换成DOM对象来实现功能,那么有的时候,通过原生的JS实现功能后,还需要其他的功能,那么,此时DOM对象还需要再次的转换成jQuery对象继续编程</li>
+<li>jQUery对象!=(不等于)DOM对象<h3 id="选择器"><a href="#选择器" class="headerlink" title="选择器"></a>选择器</h3></li>
+</ul>
+</li>
+<li>常用的选择器<ul>
+<li>id选择器  $(“#id的值”)</li>
+<li>标签选择器  $(“标签的名字”)</li>
+<li>类选择器  $(“.类样式的名字”)</li>
+</ul>
+</li>
+<li>其他选择器<ul>
+<li>标签+类选择器  $(“li.cls”)</li>
+<li>多条件选择器  $(“p,span,div”)</li>
+<li>层级选择器  <ul>
+<li>$(“div p”) 获取的是div中所有的p标签<ul>
+<li>$(“div *”)：获取div里所有的元素</li>
+</ul>
+</li>
+<li>$(“div&gt;p”) 获取的是div中直接的子元素</li>
+<li>$(“div~p”) 获取的是div后面的所有的兄弟元素</li>
+<li>$(“div+p”) 获取的是div后面的紧邻着的一个兄弟元素</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>索引选择器<ul>
+<li>:eq(索引)  获取的指定索引位置的元素</li>
+<li>:lt(索引)  获取的是索引小于目标索引的所有的元素</li>
+<li>:gt(索引)  获取的是索引大于目标索引的所有的元素</li>
+<li>注意：获取索引大于5小于3的元素是可实现的，获取大于5的元素后，所获取的元素的索引从0开始<h3 id="常用方法"><a href="#常用方法" class="headerlink" title="常用方法"></a>常用方法</h3></li>
+</ul>
+</li>
+<li>如果括号内不写内容表示的是获取,如果写内容表示设置</li>
+<li>.text()  innerText</li>
+<li>.html()  innerHTML</li>
+<li>.val()  和value属性一样</li>
+<li>.css()  设置元素样式的方法</li>
+<li>:odd()  :odd奇数的选择器—但是给用户看的时候是偶数行</li>
+<li>:even  :even偶数的选择器–但是给用户看的时候是奇数行</li>
+<li>.siblings() 获取所有的兄弟元素</li>
+<li>.find()  查找元素，如果在括号中写内容就是查找指定的元素</li>
+<li>.clone();克隆后的元素样式保留,也可以继续设置样式</li>
+</ul>
+
       
     </div>
 
@@ -353,8 +418,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/06/04/hello-world/" rel="next" title="Hello World">
-                <i class="fa fa-chevron-left"></i> Hello World
+              <a href="/2016/07/12/JavaScript-13  JS进阶和特效03/" rel="next" title="正则表达式">
+                <i class="fa fa-chevron-left"></i> 正则表达式
               </a>
             
           </div>
@@ -363,8 +428,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2017/06/04/README/" rel="prev" title="">
-                 <i class="fa fa-chevron-right"></i>
+              <a href="/2016/07/15/JavaScript-15 jQuery02/" rel="prev" title="jQuery 常用操作">
+                jQuery 常用操作 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -412,8 +477,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            Inhaltsverzeichnis
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            Übersicht
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/avatar.gif"
@@ -457,6 +531,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#jQuery介绍"><span class="nav-number">1.</span> <span class="nav-text">jQuery介绍</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#页面加载事件"><span class="nav-number">2.</span> <span class="nav-text">页面加载事件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#jQuery对象和DOM对象"><span class="nav-number">3.</span> <span class="nav-text">jQuery对象和DOM对象</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#选择器"><span class="nav-number">4.</span> <span class="nav-text">选择器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#常用方法"><span class="nav-number">5.</span> <span class="nav-text">常用方法</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       

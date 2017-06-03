@@ -1,0 +1,766 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.1" />
+
+
+
+
+
+
+<meta name="description" content="概念 事件:就是一件事,有开始有结束,有触发,有响应,事件源(按钮点击等)。  事件的类型如何获取： e.type 注意:没有on注册事件的方式 对象.on+事件名字=事件处理函数 对象.addEventListener（）；火狐谷歌支持，IE8不支持 参数1：事件的类型（事件的名字，没有“on”） 参数2：事件处理函数 参数3：false表示的是事件冒泡,如果是true则是事件捕获   对象.a">
+<meta property="og:type" content="article">
+<meta property="og:title" content="事件">
+<meta property="og:url" content="http://yoursite.com/2016/07/08/JavaScript-12  Js进阶和特效02/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="概念 事件:就是一件事,有开始有结束,有触发,有响应,事件源(按钮点击等)。  事件的类型如何获取： e.type 注意:没有on注册事件的方式 对象.on+事件名字=事件处理函数 对象.addEventListener（）；火狐谷歌支持，IE8不支持 参数1：事件的类型（事件的名字，没有“on”） 参数2：事件处理函数 参数3：false表示的是事件冒泡,如果是true则是事件捕获   对象.a">
+<meta property="og:updated_time" content="2017-06-03T13:47:07.043Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="事件">
+<meta name="twitter:description" content="概念 事件:就是一件事,有开始有结束,有触发,有响应,事件源(按钮点击等)。  事件的类型如何获取： e.type 注意:没有on注册事件的方式 对象.on+事件名字=事件处理函数 对象.addEventListener（）；火狐谷歌支持，IE8不支持 参数1：事件的类型（事件的名字，没有“on”） 参数2：事件处理函数 参数3：false表示的是事件冒泡,如果是true则是事件捕获   对象.a">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2016/07/08/JavaScript-12  Js进阶和特效02/"/>
+
+
+
+
+
+  <title>事件 | Hexo</title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Hexo</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Startseite
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Archiv
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            Tags
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/07/08/JavaScript-12  Js进阶和特效02/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="John Doe">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">事件</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Veröffentlicht am</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-07-08T00:00:00+08:00">
+                2016-07-08
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h3 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h3><blockquote>
+<p>事件:就是一件事,有开始有结束,有触发,有响应,事件源(按钮点击等)。</p>
+<ul>
+<li>事件的类型如何获取： e.type 注意:没有on<h3 id="注册事件的方式"><a href="#注册事件的方式" class="headerlink" title="注册事件的方式"></a>注册事件的方式</h3></li>
+<li>对象.on+事件名字=事件处理函数</li>
+<li>对象.addEventListener（）；火狐谷歌支持，IE8不支持<ul>
+<li>参数1：事件的类型（事件的名字，没有“on”）</li>
+<li>参数2：事件处理函数</li>
+<li>参数3：false表示的是事件冒泡,如果是true则是事件捕获</li>
+</ul>
+</li>
+<li>对象.attachEvent（）IE8支持，火狐谷歌不支持<ul>
+<li>参数1：事件的类型（”on“+事件的名字），有on</li>
+<li>参数2：事件处理函数<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">  <span class="comment">//注册事件的兼容代码</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">addEventListener</span>(<span class="params">element,type,fn</span>)</span>&#123;</div><div class="line">    <span class="keyword">if</span>(element.addEventListener)&#123;</div><div class="line">         element.addEventListener(type,fn,<span class="literal">false</span>);</div><div class="line">    &#125;<span class="keyword">else</span> <span class="keyword">if</span>(element.attachEvent)&#123;</div><div class="line">         element.attachEvent(<span class="string">"on"</span>+type,fn);</div><div class="line">    &#125;<span class="keyword">else</span>&#123;</div><div class="line">         element[<span class="string">"on"</span>+type]=fn;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+</ul>
+</blockquote>
+<h3 id="移除事件的方式"><a href="#移除事件的方式" class="headerlink" title="移除事件的方式"></a>移除事件的方式</h3><blockquote>
+<p>注册事件时用匿名函数，则无法移除；</p>
+<ul>
+<li>对象.on+”事件类型”=null;  <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">    例子:</div><div class="line">    my$(<span class="string">"btn1"</span>).onclick=<span class="literal">null</span>;</div><div class="line">    <span class="string">``</span><span class="string">` </span></div><div class="line">* 对象.removeEventListener()</div><div class="line">    `<span class="string">``</span>javascript</div><div class="line">    例子:</div><div class="line">    my$(<span class="string">"btn1"</span>).removeEventListener(<span class="string">"click"</span>,命名函数,<span class="literal">false</span>);</div></pre></td></tr></table></figure>
+</li>
+</ul>
+</blockquote>
+<ul>
+<li>对象.detachEvent()</li>
+<li>用指定的方式注册事件,就要用对应的方式移除事件,innerHTML=””不会移除这个元素的事件。<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//移除事件的兼容代码</span></div><div class="line">    <span class="function"><span class="keyword">function</span> <span class="title">removeEventListener</span>(<span class="params">element,type,fn</span>) </span>&#123;</div><div class="line">        <span class="keyword">if</span>(element.removeEventListener)&#123;</div><div class="line">            element.removeEventListener(type,fn,<span class="literal">false</span>);</div><div class="line">        &#125;<span class="keyword">else</span> <span class="keyword">if</span>(element.detachEvent)&#123;</div><div class="line">            element.detachEvent(<span class="string">"on"</span>+type,fn);</div><div class="line">        &#125;<span class="keyword">else</span>&#123;</div><div class="line">            element[<span class="string">"on"</span>+type]=<span class="literal">null</span>;</div><div class="line">        &#125;</div><div class="line">    &#125;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="注册事件不同方式的区别"><a href="#注册事件不同方式的区别" class="headerlink" title="注册事件不同方式的区别"></a>注册事件不同方式的区别</h3><ul>
+<li>方法名不同</li>
+<li>参数不同<ul>
+<li>addEventListener<ul>
+<li>第一个参数是事件类型（事件名字）没有on</li>
+<li>第二个参数是事件处理函数</li>
+<li>第三个参数是false</li>
+</ul>
+</li>
+<li>atachEvent<ul>
+<li>第一个参数是事件类型（事件名字），有on</li>
+<li>第二个参数是事件处理函数</li>
+<li>没有第三个参数</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>事件执行的时候内部的this指向不同<ul>
+<li>addEventListener中this是事件源(谁的事件触发了)</li>
+<li>attachEvent中的this是window</li>
+</ul>
+</li>
+<li>一个有on，一个没有on</li>
+<li>兼容问题：<ul>
+<li>addEventListener在谷歌和火狐中都支持,IE11也支持,IE8不支持</li>
+<li>attachEvent:IE8支持,谷歌和火狐不支持,IE11也不支持<h3 id="事件冒泡"><a href="#事件冒泡" class="headerlink" title="事件冒泡"></a>事件冒泡</h3><blockquote>
+<p>事件冒泡:元素有嵌套，并且这些元素都注册了相同的事件，里面的元素的事件触发了，外面元素的事件会自动触发。比如说元素A中有一个元素B,如果里面的元素B和外面的元素A都注册了相同的事件,如果里面元素B的该事件触发了,那么外面的元素A的该事件会自动触发。</p>
+</blockquote>
+</li>
+</ul>
+</li>
+<li>阻止事件冒泡<ul>
+<li>window.event.cancelBubble如果是e.cancelBubble火狐也支持</li>
+<li>e.stopPropagation(),谷歌和火狐都支持<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//阻止事件冒泡兼容代码</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">cancelBubble</span>(<span class="params">e</span>) </span>&#123;</div><div class="line">    e=<span class="built_in">window</span>.event||e;</div><div class="line">    <span class="keyword">if</span>(e.stopPropagation)&#123;</div><div class="line">        e.stopPropagation();</div><div class="line">    &#125;<span class="keyword">else</span>&#123;<span class="comment">//IE8</span></div><div class="line">         e.cancelBubble=<span class="literal">true</span>;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="事件的三个阶段"><a href="#事件的三个阶段" class="headerlink" title="事件的三个阶段"></a>事件的三个阶段</h3><blockquote>
+<p>e.eventPhase是可以获取当前的代码是在什么阶段触发的</p>
+<ul>
+<li>值是1：捕获阶段<ul>
+<li>addEventListener()方法，第三个参数表示的是冒泡阶段还是捕获阶段</li>
+<li>第三个参数的类型是布尔类型</li>
+<li>如果是false，那么就是冒泡阶段</li>
+<li>如果是true，则是捕获阶段</li>
+<li>冒泡阶段：从里向外</li>
+<li>捕获阶段：从外向内</li>
+</ul>
+</li>
+<li>值是2：目标阶段</li>
+<li>值是3：冒泡阶段<h3 id="事件源"><a href="#事件源" class="headerlink" title="事件源"></a>事件源</h3></li>
+<li>e.target和window.event.srcElement 事件源(只记住第一个揍我的人)</li>
+<li>e.currentTarget:当前触发该事件的对象(谁打我我记住谁)<h3 id="iframe标签"><a href="#iframe标签" class="headerlink" title="iframe标签"></a>iframe标签</h3>引入外部的网页<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;iframe src=<span class="string">"http://www.baidu.com"</span> width=<span class="string">"80%"</span> height=<span class="string">"30%"</span> frameborder=<span class="string">"0"</span>&gt;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+</blockquote>
+<h3 id="表单"><a href="#表单" class="headerlink" title="表单"></a>表单</h3><ul>
+<li>表单默认有submit属性</li>
+<li>submit标签没有提交的属性，是通过调用form标签的submit属性提交表单的</li>
+<li>如果有另外一个标签点击时需要提交，可以调用form表单的onsubmint属性，也可以调用submit标签的属性</li>
+<li>将form表单的onsubmint属性移除后，submit及调用提交属性的标签均不能再提交</li>
+</ul>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/07/05/JavaScript-11  Js进阶和特效01/" rel="next" title="offset scroll和client">
+                <i class="fa fa-chevron-left"></i> offset scroll和client
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/07/12/JavaScript-13  JS进阶和特效03/" rel="prev" title="正则表达式">
+                正则表达式 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            Inhaltsverzeichnis
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            Übersicht
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.gif"
+               alt="John Doe" />
+          <p class="site-author-name" itemprop="name">John Doe</p>
+           
+              <p class="site-description motion-element" itemprop="description"></p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives">
+                <span class="site-state-item-count">21</span>
+                <span class="site-state-item-name">Artikel</span>
+              </a>
+            </div>
+          
+
+          
+
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#概念"><span class="nav-number">1.</span> <span class="nav-text">概念</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#注册事件的方式"><span class="nav-number">2.</span> <span class="nav-text">注册事件的方式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#移除事件的方式"><span class="nav-number">3.</span> <span class="nav-text">移除事件的方式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#注册事件不同方式的区别"><span class="nav-number">4.</span> <span class="nav-text">注册事件不同方式的区别</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#事件冒泡"><span class="nav-number">5.</span> <span class="nav-text">事件冒泡</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#事件的三个阶段"><span class="nav-number">6.</span> <span class="nav-text">事件的三个阶段</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#事件源"><span class="nav-number">7.</span> <span class="nav-text">事件源</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#iframe标签"><span class="nav-number">8.</span> <span class="nav-text">iframe标签</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#表单"><span class="nav-number">9.</span> <span class="nav-text">表单</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">John Doe</span>
+</div>
+
+
+<div class="powered-by">
+  Erstellt mit  <a class="theme-link" href="https://hexo.io">Hexo</a>
+</div>
+
+<div class="theme-info">
+  Theme -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Pisces
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.1"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.1"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.1"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.1"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

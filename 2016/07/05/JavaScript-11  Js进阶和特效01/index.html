@@ -1,0 +1,715 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.1" />
+
+
+
+
+
+
+<meta name="description" content="offset系列基本概念 获取元素实际的宽高，left，top offsetLeft：元素距离左边的距离 offsetTop：元素距离上面的距离 offsetWidth：元素的宽+border offsetHeight：元素的高+border 如果想要获取元素的样式属性实际的值：*window.getComputedStyle()或currentStyle属性对象.style属性 可以获取属性，也">
+<meta property="og:type" content="article">
+<meta property="og:title" content="offset scroll和client">
+<meta property="og:url" content="http://yoursite.com/2016/07/05/JavaScript-11  Js进阶和特效01/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="offset系列基本概念 获取元素实际的宽高，left，top offsetLeft：元素距离左边的距离 offsetTop：元素距离上面的距离 offsetWidth：元素的宽+border offsetHeight：元素的高+border 如果想要获取元素的样式属性实际的值：*window.getComputedStyle()或currentStyle属性对象.style属性 可以获取属性，也">
+<meta property="og:updated_time" content="2017-06-03T13:46:40.596Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="offset scroll和client">
+<meta name="twitter:description" content="offset系列基本概念 获取元素实际的宽高，left，top offsetLeft：元素距离左边的距离 offsetTop：元素距离上面的距离 offsetWidth：元素的宽+border offsetHeight：元素的高+border 如果想要获取元素的样式属性实际的值：*window.getComputedStyle()或currentStyle属性对象.style属性 可以获取属性，也">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2016/07/05/JavaScript-11  Js进阶和特效01/"/>
+
+
+
+
+
+  <title>offset scroll和client | Hexo</title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Hexo</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Startseite
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Archiv
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            Tags
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/07/05/JavaScript-11  Js进阶和特效01/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="John Doe">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">offset scroll和client</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Veröffentlicht am</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-07-05T00:00:00+08:00">
+                2016-07-05
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h3 id="offset系列"><a href="#offset系列" class="headerlink" title="offset系列"></a>offset系列</h3><h5 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h5><ul>
+<li>获取元素实际的宽高，left，top</li>
+<li>offsetLeft：元素距离左边的距离</li>
+<li>offsetTop：元素距离上面的距离</li>
+<li>offsetWidth：元素的宽+border</li>
+<li>offsetHeight：元素的高+border</li>
+<li>如果想要获取元素的样式属性实际的值：*window.getComputedStyle()或currentStyle属性<h5 id="对象-style属性"><a href="#对象-style属性" class="headerlink" title="对象.style属性"></a>对象.style属性</h5></li>
+<li>可以获取属性，也可以设置属性（可读可写）</li>
+<li>可以获取在html标签中直接设置的样式的值，获取的都是字符串类型<h5 id="对象-offset系列属性"><a href="#对象-offset系列属性" class="headerlink" title="对象.offset系列属性"></a>对象.offset系列属性</h5></li>
+<li>获取的是数字类型，没有px</li>
+<li>offset系列中的属性只能获取值，不能设置值（可读不可写）<h5 id="offsetLeft-offsetTop"><a href="#offsetLeft-offsetTop" class="headerlink" title="offsetLeft offsetTop"></a>offsetLeft offsetTop</h5></li>
+<li>offsetLeft(没有定位)，以body为基准到自身左侧边框(border-left左边)；</li>
+<li>offsetLeft(有定位)以父元素为基准到自身左侧边框(border-left左边)；</li>
+<li>offsetLeft=父元素的margin-left+padding-left+border-left;<ul>
+<li>从body到父元素的margin-left加父元素的padding+父元素的border宽度；<h5 id="offsetWidth-offsetHeight"><a href="#offsetWidth-offsetHeight" class="headerlink" title="offsetWidth offsetHeight"></a>offsetWidth offsetHeight</h5></li>
+</ul>
+</li>
+<li>offsetWidth和offseHeight是包括元素的边框的</li>
+<li>如果元素的样式是在style标签中设置的，只能通过offset系列中的offsetWidth和offseHeight来获取，对象.style是无法获取的；<h3 id="scroll系列"><a href="#scroll系列" class="headerlink" title="scroll系列"></a>scroll系列</h3><h5 id="基本概念-1"><a href="#基本概念-1" class="headerlink" title="基本概念"></a>基本概念</h5></li>
+<li>scroll系列:获取元素的卷曲的值</li>
+<li>scrollWidth:获取元素内容的实际的宽度(如果元素非常少就是元素的宽度,如果有滚动条去掉滚动条的宽度)</li>
+<li>scrollHeight:获取元素内容的实际高度(同上)</li>
+<li>scrollLeft:获取元素中内容向左卷曲出去的距离,向左滚出去的距离</li>
+<li>scrollTop:获取元素中内容向上卷曲出去的距离,向上滚出去的距离<h5 id="注意点"><a href="#注意点" class="headerlink" title="注意点"></a>注意点</h5></li>
+<li>scrollWidth和scrollHeight：主要是元素中内容的实际高度，与border无关，如果有滚动条，需要去掉滚动条的宽度</li>
+<li>scrollHeight：获取元素内容的实际高度，如果元素非常少则是元素的高度，如果有滚动条，需要去掉滚动条的宽度<h5 id="兼容函数封装"><a href="#兼容函数封装" class="headerlink" title="兼容函数封装"></a>兼容函数封装</h5><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">getScroll</span>(<span class="params"></span>) </span>&#123;</div><div class="line">        <span class="keyword">return</span> &#123;</div><div class="line">            <span class="attr">left</span>: <span class="built_in">window</span>.pageXOffset || <span class="built_in">document</span>.body.scrollLeft || <span class="built_in">document</span>.documentElement.scrollLeft || <span class="number">0</span>,</div><div class="line">            <span class="attr">top</span>: <span class="built_in">window</span>.pageYOffset || <span class="built_in">document</span>.body.scrollTop || <span class="built_in">document</span>.documentElement.scrollTop || <span class="number">0</span></div><div class="line">        &#125;;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="client系列"><a href="#client系列" class="headerlink" title="client系列"></a>client系列</h3><h5 id="基本概念-2"><a href="#基本概念-2" class="headerlink" title="基本概念"></a>基本概念</h5><ul>
+<li>clientHeight：可视区域的高度</li>
+<li>clientWidth：可视区域的宽度</li>
+<li>clientY：可视区域的纵坐标</li>
+<li>clientX:可视区域的横坐标<br>##### </li>
+</ul>
+<h3 id="e-pageX和e-pageY"><a href="#e-pageX和e-pageY" class="headerlink" title="e.pageX和e.pageY"></a>e.pageX和e.pageY</h3><blockquote>
+<p>e.clientX和e.clientY是可视区域的坐标,e.pageX和e.pageY才是真正的文档的坐标<br>pageX和pageY在谷歌和火狐浏览器中都支持,但是在IE8浏览器中不支持<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//图片跟着鼠标飞</span></div><div class="line"><span class="built_in">document</span>.onmousemove=<span class="function"><span class="keyword">function</span> (<span class="params">e</span>) </span>&#123;</div><div class="line">    my$(<span class="string">"im"</span>).style.left=EventTools.getPageX(e)+<span class="string">"px"</span>;</div><div class="line">    my$(<span class="string">"im"</span>).style.top=EventTools.getPageY(e)+<span class="string">"px"</span>;</div><div class="line">&#125;;</div><div class="line"><span class="comment">//兼容代码</span></div><div class="line"><span class="keyword">var</span> EventTools=&#123;</div><div class="line">    <span class="attr">getEvent</span>:<span class="function"><span class="keyword">function</span> (<span class="params">e</span>) </span>&#123; <span class="comment">//封装事件对象参数:window.event或者e</span></div><div class="line">        <span class="keyword">return</span> <span class="built_in">window</span>.event||e;</div><div class="line">    &#125;,</div><div class="line">    <span class="attr">getClientX</span>:<span class="function"><span class="keyword">function</span> (<span class="params">e</span>) </span>&#123;<span class="comment">//封装的是clientX无论是谷歌还是火狐还是IE8</span></div><div class="line">        <span class="keyword">return</span> <span class="keyword">this</span>.getEvent(e).clientX;</div><div class="line">    &#125;,</div><div class="line">    <span class="attr">getClientY</span>:<span class="function"><span class="keyword">function</span> (<span class="params">e</span>) </span>&#123;<span class="comment">//封装的是clientY无论是谷歌还是火狐还是IE8</span></div><div class="line">        <span class="keyword">return</span> <span class="keyword">this</span>.getEvent(e).clientY;</div><div class="line">    &#125;,</div><div class="line">    <span class="attr">getLeft</span>:<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;<span class="comment">//获取的是页面的卷曲出去的横坐标</span></div><div class="line">        <span class="keyword">return</span> <span class="built_in">window</span>.pageXOffset||<span class="built_in">document</span>.body.scrollLeft||<span class="built_in">document</span>.documentElement.scrollLeft||<span class="number">0</span>;</div><div class="line">    &#125;,</div><div class="line">    <span class="attr">getTop</span>:<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;<span class="comment">//获取的是页面的卷曲出去的纵坐标</span></div><div class="line">        <span class="keyword">return</span> <span class="built_in">window</span>.pageYOffset||<span class="built_in">document</span>.body.scrollTop||<span class="built_in">document</span>.documentElement.scrollTop||<span class="number">0</span>;</div><div class="line">    &#125;,</div><div class="line">    <span class="attr">getPageX</span>:<span class="function"><span class="keyword">function</span> (<span class="params">e</span>) </span>&#123;<span class="comment">//获取的页面的可视区的横坐标+页面卷曲出去的横坐标</span></div><div class="line">        <span class="keyword">return</span> <span class="keyword">this</span>.getEvent(e).pageX?<span class="keyword">this</span>.getEvent(e).pageX:<span class="keyword">this</span>.getClientX(e)+<span class="keyword">this</span>.getLeft();</div><div class="line">    &#125;,</div><div class="line">    <span class="attr">getPageY</span>:<span class="function"><span class="keyword">function</span> (<span class="params">e</span>) </span>&#123;<span class="comment">//获取的页面的可视区的纵坐标+页面卷曲出去的纵坐标</span></div><div class="line">        <span class="keyword">return</span> <span class="keyword">this</span>.getEvent(e).pageY?<span class="keyword">this</span>.getEvent(e).pageY:<span class="keyword">this</span>.getClientY(e)+<span class="keyword">this</span>.getTop();</div><div class="line">    &#125;</div><div class="line"></div><div class="line"></div><div class="line">&#125;;</div></pre></td></tr></table></figure></p>
+</blockquote>
+<h3 id="响应式布局原理"><a href="#响应式布局原理" class="headerlink" title="响应式布局原理"></a>响应式布局原理</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//获取的可视区域的宽和高</span></div><div class="line">    <span class="function"><span class="keyword">function</span> <span class="title">getClient</span>(<span class="params"></span>) </span>&#123;</div><div class="line">        <span class="keyword">return</span>&#123;</div><div class="line">            <span class="comment">//可视区域的宽度</span></div><div class="line">            width:<span class="built_in">window</span>.innerWidth||<span class="built_in">document</span>.body.clientWidth||<span class="built_in">document</span>.documentElement.clientWidth||<span class="number">0</span>,</div><div class="line">            <span class="comment">//可视区域的高度</span></div><div class="line">            height:<span class="built_in">window</span>.innerHeight||<span class="built_in">document</span>.body.clientHeight||<span class="built_in">document</span>.documentElement.clientHeight||<span class="number">0</span></div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    <span class="comment">//事件可以检测用户的浏览器的页面的宽度和高度是否发生变化</span></div><div class="line">    <span class="comment">//只要页面的宽和高发生变化这个事件就会触发</span></div><div class="line">    <span class="built_in">window</span>.onresize=<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">        <span class="keyword">if</span>(getClient().width&gt;<span class="number">960</span>)&#123;</div><div class="line">            <span class="built_in">console</span>.log(<span class="string">"您此时用的是电脑浏览的页面"</span>);</div><div class="line">        &#125;<span class="keyword">else</span> <span class="keyword">if</span>(getClient().width&gt;<span class="number">700</span>)&#123;</div><div class="line">            <span class="built_in">console</span>.log(<span class="string">"您此时用的是平板浏览的页面"</span>);</div><div class="line">        &#125;<span class="keyword">else</span>&#123;</div><div class="line">            <span class="built_in">console</span>.log(<span class="string">"您此时用的是手机浏览的页面"</span>);</div><div class="line">        &#125;</div><div class="line">    &#125;;</div></pre></td></tr></table></figure>
+<h3 id="通过document直接获取元素"><a href="#通过document直接获取元素" class="headerlink" title="通过document直接获取元素"></a>通过document直接获取元素</h3><ul>
+<li>title:document.title  可以获取title标签中的值也可以设置</li>
+<li>body:document.body—对象</li>
+<li>html:document.documentElement—对象<h3 id="动画函数封装"><a href="#动画函数封装" class="headerlink" title="动画函数封装"></a>动画函数封装</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">animate</span>(<span class="params">element,target</span>) </span>&#123;    </div><div class="line">    <span class="keyword">var</span> timeId=<span class="literal">null</span>;    </div><div class="line">    timeId=setInterval(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;        </div><div class="line">        <span class="keyword">var</span> step=<span class="number">8</span>;        </div><div class="line">        <span class="keyword">var</span> current=element.offsetLeft; </div><div class="line">        step=current&lt;target?step:-step;        </div><div class="line">        <span class="keyword">if</span>(<span class="built_in">Math</span>.abs(target-current)&lt;=<span class="built_in">Math</span>.abs(step))&#123;            </div><div class="line">            clearInterval(timeId); </div><div class="line">            element.style.left=target+<span class="string">"px"</span>;        </div><div class="line">        &#125;<span class="keyword">else</span>&#123;            </div><div class="line">            current=current+step;   </div><div class="line">            element.style.left=current+<span class="string">"px"</span>;        </div><div class="line">        &#125;    </div><div class="line">    &#125;,<span class="number">20</span>);</div><div class="line">&#125;</div></pre></td></tr></table></figure></li>
+</ul>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/07/01/JavaScript-10  BOM/" rel="next" title="BOM">
+                <i class="fa fa-chevron-left"></i> BOM
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/07/08/JavaScript-12  Js进阶和特效02/" rel="prev" title="事件">
+                事件 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            Inhaltsverzeichnis
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            Übersicht
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.gif"
+               alt="John Doe" />
+          <p class="site-author-name" itemprop="name">John Doe</p>
+           
+              <p class="site-description motion-element" itemprop="description"></p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives">
+                <span class="site-state-item-count">21</span>
+                <span class="site-state-item-name">Artikel</span>
+              </a>
+            </div>
+          
+
+          
+
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#offset系列"><span class="nav-number">1.</span> <span class="nav-text">offset系列</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#基本概念"><span class="nav-number">1.0.1.</span> <span class="nav-text">基本概念</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#对象-style属性"><span class="nav-number">1.0.2.</span> <span class="nav-text">对象.style属性</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#对象-offset系列属性"><span class="nav-number">1.0.3.</span> <span class="nav-text">对象.offset系列属性</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#offsetLeft-offsetTop"><span class="nav-number">1.0.4.</span> <span class="nav-text">offsetLeft offsetTop</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#offsetWidth-offsetHeight"><span class="nav-number">1.0.5.</span> <span class="nav-text">offsetWidth offsetHeight</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#scroll系列"><span class="nav-number">2.</span> <span class="nav-text">scroll系列</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#基本概念-1"><span class="nav-number">2.0.1.</span> <span class="nav-text">基本概念</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#注意点"><span class="nav-number">2.0.2.</span> <span class="nav-text">注意点</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#兼容函数封装"><span class="nav-number">2.0.3.</span> <span class="nav-text">兼容函数封装</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#client系列"><span class="nav-number">3.</span> <span class="nav-text">client系列</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#基本概念-2"><span class="nav-number">3.0.1.</span> <span class="nav-text">基本概念</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#e-pageX和e-pageY"><span class="nav-number">4.</span> <span class="nav-text">e.pageX和e.pageY</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#响应式布局原理"><span class="nav-number">5.</span> <span class="nav-text">响应式布局原理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#通过document直接获取元素"><span class="nav-number">6.</span> <span class="nav-text">通过document直接获取元素</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#动画函数封装"><span class="nav-number">7.</span> <span class="nav-text">动画函数封装</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">John Doe</span>
+</div>
+
+
+<div class="powered-by">
+  Erstellt mit  <a class="theme-link" href="https://hexo.io">Hexo</a>
+</div>
+
+<div class="theme-info">
+  Theme -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Pisces
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.1"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.1"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.1"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.1"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

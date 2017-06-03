@@ -93,13 +93,16 @@
 
 
 
+<meta name="description" content="字符串字符串特性 特性:不可变性 字符串的变量如果调用了属性或者方法就是基本包装类型对象 字符串中的属性:length,字符串的长度字符串中的方法 charAt(索引);获取指定索引位置的字符串 charCodeAt(索引);获取的指定索引位置的字符串的ASCII码值 concat(“字符串1”,”字符串2”);拼接字符串的,返回值是拼接后的新的字符串 slice(开始索引,结束索引);从开始索引">
 <meta property="og:type" content="article">
-<meta property="og:title" content="test_my_site">
-<meta property="og:url" content="http://yoursite.com/2017/06/04/test-my-site/index.html">
+<meta property="og:title" content="字符串及数组方法">
+<meta property="og:url" content="http://yoursite.com/2016/06/28/JavaScript-09  DOM04/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:updated_time" content="2017-06-03T17:10:57.200Z">
+<meta property="og:description" content="字符串字符串特性 特性:不可变性 字符串的变量如果调用了属性或者方法就是基本包装类型对象 字符串中的属性:length,字符串的长度字符串中的方法 charAt(索引);获取指定索引位置的字符串 charCodeAt(索引);获取的指定索引位置的字符串的ASCII码值 concat(“字符串1”,”字符串2”);拼接字符串的,返回值是拼接后的新的字符串 slice(开始索引,结束索引);从开始索引">
+<meta property="og:updated_time" content="2017-06-03T13:45:11.459Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="test_my_site">
+<meta name="twitter:title" content="字符串及数组方法">
+<meta name="twitter:description" content="字符串字符串特性 特性:不可变性 字符串的变量如果调用了属性或者方法就是基本包装类型对象 字符串中的属性:length,字符串的长度字符串中的方法 charAt(索引);获取指定索引位置的字符串 charCodeAt(索引);获取的指定索引位置的字符串的ASCII码值 concat(“字符串1”,”字符串2”);拼接字符串的,返回值是拼接后的新的字符串 slice(开始索引,结束索引);从开始索引">
 
 
 
@@ -127,13 +130,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/06/04/test-my-site/"/>
+  <link rel="canonical" href="http://yoursite.com/2016/06/28/JavaScript-09  DOM04/"/>
 
 
 
 
 
-  <title>test_my_site | Hexo</title>
+  <title>字符串及数组方法 | Hexo</title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="">
@@ -253,7 +256,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/06/04/test-my-site/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/06/28/JavaScript-09  DOM04/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="John Doe">
@@ -270,7 +273,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">test_my_site</h1>
+          <h1 class="post-title" itemprop="name headline">字符串及数组方法</h1>
         
 
         <div class="post-meta">
@@ -282,8 +285,8 @@
               
                 <span class="post-meta-item-text">Veröffentlicht am</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-06-04T01:10:57+08:00">
-                2017-06-04
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-06-28T00:00:00+08:00">
+                2016-06-28
               </time>
             
 
@@ -317,7 +320,54 @@
       
 
       
-        
+        <h3 id="字符串"><a href="#字符串" class="headerlink" title="字符串"></a>字符串</h3><h4 id="字符串特性"><a href="#字符串特性" class="headerlink" title="字符串特性"></a>字符串特性</h4><ul>
+<li>特性:不可变性</li>
+<li>字符串的变量如果调用了属性或者方法就是基本包装类型对象</li>
+<li>字符串中的属性:length,字符串的长度<h4 id="字符串中的方法"><a href="#字符串中的方法" class="headerlink" title="字符串中的方法"></a>字符串中的方法</h4></li>
+<li>charAt(索引);获取指定索引位置的字符串</li>
+<li>charCodeAt(索引);获取的指定索引位置的字符串的ASCII码值</li>
+<li>concat(“字符串1”,”字符串2”);拼接字符串的,返回值是拼接后的新的字符串</li>
+<li>slice(开始索引,结束索引);从开始索引位置开始截取,到结束索引的位置的前一个结束,返回的是截取后的新的字符串</li>
+<li>substring(开始的索引,结束的索引);截取(同上)</li>
+<li>substr(开始的索引,截取的长度);从指定的索引位置开始截取,截取多少个,返回一个新的字符串</li>
+<li>indexOf(“要找的字符串”,开始索引);从开始索引位置查找字符串,找到则返回索引,找不到则返回-1,返回值是索引</li>
+<li>lastIndexOf(“要找的字符串”,开始索引);从后面向前面找,索引仍然是从前面开始计算的,找到则返回指定索引,找不到则返回-1</li>
+<li>trim();去掉字符串两端的空格,中间的无法去掉</li>
+<li>to(Locale)UpperCase() //转换大写</li>
+<li>to(Locale)LowerCase() //转换小写</li>
+<li>replace(“要替换的字符串”,”新的字符串”);替换字符串的,返回新的字符串</li>
+<li>split(“指定的字符串”);是用来切割字符串中指定的字符串的,返回的是字符串的数组<h3 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h3><h4 id="数组中的属性-length"><a href="#数组中的属性-length" class="headerlink" title="数组中的属性:length"></a>数组中的属性:length</h4><h4 id="数组中的常用方法"><a href="#数组中的常用方法" class="headerlink" title="数组中的常用方法:"></a>数组中的常用方法:</h4></li>
+<li>push(元素);在数组的后面追加一个元素，返回值是追加后的数组的长度</li>
+<li>pop();删除数组最后一个元素,返回的是被删除的元素的值</li>
+<li>unshift(元素);在数组的前面插入一个元素，返回值是插入后的数组的长度</li>
+<li>shift();删除数组第一个元素,返回的是被删除的元素的值</li>
+<li>concat(数组1,数组2);拼接数组的</li>
+<li>slice(开始的索引,结束的索引);从开始索引位置截取数组元素,到结束索引位置的前一个,返回新的数组</li>
+<li>splice(开始的索引,长度);从开始的位置截取数组元素.截取指定长度的个数,返回的是截取后的新的数组</li>
+<li>reverse()反转的</li>
+<li>sort()排序,一般回传入一个回调函数,可以比较字符串也可以比较数字</li>
+<li>indexOf(元素);返回的饿时该元素的索引，如果找不到则返回-1</li>
+<li>lastIndexOf(元素);同上</li>
+<li>every(函数)方法,判断数组中的每个元素是否符合函数中的判断,如果每个元素都满足条件则返回true,否则返回false</li>
+<li>map(函数),让数组中的每个元素都执行一次函数,把得到的返回值组成一个新的数组</li>
+<li>filter(函数),让数组中的每个元素都要执行函数,把满足条件的元素存放在一个新的数组中</li>
+<li>foreach(函数);遍历的</li>
+<li>join(字符串);把数组中的每个元素之间用指定的字符串进行连接.返回一个新的字符串<h3 id="基本包装类型"><a href="#基本包装类型" class="headerlink" title="基本包装类型"></a>基本包装类型</h3></li>
+<li>基本包装类型:String,Number,Boolean</li>
+<li>基本类型:string,number,boolean,null,undefined</li>
+<li>基本类型变量无法直接调用属性和方法</li>
+<li>对象才可以直接调用属性或者方法<h3 id="Date对象"><a href="#Date对象" class="headerlink" title="Date对象"></a>Date对象</h3><blockquote>
+<p>var dt=new Date();Date方法如下：</p>
+</blockquote>
+</li>
+<li>year=dt.getFullYear();</li>
+<li>month=dt.getMonth()+1;</li>
+<li>day=dt.getDate();</li>
+<li>h=dt.getHours();</li>
+<li>m=dt.getMinutes();</li>
+<li>s=dt.getSeconds();</li>
+</ul>
+
       
     </div>
 
@@ -353,8 +403,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/06/04/hello-world/" rel="next" title="Hello World">
-                <i class="fa fa-chevron-left"></i> Hello World
+              <a href="/2016/06/23/JavaScript-08  DOM03/" rel="next" title="DOM 元素获取">
+                <i class="fa fa-chevron-left"></i> DOM 元素获取
               </a>
             
           </div>
@@ -363,8 +413,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2017/06/04/README/" rel="prev" title="">
-                 <i class="fa fa-chevron-right"></i>
+              <a href="/2016/07/01/JavaScript-10  BOM/" rel="prev" title="BOM">
+                BOM <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -412,8 +462,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            Inhaltsverzeichnis
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            Übersicht
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/avatar.gif"
@@ -457,6 +516,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#字符串"><span class="nav-number">1.</span> <span class="nav-text">字符串</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#字符串特性"><span class="nav-number">1.1.</span> <span class="nav-text">字符串特性</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#字符串中的方法"><span class="nav-number">1.2.</span> <span class="nav-text">字符串中的方法</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#数组"><span class="nav-number">2.</span> <span class="nav-text">数组</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#数组中的属性-length"><span class="nav-number">2.1.</span> <span class="nav-text">数组中的属性:length</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#数组中的常用方法"><span class="nav-number">2.2.</span> <span class="nav-text">数组中的常用方法:</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#基本包装类型"><span class="nav-number">3.</span> <span class="nav-text">基本包装类型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Date对象"><span class="nav-number">4.</span> <span class="nav-text">Date对象</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
