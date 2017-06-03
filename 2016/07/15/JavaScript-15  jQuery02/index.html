@@ -6,18 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives: 2017/6 | 戎码一生的博客</title>
+  <title>jQuery 常用操作 | 戎码一生的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="走在前端的路上，一往无前">
+  <meta name="description" content="jQuery样式操作问题 DOM中不能获取元素的属性值 jQuery中可以获取属性的值，$(),括号里如果只写属性，获取的是属性的值 通过类样式操作元素 .addclass(“类样式的名字”)方法为元素添加类样式，可以在该方法中添加多个类样式，中间用空格隔开 .removeclass(“类样式的名字”)方法为元素删除类样式，可以在该方法中删除多个类样式，中间用空格隔开，如果该方法内部没有参数，则删">
 <meta name="keywords" content="前端,js,jquery,javascript,html5,开发者,程序猿,开源,IT网站,Developer,Programmer,Coder,Geek,html,css,css3,用户体验">
-<meta property="og:type" content="website">
-<meta property="og:title" content="戎码一生的博客">
-<meta property="og:url" content="http://yoursite.com/archives/2017/06/index.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="jQuery 常用操作">
+<meta property="og:url" content="http://yoursite.com/2016/07/15/JavaScript-15  jQuery02/index.html">
 <meta property="og:site_name" content="戎码一生的博客">
-<meta property="og:description" content="走在前端的路上，一往无前">
+<meta property="og:description" content="jQuery样式操作问题 DOM中不能获取元素的属性值 jQuery中可以获取属性的值，$(),括号里如果只写属性，获取的是属性的值 通过类样式操作元素 .addclass(“类样式的名字”)方法为元素添加类样式，可以在该方法中添加多个类样式，中间用空格隔开 .removeclass(“类样式的名字”)方法为元素删除类样式，可以在该方法中删除多个类样式，中间用空格隔开，如果该方法内部没有参数，则删">
+<meta property="og:updated_time" content="2017-06-03T13:48:31.204Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="戎码一生的博客">
-<meta name="twitter:description" content="走在前端的路上，一往无前">
+<meta name="twitter:title" content="jQuery 常用操作">
+<meta name="twitter:description" content="jQuery样式操作问题 DOM中不能获取元素的属性值 jQuery中可以获取属性的值，$(),括号里如果只写属性，获取的是属性的值 通过类样式操作元素 .addclass(“类样式的名字”)方法为元素添加类样式，可以在该方法中添加多个类样式，中间用空格隔开 .removeclass(“类样式的名字”)方法为元素删除类样式，可以在该方法中删除多个类样式，中间用空格隔开，如果该方法内部没有参数，则删">
   
     <link rel="alternative" href="/atom.xml" title="戎码一生的博客" type="application/atom+xml">
   
@@ -46,7 +47,7 @@
 <div class="intrude-less">
 	<header id="header" class="inner">
 		<a href="/" class="profilepic">
-			<img src="img/a.png" class="js-avatar">
+			<img src="../../img/a.png" class="js-avatar">
 		</a>
 		<hgroup>
 		  <h1 class="header-author"><a href="/">yanchang</a></h1>
@@ -106,7 +107,7 @@
 	<div class="intrude-less">
 		<header id="header" class="inner">
 			<div class="profilepic">
-				<img src="img/a.png" class="js-avatar">
+				<img src="../../img/a.png" class="js-avatar">
 			</div>
 			<hgroup>
 			  <h1 class="header-author js-header-author">yanchang</h1>
@@ -157,145 +158,207 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-JavaScript-15  jQuery02" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      jQuery 常用操作
+    </h1>
+  
+
+        
+        <a href="/2016/07/15/JavaScript-15  jQuery02/" class="archive-article-date">
+  	<time datetime="2016-07-14T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-07-15</time>
+</a>
+        
+      </header>
     
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="jQuery样式操作问题"><a href="#jQuery样式操作问题" class="headerlink" title="jQuery样式操作问题"></a>jQuery样式操作问题</h3><ul>
+<li>DOM中不能获取元素的属性值</li>
+<li>jQuery中可以获取属性的值，$(),括号里如果只写属性，获取的是属性的值</li>
+<li>通过类样式操作元素<ul>
+<li>.addclass(“类样式的名字”)方法为元素添加类样式，可以在该方法中添加多个类样式，中间用空格隔开</li>
+<li>.removeclass(“类样式的名字”)方法为元素删除类样式，可以在该方法中删除多个类样式，中间用空格隔开，如果该方法内部没有参数，则删除的是全部的类样式</li>
+<li>.hasClass方法 判断当前元素是否应用了指定的类样式,返回值是布尔类型</li>
+<li>.toggleClass（“类样式的名字”）切换类样式  （开关灯案例）<h3 id="链式编程"><a href="#链式编程" class="headerlink" title="链式编程"></a>链式编程</h3></li>
+</ul>
+</li>
+<li>只有当前调用该方法的是一个对象才能继续链式编程<br>  对象调用方法后,如果返回的还是调用该方法的对象,那么可以继续的链式编程</li>
+<li>如果对象调用方法后,返回的不是对象,那么此时就不能链式编程了</li>
+<li>什么时候返回的是对象,什么时候不是<ul>
+<li>不太严禁的总结:对象调用方法的时候,进行了设置,那么一般返回的都是对象,如果是获取,那么一般返回的都是获取的内容而不是对象<h3 id="方法补充"><a href="#方法补充" class="headerlink" title="方法补充"></a>方法补充</h3></li>
+</ul>
+</li>
+<li>.next() 获取当前元素下一个兄弟元素</li>
+<li>.nextAll() 获取当前元素下面所有的兄弟元素</li>
+<li>.prev() 获取当前元素前一个兄弟元素</li>
+<li>.prevtAll() 获取当前元素前面所有的兄弟元素</li>
+<li>.siblings() 获取当前元素的所有兄弟元素，不包括自己</li>
+<li>.end() 修复断链方法</li>
+<li>.last() 获取最后一个元素</li>
+<li>:last 获取最后一个元素<h3 id="动画的方法"><a href="#动画的方法" class="headerlink" title="动画的方法"></a>动画的方法</h3></li>
+<li>.show()方法 显示</li>
+<li>.hide()方法 隐藏</li>
+<li>.slideDown()方法 滑出–显示</li>
+<li>.shideUp()方法 滑入–隐藏</li>
+<li>.fadeIn()方法 淡出–显示</li>
+<li>.fadeout()方法 淡入–隐藏</li>
+<li>参数问题<ul>
+<li>参数可以是一个数字，可以是一个字符串（slow,normal,fast）</li>
+<li>参数也可以是两个，第一个是数字或字符串，第二个是一个函数</li>
+</ul>
+</li>
+<li>animate<ul>
+<li>参数1：键值对</li>
+<li>参数2：时间</li>
+<li>参数3：函数</li>
+</ul>
+</li>
+<li>.stop() 停止当前的动画<h3 id="arguments-callee"><a href="#arguments-callee" class="headerlink" title="arguments.callee"></a>arguments.callee</h3></li>
+<li>主要是递归，可以调用所在的函数，注意：新版本的标准中不是很推荐使用<h3 id="动态的创建元素"><a href="#动态的创建元素" class="headerlink" title="动态的创建元素"></a>动态的创建元素</h3></li>
+<li>.html(“<p>这是一个p</p>“）)</li>
+<li>.append()添加方法，追加 $(“div”).append($(“<p>哈哈</p>“))</li>
+<li>.appendTo()被添加 $(“<p>哈哈</p>“).appendTo($(“div”))<h3 id="清空"><a href="#清空" class="headerlink" title="清空"></a>清空</h3></li>
+<li>.html(“”);清空</li>
+<li>.empty();清空</li>
+<li>.remove();自杀了—当前元素移除了<h3 id="表单val-方法的使用"><a href="#表单val-方法的使用" class="headerlink" title="表单val()方法的使用"></a>表单val()方法的使用</h3></li>
+<li>textarea文本域, 可以使用.val方法也可以使用.text方法</li>
+<li>在DOM中如果是获取文本域的内容,使用value属性，如果是设置文本域的内容,最好使用innerText</li>
+<li>jQuery中设置和获取文本域的内容最好使用text()方法</li>
+<li>设置某个下拉框选中<ul>
+<li>.val()方法针对下拉框的内容选中的时候,方法中传入的是某个option的value属性值<ul>
+<li>$(“#s1”).val(4)</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
       
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/06/04/响应式布局/" class="archive-article-date">
-  	<time datetime="2017-06-03T17:44:12.713Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-06-04</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2016/07/15/JavaScript-15  jQuery02/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/06/04/README/" class="archive-article-date">
-  	<time datetime="2017-06-03T17:44:12.710Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-06-04</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/06/04/test-my-site/" class="archive-article-date">
-  	<time datetime="2017-06-03T17:10:57.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-06-04</time>
-</a>
-        </div>
-    	 
+<nav id="article-nav">
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/06/04/test-my-site/">test_my_site</a>
-    </h1>
+    <a href="/2016/07/20/JavaScript-16  jQuery03/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          jQuery 事件
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2016/07/15/JavaScript-14  jQuery01/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">jQuery 介绍</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+
+
+
+  
+  
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/06/04/hello-world/" class="archive-article-date">
-  	<time datetime="2017-06-03T17:06:49.122Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-06-04</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/06/04/hello-world/">Hello World</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/06/03/my-new-post/" class="archive-article-date">
-  	<time datetime="2017-06-03T15:34:13.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-06-03</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/06/03/my-new-post/">my new post</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
 
 
           </div>
@@ -318,8 +381,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,

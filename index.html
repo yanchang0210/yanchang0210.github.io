@@ -46,7 +46,7 @@
 <div class="intrude-less">
 	<header id="header" class="inner">
 		<a href="/" class="profilepic">
-			<img src="img/a.png" class="js-avatar">
+			<img src="../../img/a.png" class="js-avatar">
 		</a>
 		<hgroup>
 		  <h1 class="header-author"><a href="/">yanchang</a></h1>
@@ -106,7 +106,7 @@
 	<div class="intrude-less">
 		<header id="header" class="inner">
 			<div class="profilepic">
-				<img src="img/a.png" class="js-avatar">
+				<img src="../../img/a.png" class="js-avatar">
 			</div>
 			<hgroup>
 			  <h1 class="header-author js-header-author">yanchang</h1>
@@ -159,306 +159,19 @@
           <div id="js-content" class="content-ll">
             
   
-    <article id="post-响应式布局" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="响应式布局"><a href="#响应式布局" class="headerlink" title="响应式布局"></a>响应式布局</h1>
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/06/04/响应式布局/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-  
-    <article id="post-README" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>#微金所</p>
-<h2 id="1-1-项目结构"><a href="#1-1-项目结构" class="headerlink" title="1.1 项目结构"></a>1.1 项目结构</h2><ul>
-<li>weijinsuo…………项目文件夹<ul>
-<li>js……………….js文件目录              </li>
-<li>lib………………第三方框架目录</li>
-<li>fonts…………….字体文件目录</li>
-<li>images……………图片文件目录</li>
-<li>css………………css文件目录</li>
-<li>favicon.ico……….网站图标</li>
-<li>index.html………..站点入口</li>
-</ul>
-</li>
-</ul>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment">&lt;!--link:favicon--&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">"shortcut icon"</span> <span class="attr">type</span>=<span class="string">"image/x-icon"</span> <span class="attr">href</span>=<span class="string">"favicon.ico"</span>/&gt;</span></div></pre></td></tr></table></figure>
-<h2 id="1-2-编码规范"><a href="#1-2-编码规范" class="headerlink" title="1.2 编码规范"></a>1.2 编码规范</h2><h5 id="1-2-1-HTML约定"><a href="#1-2-1-HTML约定" class="headerlink" title="1.2.1 HTML约定"></a>1.2.1 HTML约定</h5><ul>
-<li>在head中引入必要的CSS文件，优先引用第三方的CSS，方便我们自己的样式覆盖。</li>
-<li>在body末尾引入必要的JS文件，<br>  优先引用第三方的JS，<br>  注意JS文件之间的依赖关系，<br>  比如bootstrap.js依赖jQuery，<br>  那就应该先引用jquery.js 然后引用bootstrap.js。</li>
-</ul>
-<h5 id="1-2-2-CSS约定"><a href="#1-2-2-CSS约定" class="headerlink" title="1.2.2.CSS约定"></a>1.2.2.CSS约定</h5><ul>
-<li>除了公共级别样式，其余样式全部由 模块前缀</li>
-<li>尽量使用 直接子代选择器，少用间接子代 避免覆盖</li>
-</ul>
-<h5 id="1-2-3-HTML5文档结构"><a href="#1-2-3-HTML5文档结构" class="headerlink" title="1.2.3 HTML5文档结构"></a>1.2.3 HTML5文档结构</h5><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">"zh-CN"</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">title</span>&gt;</span>页面标题<span class="tag">&lt;/<span class="name">title</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></div></pre></td></tr></table></figure>
-<h2 id="1-3-bootstrap常用样式"><a href="#1-3-bootstrap常用样式" class="headerlink" title="1.3 bootstrap常用样式"></a>1.3 bootstrap常用样式</h2><h5 id="1-3-1-container类"><a href="#1-3-1-container类" class="headerlink" title="1.3.1 container类"></a>1.3.1 container类</h5><ul>
-<li>用于定义一个固定宽度且居中的版心</li>
-</ul>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"topbar"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"container"</span>&gt;</span></div><div class="line">    <span class="comment">&lt;!--</span></div><div class="line">      此处的代码会显示在一个固定宽度且居中的容器中</div><div class="line">      该容器的宽度会跟随屏幕的变化而变化</div><div class="line">    --&gt;</div><div class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
-<h5 id="1-3-2-栅格系统"><a href="#1-3-2-栅格系统" class="headerlink" title="1.3.2 栅格系统"></a>1.3.2 栅格系统</h5><ul>
-<li>Bootstrap中定义了一套响应式的网格系统，</li>
-<li>其使用方式就是将一个容器划分成12列，</li>
-<li>然后通过col-xx-xx的类名控制每一列的占比</li>
-</ul>
-<h5 id="1-3-3-row类"><a href="#1-3-3-row类" class="headerlink" title="1.3.3.row类"></a>1.3.3.row类</h5><ul>
-<li>因为每一个列默认有一个15px的左右外边距</li>
-<li>row类的一个作用就是通过左右-15px屏蔽掉这个边距</li>
-</ul>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"container"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"row"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
-<h5 id="1-3-4-col-类"><a href="#1-3-4-col-类" class="headerlink" title="1.3.4.col-\-*类"></a>1.3.4.col-<em>\</em>-*类</h5><ul>
-<li>col-xs-[列数]：在超小屏幕下展示几份</li>
-<li>col-sm-[列数]：在小屏幕下展示几份</li>
-<li>col-md-[列数]：在中等屏幕下展示几份</li>
-<li>col-lg-[列数]：在大屏幕下展示几份</li>
-<li><strong>xs</strong> : 超小屏幕 手机 (&lt;768px)  </li>
-<li><strong>sm</strong> : 小屏幕 平板 (≥768px) </li>
-<li><strong>md</strong> : 中等屏幕 桌面显示器 (≥992px) </li>
-<li><strong>lg</strong> : 大屏幕 大桌面显示器 (≥1200px)</li>
-</ul>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"row"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"col-md-2 text-center"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"col-md-5 text-center"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"col-md-2 text-center"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"col-md-3 text-center"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
-<h2 id="1-4-字体图标"><a href="#1-4-字体图标" class="headerlink" title="1.4 字体图标"></a>1.4 字体图标</h2><h3 id="1-4-1-字体图标"><a href="#1-4-1-字体图标" class="headerlink" title="1.4.1 字体图标"></a>1.4.1 字体图标</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">@<span class="keyword">font-face</span> &#123;</div><div class="line">  <span class="attribute">font-family</span>: <span class="string">'XXX'</span>;</div><div class="line">  <span class="attribute">src</span>: <span class="built_in">url</span>(<span class="string">'../font/MiFie-Web-Font.eot'</span>) <span class="built_in">format</span>(<span class="string">'embedded-opentype'</span>), </div><div class="line">  <span class="built_in">url</span>(<span class="string">'../font/MiFie-Web-Font.svg'</span>) <span class="built_in">format</span>(<span class="string">'svg'</span>), </div><div class="line">  <span class="built_in">url</span>(<span class="string">'../font/MiFie-Web-Font.ttf'</span>) <span class="built_in">format</span>(<span class="string">'truetype'</span>), </div><div class="line">  <span class="built_in">url</span>(<span class="string">'../font/MiFie-Web-Font.woff'</span>) <span class="built_in">format</span>(<span class="string">'woff'</span>);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h5 id="1-4-2-字体文件格式"><a href="#1-4-2-字体文件格式" class="headerlink" title="1.4.2 字体文件格式"></a>1.4.2 字体文件格式</h5><ul>
-<li>eot : embedded-opentype</li>
-<li>svg : svg</li>
-<li>ttf : truetype</li>
-<li>woff : woff</li>
-</ul>
-<h5 id="1-5-1-Bootstrap中轮播图插件叫作Carousel"><a href="#1-5-1-Bootstrap中轮播图插件叫作Carousel" class="headerlink" title="1.5.1.Bootstrap中轮播图插件叫作Carousel"></a>1.5.1.Bootstrap中轮播图插件叫作Carousel</h5><h5 id="1-5-2-基本的轮播图实现"><a href="#1-5-2-基本的轮播图实现" class="headerlink" title="1.5.2.基本的轮播图实现"></a>1.5.2.基本的轮播图实现</h5><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div></pre></td><td class="code"><pre><div class="line"><span class="comment">&lt;!-- </span></div><div class="line">  以下容器就是整个轮播图组件的整体，</div><div class="line">  注意该盒子必须加上 class="carousel slide" data-ride="carousel" 表示当前是一个轮播图</div><div class="line">  bootstrap.js会自动为当前元 素添加图片轮播的特效</div><div class="line">--&gt;</div><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"轮播图的ID"</span> <span class="attr">class</span>=<span class="string">"carousel slide"</span> <span class="attr">data-ride</span>=<span class="string">"carousel"</span>&gt;</span></div><div class="line">  <span class="comment">&lt;!-- ol标签是图片轮播的控制点 --&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">ol</span> <span class="attr">class</span>=<span class="string">"carousel-indicators"</span>&gt;</span></div><div class="line">    <span class="comment">&lt;!-- </span></div><div class="line">      每一个li就是一个单独的控制点</div><div class="line">        data-target属性就是指定当前控制点控制的是哪一个轮播图，其目的是如果界面上有多个轮播图，便于区分到底控制哪一个</div><div class="line">        data-slide-to属性是指当前的li元素绑定的是第几个轮播项</div><div class="line">      注意，默认必须给其中某个li加上active，展示的时候就是焦点项目</div><div class="line">    --&gt;</div><div class="line">    <span class="tag">&lt;<span class="name">li</span> <span class="attr">data-target</span>=<span class="string">"#轮播图的ID"</span> <span class="attr">data-slide-to</span>=<span class="string">"0"</span> <span class="attr">class</span>=<span class="string">"active"</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">li</span> <span class="attr">data-target</span>=<span class="string">"#轮播图的ID"</span> <span class="attr">data-slide-to</span>=<span class="string">"1"</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">    <span class="comment">&lt;!-- ...更多的 --&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">ol</span>&gt;</span></div><div class="line">  <span class="comment">&lt;!-- </span></div><div class="line">    .carousel-inner是所有轮播项的容器盒子，</div><div class="line">    注意role="listbox"代表当前div是一个列表盒子，作用就是给当前div添加一个语义</div><div class="line">  --&gt;</div><div class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"carousel-inner"</span> <span class="attr">role</span>=<span class="string">"listbox"</span>&gt;</span></div><div class="line">    <span class="comment">&lt;!-- 每一个.item就是单个轮播项目，注意默认要给第一个轮播项目加上active，表示为焦点 --&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"item active"</span>&gt;</span></div><div class="line">      <span class="comment">&lt;!-- 轮播项目中展示的图片 --&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"example.jpg"</span> <span class="attr">alt</span>=<span class="string">"示例图片"</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"carousel-caption"</span>&gt;</span></div><div class="line">        <span class="comment">&lt;!-- 标题或说明性文字，如果不需要，直接删除当前div.carousel-caption --&gt;</span></div><div class="line">      <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"item"</span>&gt;</span></div><div class="line">      <span class="comment">&lt;!-- ... --&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">    <span class="comment">&lt;!-- ... --&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">  <span class="comment">&lt;!-- 图片轮播上左右两个控制按钮，分别点击可以滚动到上一张和下一张 --&gt;</span></div><div class="line">  <span class="comment">&lt;!-- 此处需要注意的是 该a链接的href属性必须指向需要控制的轮播图ID --&gt;</span></div><div class="line">  <span class="comment">&lt;!-- 另外a链接中的data-slide="prev"代表点击该链接会滚到上一张，如果设置为next的话则相反 --&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">a</span> <span class="attr">class</span>=<span class="string">"left carousel-control"</span> <span class="attr">href</span>=<span class="string">"#轮播图的ID"</span> <span class="attr">role</span>=<span class="string">"button"</span> <span class="attr">data-slide</span>=<span class="string">"prev"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"glyphicon glyphicon-chevron-left"</span> <span class="attr">aria-hidden</span>=<span class="string">"true"</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"sr-only"</span>&gt;</span>上一张<span class="tag">&lt;/<span class="name">span</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">a</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">a</span> <span class="attr">class</span>=<span class="string">"right carousel-control"</span> <span class="attr">href</span>=<span class="string">"#轮播图的ID"</span> <span class="attr">role</span>=<span class="string">"button"</span> <span class="attr">data-slide</span>=<span class="string">"next"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"glyphicon glyphicon-chevron-right"</span> <span class="attr">aria-hidden</span>=<span class="string">"true"</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"sr-only"</span>&gt;</span>下一张<span class="tag">&lt;/<span class="name">span</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">a</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
-<h4 id="1-6-underscoreJS"><a href="#1-6-underscoreJS" class="headerlink" title="1.6 underscoreJS"></a>1.6 underscoreJS</h4><h5 id="1-6-1-template"><a href="#1-6-1-template" class="headerlink" title="1.6.1 _.template"></a>1.6.1 _.template</h5><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">ol</span> <span class="attr">class</span>=<span class="string">"carousel-indicators"</span>&gt;</span></div><div class="line">  <span class="comment">&lt;!--渲染的HTML字符串--&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">ol</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"carousel-inner"</span> <span class="attr">role</span>=<span class="string">"listbox"</span>&gt;</span></div><div class="line">  <span class="comment">&lt;!--渲染的HTML字符串--&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/*取到模版当中的字符串*/</span></div><div class="line"><span class="keyword">var</span> pointTemplateStr = $(<span class="string">'#point_template'</span>).html();</div><div class="line"><span class="keyword">var</span> imageTemplateStr = $(<span class="string">'#image_template'</span>).html();</div><div class="line"><span class="comment">/*转化成模版函数*/</span></div><div class="line"><span class="keyword">var</span> pointTemplate = _.template(pointTemplateStr);</div><div class="line"><span class="keyword">var</span> imageTemplate = _.template(imageTemplateStr);</div><div class="line"><span class="comment">/*传入数据 解析成 html 字符*/</span></div><div class="line"><span class="keyword">var</span> pointHtml = pointTemplate(&#123;<span class="attr">model</span>:data&#125;);</div><div class="line"><span class="keyword">var</span> imageHtml = imageTemplate(&#123;<span class="attr">model</span>:data,<span class="attr">isMobile</span>:isMobile&#125;);<span class="comment">//我们只需要再加一个属性</span></div><div class="line"><span class="comment">/*把html字符串渲染在页面当中*/</span></div><div class="line">$(<span class="string">'.carousel-indicators'</span>).html(pointHtml);</div><div class="line">$(<span class="string">'.carousel-inner'</span>).html(imageHtml);</div></pre></td></tr></table></figure>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line"><span class="comment">&lt;!--点模版--&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/template"</span> <span class="attr">id</span>=<span class="string">"point_template"</span>&gt;</span><span class="javascript"></span></div><div class="line">    &lt;%_.each(model,<span class="function"><span class="keyword">function</span>(<span class="params">obj,i</span>)</span>&#123;%&gt;</div><div class="line">        <span class="xml"><span class="tag">&lt;<span class="name">li</span> <span class="attr">data-target</span>=<span class="string">"#carousel-example-generic"</span> <span class="attr">data-slide-to</span>=<span class="string">"&lt;%=i%&gt;"</span> <span class="attr">class</span>=<span class="string">"&lt;%=(i==0?'active':'')%&gt;"</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span></div><div class="line">    &lt;%&#125;)%&gt;</div><div class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line"><span class="comment">&lt;!--图片模版--&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/template"</span> <span class="attr">id</span>=<span class="string">"image_template"</span>&gt;</span><span class="javascript"></span></div><div class="line">    &lt;%_.each(model,<span class="function"><span class="keyword">function</span>(<span class="params">obj,i</span>)</span>&#123;%&gt;</div><div class="line">        <span class="xml"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"item &lt;%=(i==0?'active':'')%&gt;"</span>&gt;</span></span></div><div class="line">            <span class="tag">&lt;<span class="name">%</span> <span class="attr">if</span>(<span class="attr">isMobile</span>)&#123; %&gt;</span></div><div class="line">                <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"#"</span> <span class="attr">class</span>=<span class="string">"m_imgBox"</span>&gt;</span></div><div class="line">                    <span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"&lt;%=obj.img%&gt;"</span> <span class="attr">alt</span>=<span class="string">""</span>/&gt;</span></div><div class="line">                <span class="tag">&lt;/<span class="name">a</span>&gt;</span></div><div class="line">            <span class="tag">&lt;<span class="name">%&#125;</span> <span class="attr">else</span> &#123;%&gt;</span></div><div class="line">                <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"#"</span> <span class="attr">class</span>=<span class="string">"pc_imgBox"</span> <span class="attr">style</span>=<span class="string">"background-image:url(&lt;%=obj.bac%&gt;)"</span>&gt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span></div><div class="line">            <span class="tag">&lt;<span class="name">%&#125;%</span>&gt;</span></div><div class="line">        <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">%&#125;)%</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div></pre></td></tr></table></figure>
-<h4 id="1-7-导航栏"><a href="#1-7-导航栏" class="headerlink" title="1.7 导航栏"></a>1.7 导航栏</h4><h4 id="1-8-常用类"><a href="#1-8-常用类" class="headerlink" title="1.8 常用类"></a>1.8 常用类</h4><p>container类<br>用于定义一个固定宽度且居中的版心   </p>
-<p>row类<br>因为每一个列默认有一个15px的左右外边距，row类的一个作用就是通过左右-15px屏蔽掉这个边距 </p>
-<p>col-<em>*-</em>类<br>col-xs-[列数]：在超小屏幕下展示几份<br>col-sm-[列数]：在小屏幕下展示几份<br>col-md-[列数]：在中等屏幕下展示几份<br>col-lg-[列数]：在大屏幕下展示几份<br>xs : 超小屏幕 手机 (&lt;768px)<br>sm : 小屏幕 平板 (≥768px)<br>md : 中等屏幕 桌面显示器 (≥992px)<br>lg : 大屏幕 大桌面显示器 (≥1200px) </p>
-<p>push  pull  offset</p>
-<p>hidden 类<br>hidden-xs,hidden-sm,hidden-md,hidden-lg在不同的屏幕下隐藏。</p>
-<p>text-* 类<br>     text-center 文本居中<br>     text-left 文本左对齐<br>     text-right 文本右对齐</p>
-<p> pull-* 类<br> pull-left 左浮动类<br> pull-right 右浮动类</p>
-<p>center-block 类<br>让一个固定宽度的元素居中。</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/06/04/README/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-  
-    <article id="post-test-my-site" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-JavaScript-16  jQuery03" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2017/06/04/test-my-site/">test_my_site</a>
+      <a class="article-title" href="/2016/07/20/JavaScript-16  jQuery03/">jQuery 事件</a>
     </h1>
   
 
         
-        <a href="/2017/06/04/test-my-site/" class="archive-article-date">
-  	<time datetime="2017-06-03T17:10:57.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-06-04</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/06/04/test-my-site/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-  
-    <article id="post-hello-world" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/06/04/hello-world/">Hello World</a>
-    </h1>
-  
-
-        
-        <a href="/2017/06/04/hello-world/" class="archive-article-date">
-  	<time datetime="2017-06-03T17:06:49.122Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-06-04</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/06/04/hello-world/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-  
-    <article id="post-my-new-post" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/06/03/my-new-post/">my new post</a>
-    </h1>
-  
-
-        
-        <a href="/2017/06/03/my-new-post/" class="archive-article-date">
-  	<time datetime="2017-06-03T15:34:13.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-06-03</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="JavaScript-01-JavaScript-简介"><a href="#JavaScript-01-JavaScript-简介" class="headerlink" title="JavaScript-01  JavaScript 简介"></a>JavaScript-01  JavaScript 简介</h1><h3 id="JavaScript是什么"><a href="#JavaScript是什么" class="headerlink" title="JavaScript是什么"></a>JavaScript是什么</h3><p>JavaScript是世界上用的最多的，一种客户端的脚本语言。<br>脚本语言：不需要编译，直接运行时边解析边执行的语言。</p>
-<h3 id="JavaScript的历史"><a href="#JavaScript的历史" class="headerlink" title="JavaScript的历史"></a>JavaScript的历史</h3><p>JavaScript诞生于1995年。主要目的是处理以前由服务器端语言负责的一些输入验证操作。</p>
-<p>当时工作于 Netscape 的 Brendan Eich，开始着手为即将在 1995 年发行的 Netscape Navigator 2.0 开发一个称之为 LiveScript 的脚本语言，当时的目的是在浏览器和服务器（本来要叫它 LiveWire）端使用它。Netscape 与 Sun 及时完成 LiveScript 实现。就在 Netscape Navigator 2.0 即将正式发布前，Netscape 将其更名为 JavaScript，目的是为了利用 Java 这个因特网时髦词汇。Netscape 的赌注最终得到回报，JavaScript 从此变成了因特网的必备组件。</p>
-<p>因为 JavaScript 1.0 如此成功，Netscape 在 Netscape Navigator 3.0 中发布了 1.1 版。恰巧那个时候，微软决定进军浏览器，发布了 IE 3.0 并搭载了一个 JavaScript 的克隆版，叫做 JScript（这样命名是为了避免与 Netscape 潜在的许可纠纷）。微软步入 Web 浏览器领域的这重要一步虽然令其声名狼藉，但也成为 JavaScript 语言发展过程中的重要一步。</p>
-<p>在微软进入后，有 3 种不同的 JavaScript 版本同时存在：Netscape Navigator 3.0 中的 JavaScript、IE 中的 JScript 以及 CEnvi 中的 ScriptEase。与 C 和其他编程语言不同的是，JavaScript 并没有一个标准来统一其语法或特性，而这 3 中不同的版本恰恰突出了这个问题。随着业界担心的增加，这个语言的标准化显然已经势在必行。</p>
-<h3 id="JavaScript实现"><a href="#JavaScript实现" class="headerlink" title="JavaScript实现"></a>JavaScript实现</h3><p>一个完整的JavaScript实现应该由以下三个部分组成：<br>核心：ECMAScript–JavaScript的语法规范；<br>文档对象模型：DOM–JavaScript操作网页上元素的API；<br>浏览器对象模型：BOM–JavaScript操作浏览器部分功能的API；</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/06/03/my-new-post/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-  
-    <article id="post-JavaScript-16 jQuery03" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/07/20/JavaScript-16 jQuery03/">jQuery 事件</a>
-    </h1>
-  
-
-        
-        <a href="/2016/07/20/JavaScript-16 jQuery03/" class="archive-article-date">
+        <a href="/2016/07/20/JavaScript-16  jQuery03/" class="archive-article-date">
   	<time datetime="2016-07-19T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-07-20</time>
 </a>
         
@@ -538,7 +251,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2016/07/20/JavaScript-16 jQuery03/">展开全文 >></a>
+          <a class="article-more-a" href="/2016/07/20/JavaScript-16  jQuery03/">展开全文 >></a>
         </p>
       
 
@@ -553,19 +266,19 @@
 
 
   
-    <article id="post-JavaScript-15 jQuery02" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-JavaScript-15  jQuery02" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2016/07/15/JavaScript-15 jQuery02/">jQuery 常用操作</a>
+      <a class="article-title" href="/2016/07/15/JavaScript-15  jQuery02/">jQuery 常用操作</a>
     </h1>
   
 
         
-        <a href="/2016/07/15/JavaScript-15 jQuery02/" class="archive-article-date">
+        <a href="/2016/07/15/JavaScript-15  jQuery02/" class="archive-article-date">
   	<time datetime="2016-07-14T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-07-15</time>
 </a>
         
@@ -645,7 +358,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2016/07/15/JavaScript-15 jQuery02/">展开全文 >></a>
+          <a class="article-more-a" href="/2016/07/15/JavaScript-15  jQuery02/">展开全文 >></a>
         </p>
       
 
@@ -769,9 +482,516 @@
 
 
   
+    <article id="post-JavaScript-13  JS进阶和特效03" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/07/12/JavaScript-13  JS进阶和特效03/">正则表达式</a>
+    </h1>
+  
+
+        
+        <a href="/2016/07/12/JavaScript-13  JS进阶和特效03/" class="archive-article-date">
+  	<time datetime="2016-07-11T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-07-12</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h3><blockquote>
+<p>正则表达式:首先是一个表达式(可能是单个的元字符组成,也可能是多个的元字符组成),有一定规则,也叫规则表达式。正则表达式的作用:就是用来匹配字符串的。</p>
+<h3 id="基本原字符"><a href="#基本原字符" class="headerlink" title="基本原字符"></a>基本原字符</h3><ul>
+<li>\b表示单词的边界</li>
+<li>[ .]  干掉元字符原来的意义，</li>
+<li>{ } 表示的是前面的表达式出现的次数</li>
+<li>$ 以什么结束</li>
+<li>[^]  取反取非</li>
+<li>^   以什么开头</li>
+<li>\W 特殊符号  [^a-zA-Z__ ]</li>
+<li>\w 非特殊符号，包括__（下划线）</li>
+<li>\S 非空白符号</li>
+<li>\s 空白符号</li>
+<li>\D 非数字中的一个</li>
+<li>\d 所有数字中的一个</li>
+<li>？<ul>
+<li>表示的是该符号前面的第一个表达式出现了零次到1次</li>
+<li>第二种作用：阻止贪婪模式</li>
+</ul>
+</li>
+<li>*表示的是该符号前面的第一个表达式出现了零次到多次</li>
+<li>+表示的是该符号前面的第一个表达式出现了1次到多次</li>
+<li>（ ）  提升优先级别，分组（指的是从左到右）；</li>
+<li>|  或者，在正则表达式中的优先级别是最低的</li>
+<li>[ ] 表示的是范围  [0-9]  指0——9中的一个数字</li>
+<li>.  表示的是除了\n以外的任意一个字符（字符串）<h3 id="正则表达式创建"><a href="#正则表达式创建" class="headerlink" title="正则表达式创建"></a>正则表达式创建</h3></li>
+<li>var reg=new Regxp(/正则表达式/)</li>
+<li>var reg=/正则表达式/</li>
+<li>.text（）方法    ：验证正则表达式和字符串是否匹配，返回值布尔值<h3 id="正则表达式其他使用方式"><a href="#正则表达式其他使用方式" class="headerlink" title="正则表达式其他使用方式"></a>正则表达式其他使用方式</h3></li>
+<li>exec方法是正则表达式对象的一个方法，用来超找指定字符串，返回值是一个数组（找到的对象，索引，整个原字符串）；</li>
+<li>button获取鼠标的键值</li>
+<li>which既能获取鼠标的键值又能获取键盘的键值<h3 id="回车实现文本框跳转"><a href="#回车实现文本框跳转" class="headerlink" title="回车实现文本框跳转"></a>回车实现文本框跳转</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//获取所有的文本框</span></div><div class="line"><span class="keyword">var</span> inputs=<span class="built_in">document</span>.getElementsByTagName(<span class="string">"input"</span>);</div><div class="line"><span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">0</span>;i&lt;inputs.length;i++)&#123;</div><div class="line">    inputs[i].onkeydown=<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">        <span class="keyword">if</span>(<span class="built_in">window</span>.event.keyCode==<span class="number">13</span>)&#123;</div><div class="line">            <span class="built_in">window</span>.event.keyCode=<span class="number">9</span>;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></li>
+</ul>
+</blockquote>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2016/07/12/JavaScript-13  JS进阶和特效03/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+  
+    <article id="post-JavaScript-12  Js进阶和特效02" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/07/08/JavaScript-12  Js进阶和特效02/">事件</a>
+    </h1>
+  
+
+        
+        <a href="/2016/07/08/JavaScript-12  Js进阶和特效02/" class="archive-article-date">
+  	<time datetime="2016-07-07T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-07-08</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h3><blockquote>
+<p>事件:就是一件事,有开始有结束,有触发,有响应,事件源(按钮点击等)。</p>
+<ul>
+<li>事件的类型如何获取： e.type 注意:没有on<h3 id="注册事件的方式"><a href="#注册事件的方式" class="headerlink" title="注册事件的方式"></a>注册事件的方式</h3></li>
+<li>对象.on+事件名字=事件处理函数</li>
+<li>对象.addEventListener（）；火狐谷歌支持，IE8不支持<ul>
+<li>参数1：事件的类型（事件的名字，没有“on”）</li>
+<li>参数2：事件处理函数</li>
+<li>参数3：false表示的是事件冒泡,如果是true则是事件捕获</li>
+</ul>
+</li>
+<li>对象.attachEvent（）IE8支持，火狐谷歌不支持<ul>
+<li>参数1：事件的类型（”on“+事件的名字），有on</li>
+<li>参数2：事件处理函数<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">  <span class="comment">//注册事件的兼容代码</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">addEventListener</span>(<span class="params">element,type,fn</span>)</span>&#123;</div><div class="line">    <span class="keyword">if</span>(element.addEventListener)&#123;</div><div class="line">         element.addEventListener(type,fn,<span class="literal">false</span>);</div><div class="line">    &#125;<span class="keyword">else</span> <span class="keyword">if</span>(element.attachEvent)&#123;</div><div class="line">         element.attachEvent(<span class="string">"on"</span>+type,fn);</div><div class="line">    &#125;<span class="keyword">else</span>&#123;</div><div class="line">         element[<span class="string">"on"</span>+type]=fn;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+</ul>
+</blockquote>
+<h3 id="移除事件的方式"><a href="#移除事件的方式" class="headerlink" title="移除事件的方式"></a>移除事件的方式</h3><blockquote>
+<p>注册事件时用匿名函数，则无法移除；</p>
+<ul>
+<li>对象.on+”事件类型”=null;  <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">    例子:</div><div class="line">    my$(<span class="string">"btn1"</span>).onclick=<span class="literal">null</span>;</div><div class="line">    <span class="string">``</span><span class="string">` </span></div><div class="line">* 对象.removeEventListener()</div><div class="line">    `<span class="string">``</span>javascript</div><div class="line">    例子:</div><div class="line">    my$(<span class="string">"btn1"</span>).removeEventListener(<span class="string">"click"</span>,命名函数,<span class="literal">false</span>);</div></pre></td></tr></table></figure>
+</li>
+</ul>
+</blockquote>
+<ul>
+<li>对象.detachEvent()</li>
+<li>用指定的方式注册事件,就要用对应的方式移除事件,innerHTML=””不会移除这个元素的事件。<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//移除事件的兼容代码</span></div><div class="line">    <span class="function"><span class="keyword">function</span> <span class="title">removeEventListener</span>(<span class="params">element,type,fn</span>) </span>&#123;</div><div class="line">        <span class="keyword">if</span>(element.removeEventListener)&#123;</div><div class="line">            element.removeEventListener(type,fn,<span class="literal">false</span>);</div><div class="line">        &#125;<span class="keyword">else</span> <span class="keyword">if</span>(element.detachEvent)&#123;</div><div class="line">            element.detachEvent(<span class="string">"on"</span>+type,fn);</div><div class="line">        &#125;<span class="keyword">else</span>&#123;</div><div class="line">            element[<span class="string">"on"</span>+type]=<span class="literal">null</span>;</div><div class="line">        &#125;</div><div class="line">    &#125;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="注册事件不同方式的区别"><a href="#注册事件不同方式的区别" class="headerlink" title="注册事件不同方式的区别"></a>注册事件不同方式的区别</h3><ul>
+<li>方法名不同</li>
+<li>参数不同<ul>
+<li>addEventListener<ul>
+<li>第一个参数是事件类型（事件名字）没有on</li>
+<li>第二个参数是事件处理函数</li>
+<li>第三个参数是false</li>
+</ul>
+</li>
+<li>atachEvent<ul>
+<li>第一个参数是事件类型（事件名字），有on</li>
+<li>第二个参数是事件处理函数</li>
+<li>没有第三个参数</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>事件执行的时候内部的this指向不同<ul>
+<li>addEventListener中this是事件源(谁的事件触发了)</li>
+<li>attachEvent中的this是window</li>
+</ul>
+</li>
+<li>一个有on，一个没有on</li>
+<li>兼容问题：<ul>
+<li>addEventListener在谷歌和火狐中都支持,IE11也支持,IE8不支持</li>
+<li>attachEvent:IE8支持,谷歌和火狐不支持,IE11也不支持<h3 id="事件冒泡"><a href="#事件冒泡" class="headerlink" title="事件冒泡"></a>事件冒泡</h3><blockquote>
+<p>事件冒泡:元素有嵌套，并且这些元素都注册了相同的事件，里面的元素的事件触发了，外面元素的事件会自动触发。比如说元素A中有一个元素B,如果里面的元素B和外面的元素A都注册了相同的事件,如果里面元素B的该事件触发了,那么外面的元素A的该事件会自动触发。</p>
+</blockquote>
+</li>
+</ul>
+</li>
+<li>阻止事件冒泡<ul>
+<li>window.event.cancelBubble如果是e.cancelBubble火狐也支持</li>
+<li>e.stopPropagation(),谷歌和火狐都支持<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//阻止事件冒泡兼容代码</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">cancelBubble</span>(<span class="params">e</span>) </span>&#123;</div><div class="line">    e=<span class="built_in">window</span>.event||e;</div><div class="line">    <span class="keyword">if</span>(e.stopPropagation)&#123;</div><div class="line">        e.stopPropagation();</div><div class="line">    &#125;<span class="keyword">else</span>&#123;<span class="comment">//IE8</span></div><div class="line">         e.cancelBubble=<span class="literal">true</span>;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="事件的三个阶段"><a href="#事件的三个阶段" class="headerlink" title="事件的三个阶段"></a>事件的三个阶段</h3><blockquote>
+<p>e.eventPhase是可以获取当前的代码是在什么阶段触发的</p>
+<ul>
+<li>值是1：捕获阶段<ul>
+<li>addEventListener()方法，第三个参数表示的是冒泡阶段还是捕获阶段</li>
+<li>第三个参数的类型是布尔类型</li>
+<li>如果是false，那么就是冒泡阶段</li>
+<li>如果是true，则是捕获阶段</li>
+<li>冒泡阶段：从里向外</li>
+<li>捕获阶段：从外向内</li>
+</ul>
+</li>
+<li>值是2：目标阶段</li>
+<li>值是3：冒泡阶段<h3 id="事件源"><a href="#事件源" class="headerlink" title="事件源"></a>事件源</h3></li>
+<li>e.target和window.event.srcElement 事件源(只记住第一个揍我的人)</li>
+<li>e.currentTarget:当前触发该事件的对象(谁打我我记住谁)<h3 id="iframe标签"><a href="#iframe标签" class="headerlink" title="iframe标签"></a>iframe标签</h3>引入外部的网页<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;iframe src=<span class="string">"http://www.baidu.com"</span> width=<span class="string">"80%"</span> height=<span class="string">"30%"</span> frameborder=<span class="string">"0"</span>&gt;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+</blockquote>
+<h3 id="表单"><a href="#表单" class="headerlink" title="表单"></a>表单</h3><ul>
+<li>表单默认有submit属性</li>
+<li>submit标签没有提交的属性，是通过调用form标签的submit属性提交表单的</li>
+<li>如果有另外一个标签点击时需要提交，可以调用form表单的onsubmint属性，也可以调用submit标签的属性</li>
+<li>将form表单的onsubmint属性移除后，submit及调用提交属性的标签均不能再提交</li>
+</ul>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2016/07/08/JavaScript-12  Js进阶和特效02/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+  
+    <article id="post-JavaScript-11  Js进阶和特效01" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/07/05/JavaScript-11  Js进阶和特效01/">offset scroll和client</a>
+    </h1>
+  
+
+        
+        <a href="/2016/07/05/JavaScript-11  Js进阶和特效01/" class="archive-article-date">
+  	<time datetime="2016-07-04T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-07-05</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="offset系列"><a href="#offset系列" class="headerlink" title="offset系列"></a>offset系列</h3><h5 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h5><ul>
+<li>获取元素实际的宽高，left，top</li>
+<li>offsetLeft：元素距离左边的距离</li>
+<li>offsetTop：元素距离上面的距离</li>
+<li>offsetWidth：元素的宽+border</li>
+<li>offsetHeight：元素的高+border</li>
+<li>如果想要获取元素的样式属性实际的值：*window.getComputedStyle()或currentStyle属性<h5 id="对象-style属性"><a href="#对象-style属性" class="headerlink" title="对象.style属性"></a>对象.style属性</h5></li>
+<li>可以获取属性，也可以设置属性（可读可写）</li>
+<li>可以获取在html标签中直接设置的样式的值，获取的都是字符串类型<h5 id="对象-offset系列属性"><a href="#对象-offset系列属性" class="headerlink" title="对象.offset系列属性"></a>对象.offset系列属性</h5></li>
+<li>获取的是数字类型，没有px</li>
+<li>offset系列中的属性只能获取值，不能设置值（可读不可写）<h5 id="offsetLeft-offsetTop"><a href="#offsetLeft-offsetTop" class="headerlink" title="offsetLeft offsetTop"></a>offsetLeft offsetTop</h5></li>
+<li>offsetLeft(没有定位)，以body为基准到自身左侧边框(border-left左边)；</li>
+<li>offsetLeft(有定位)以父元素为基准到自身左侧边框(border-left左边)；</li>
+<li>offsetLeft=父元素的margin-left+padding-left+border-left;<ul>
+<li>从body到父元素的margin-left加父元素的padding+父元素的border宽度；<h5 id="offsetWidth-offsetHeight"><a href="#offsetWidth-offsetHeight" class="headerlink" title="offsetWidth offsetHeight"></a>offsetWidth offsetHeight</h5></li>
+</ul>
+</li>
+<li>offsetWidth和offseHeight是包括元素的边框的</li>
+<li>如果元素的样式是在style标签中设置的，只能通过offset系列中的offsetWidth和offseHeight来获取，对象.style是无法获取的；<h3 id="scroll系列"><a href="#scroll系列" class="headerlink" title="scroll系列"></a>scroll系列</h3><h5 id="基本概念-1"><a href="#基本概念-1" class="headerlink" title="基本概念"></a>基本概念</h5></li>
+<li>scroll系列:获取元素的卷曲的值</li>
+<li>scrollWidth:获取元素内容的实际的宽度(如果元素非常少就是元素的宽度,如果有滚动条去掉滚动条的宽度)</li>
+<li>scrollHeight:获取元素内容的实际高度(同上)</li>
+<li>scrollLeft:获取元素中内容向左卷曲出去的距离,向左滚出去的距离</li>
+<li>scrollTop:获取元素中内容向上卷曲出去的距离,向上滚出去的距离<h5 id="注意点"><a href="#注意点" class="headerlink" title="注意点"></a>注意点</h5></li>
+<li>scrollWidth和scrollHeight：主要是元素中内容的实际高度，与border无关，如果有滚动条，需要去掉滚动条的宽度</li>
+<li>scrollHeight：获取元素内容的实际高度，如果元素非常少则是元素的高度，如果有滚动条，需要去掉滚动条的宽度<h5 id="兼容函数封装"><a href="#兼容函数封装" class="headerlink" title="兼容函数封装"></a>兼容函数封装</h5><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">getScroll</span>(<span class="params"></span>) </span>&#123;</div><div class="line">        <span class="keyword">return</span> &#123;</div><div class="line">            <span class="attr">left</span>: <span class="built_in">window</span>.pageXOffset || <span class="built_in">document</span>.body.scrollLeft || <span class="built_in">document</span>.documentElement.scrollLeft || <span class="number">0</span>,</div><div class="line">            <span class="attr">top</span>: <span class="built_in">window</span>.pageYOffset || <span class="built_in">document</span>.body.scrollTop || <span class="built_in">document</span>.documentElement.scrollTop || <span class="number">0</span></div><div class="line">        &#125;;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="client系列"><a href="#client系列" class="headerlink" title="client系列"></a>client系列</h3><h5 id="基本概念-2"><a href="#基本概念-2" class="headerlink" title="基本概念"></a>基本概念</h5><ul>
+<li>clientHeight：可视区域的高度</li>
+<li>clientWidth：可视区域的宽度</li>
+<li>clientY：可视区域的纵坐标</li>
+<li>clientX:可视区域的横坐标<br>##### </li>
+</ul>
+<h3 id="e-pageX和e-pageY"><a href="#e-pageX和e-pageY" class="headerlink" title="e.pageX和e.pageY"></a>e.pageX和e.pageY</h3><blockquote>
+<p>e.clientX和e.clientY是可视区域的坐标,e.pageX和e.pageY才是真正的文档的坐标<br>pageX和pageY在谷歌和火狐浏览器中都支持,但是在IE8浏览器中不支持<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//图片跟着鼠标飞</span></div><div class="line"><span class="built_in">document</span>.onmousemove=<span class="function"><span class="keyword">function</span> (<span class="params">e</span>) </span>&#123;</div><div class="line">    my$(<span class="string">"im"</span>).style.left=EventTools.getPageX(e)+<span class="string">"px"</span>;</div><div class="line">    my$(<span class="string">"im"</span>).style.top=EventTools.getPageY(e)+<span class="string">"px"</span>;</div><div class="line">&#125;;</div><div class="line"><span class="comment">//兼容代码</span></div><div class="line"><span class="keyword">var</span> EventTools=&#123;</div><div class="line">    <span class="attr">getEvent</span>:<span class="function"><span class="keyword">function</span> (<span class="params">e</span>) </span>&#123; <span class="comment">//封装事件对象参数:window.event或者e</span></div><div class="line">        <span class="keyword">return</span> <span class="built_in">window</span>.event||e;</div><div class="line">    &#125;,</div><div class="line">    <span class="attr">getClientX</span>:<span class="function"><span class="keyword">function</span> (<span class="params">e</span>) </span>&#123;<span class="comment">//封装的是clientX无论是谷歌还是火狐还是IE8</span></div><div class="line">        <span class="keyword">return</span> <span class="keyword">this</span>.getEvent(e).clientX;</div><div class="line">    &#125;,</div><div class="line">    <span class="attr">getClientY</span>:<span class="function"><span class="keyword">function</span> (<span class="params">e</span>) </span>&#123;<span class="comment">//封装的是clientY无论是谷歌还是火狐还是IE8</span></div><div class="line">        <span class="keyword">return</span> <span class="keyword">this</span>.getEvent(e).clientY;</div><div class="line">    &#125;,</div><div class="line">    <span class="attr">getLeft</span>:<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;<span class="comment">//获取的是页面的卷曲出去的横坐标</span></div><div class="line">        <span class="keyword">return</span> <span class="built_in">window</span>.pageXOffset||<span class="built_in">document</span>.body.scrollLeft||<span class="built_in">document</span>.documentElement.scrollLeft||<span class="number">0</span>;</div><div class="line">    &#125;,</div><div class="line">    <span class="attr">getTop</span>:<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;<span class="comment">//获取的是页面的卷曲出去的纵坐标</span></div><div class="line">        <span class="keyword">return</span> <span class="built_in">window</span>.pageYOffset||<span class="built_in">document</span>.body.scrollTop||<span class="built_in">document</span>.documentElement.scrollTop||<span class="number">0</span>;</div><div class="line">    &#125;,</div><div class="line">    <span class="attr">getPageX</span>:<span class="function"><span class="keyword">function</span> (<span class="params">e</span>) </span>&#123;<span class="comment">//获取的页面的可视区的横坐标+页面卷曲出去的横坐标</span></div><div class="line">        <span class="keyword">return</span> <span class="keyword">this</span>.getEvent(e).pageX?<span class="keyword">this</span>.getEvent(e).pageX:<span class="keyword">this</span>.getClientX(e)+<span class="keyword">this</span>.getLeft();</div><div class="line">    &#125;,</div><div class="line">    <span class="attr">getPageY</span>:<span class="function"><span class="keyword">function</span> (<span class="params">e</span>) </span>&#123;<span class="comment">//获取的页面的可视区的纵坐标+页面卷曲出去的纵坐标</span></div><div class="line">        <span class="keyword">return</span> <span class="keyword">this</span>.getEvent(e).pageY?<span class="keyword">this</span>.getEvent(e).pageY:<span class="keyword">this</span>.getClientY(e)+<span class="keyword">this</span>.getTop();</div><div class="line">    &#125;</div><div class="line"></div><div class="line"></div><div class="line">&#125;;</div></pre></td></tr></table></figure></p>
+</blockquote>
+<h3 id="响应式布局原理"><a href="#响应式布局原理" class="headerlink" title="响应式布局原理"></a>响应式布局原理</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//获取的可视区域的宽和高</span></div><div class="line">    <span class="function"><span class="keyword">function</span> <span class="title">getClient</span>(<span class="params"></span>) </span>&#123;</div><div class="line">        <span class="keyword">return</span>&#123;</div><div class="line">            <span class="comment">//可视区域的宽度</span></div><div class="line">            width:<span class="built_in">window</span>.innerWidth||<span class="built_in">document</span>.body.clientWidth||<span class="built_in">document</span>.documentElement.clientWidth||<span class="number">0</span>,</div><div class="line">            <span class="comment">//可视区域的高度</span></div><div class="line">            height:<span class="built_in">window</span>.innerHeight||<span class="built_in">document</span>.body.clientHeight||<span class="built_in">document</span>.documentElement.clientHeight||<span class="number">0</span></div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    <span class="comment">//事件可以检测用户的浏览器的页面的宽度和高度是否发生变化</span></div><div class="line">    <span class="comment">//只要页面的宽和高发生变化这个事件就会触发</span></div><div class="line">    <span class="built_in">window</span>.onresize=<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">        <span class="keyword">if</span>(getClient().width&gt;<span class="number">960</span>)&#123;</div><div class="line">            <span class="built_in">console</span>.log(<span class="string">"您此时用的是电脑浏览的页面"</span>);</div><div class="line">        &#125;<span class="keyword">else</span> <span class="keyword">if</span>(getClient().width&gt;<span class="number">700</span>)&#123;</div><div class="line">            <span class="built_in">console</span>.log(<span class="string">"您此时用的是平板浏览的页面"</span>);</div><div class="line">        &#125;<span class="keyword">else</span>&#123;</div><div class="line">            <span class="built_in">console</span>.log(<span class="string">"您此时用的是手机浏览的页面"</span>);</div><div class="line">        &#125;</div><div class="line">    &#125;;</div></pre></td></tr></table></figure>
+<h3 id="通过document直接获取元素"><a href="#通过document直接获取元素" class="headerlink" title="通过document直接获取元素"></a>通过document直接获取元素</h3><ul>
+<li>title:document.title  可以获取title标签中的值也可以设置</li>
+<li>body:document.body—对象</li>
+<li>html:document.documentElement—对象<h3 id="动画函数封装"><a href="#动画函数封装" class="headerlink" title="动画函数封装"></a>动画函数封装</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">animate</span>(<span class="params">element,target</span>) </span>&#123;    </div><div class="line">    <span class="keyword">var</span> timeId=<span class="literal">null</span>;    </div><div class="line">    timeId=setInterval(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;        </div><div class="line">        <span class="keyword">var</span> step=<span class="number">8</span>;        </div><div class="line">        <span class="keyword">var</span> current=element.offsetLeft; </div><div class="line">        step=current&lt;target?step:-step;        </div><div class="line">        <span class="keyword">if</span>(<span class="built_in">Math</span>.abs(target-current)&lt;=<span class="built_in">Math</span>.abs(step))&#123;            </div><div class="line">            clearInterval(timeId); </div><div class="line">            element.style.left=target+<span class="string">"px"</span>;        </div><div class="line">        &#125;<span class="keyword">else</span>&#123;            </div><div class="line">            current=current+step;   </div><div class="line">            element.style.left=current+<span class="string">"px"</span>;        </div><div class="line">        &#125;    </div><div class="line">    &#125;,<span class="number">20</span>);</div><div class="line">&#125;</div></pre></td></tr></table></figure></li>
+</ul>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2016/07/05/JavaScript-11  Js进阶和特效01/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+  
+    <article id="post-JavaScript-10  BOM" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/07/01/JavaScript-10  BOM/">BOM</a>
+    </h1>
+  
+
+        
+        <a href="/2016/07/01/JavaScript-10  BOM/" class="archive-article-date">
+  	<time datetime="2016-06-30T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-07-01</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h3><blockquote>
+<p>BOM Browser Object Model  浏览器对象模型</p>
+<h3 id="顶级对象"><a href="#顶级对象" class="headerlink" title="顶级对象"></a>顶级对象</h3><ul>
+<li>BOM中的顶级对象:window，window对象在代码是可以省略的<h3 id="window下的方法"><a href="#window下的方法" class="headerlink" title="window下的方法"></a>window下的方法</h3>下面的方法返回的是新窗口的对象</li>
+<li>window.open(url,target,param);<ul>
+<li>url 要打开的地址</li>
+<li>target新窗口的位置 _blank  _self  _parent(父框架)</li>
+<li>param 新窗口的一些设置</li>
+</ul>
+</li>
+<li>window.close()该方法可以关闭新窗口<h3 id="location对象"><a href="#location对象" class="headerlink" title="location对象"></a>location对象</h3>window.location location相当于浏览器地址栏可以将url解析成独立的片段</li>
+<li>location对象的属性<ul>
+<li>href</li>
+<li>hash   返回url中#后面的内容，包含#</li>
+<li>host    主机名，包括端口</li>
+<li>hostname   主机名</li>
+<li>pathname     url中的路径部分</li>
+<li>protocol    协议 一般是http、https</li>
+<li>search         查询字符串</li>
+</ul>
+</li>
+<li>location对象的方法<ul>
+<li>location.href:跳转页面(没有后退)<ul>
+<li>location.assign()    改变浏览器地址栏的地址，并记录到历史中。设置location.href  就会调用assign()。一般使用location.href 进行页面之间的跳转。都有后退的,如果是页面直接加载的时候进行跳转,href和assign方法都看不到后退</li>
+<li>location.replace()    替换浏览器地址栏的地址，不会记录到历史中</li>
+<li>location.reload()    重新加载<h3 id="navigator对象"><a href="#navigator对象" class="headerlink" title="navigator对象"></a>navigator对象</h3>window.navigator 的一些属性可以获取客户端(浏览器)的一些信息</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>navigator对象的方法<ul>
+<li>userAgent</li>
+<li>platform<h3 id="history对象-历史记录"><a href="#history对象-历史记录" class="headerlink" title="history对象:历史记录"></a>history对象:历史记录</h3></li>
+</ul>
+</li>
+<li>后退<ul>
+<li>history.back()</li>
+<li>history.go(-1)</li>
+</ul>
+</li>
+<li>前进<ul>
+<li>history.forward()</li>
+<li>history.go(1)<h3 id="页面的加载事件-三个"><a href="#页面的加载事件-三个" class="headerlink" title="页面的加载事件:三个"></a>页面的加载事件:三个</h3></li>
+</ul>
+</li>
+<li>非常重要的:onload事件:页面内容全部加载完毕，不常用；</li>
+<li>onunload关闭后触发,IE8支持</li>
+<li>onbeforeunload关闭前触发,IE8支持<h3 id="计时器-两个"><a href="#计时器-两个" class="headerlink" title="计时器(两个)"></a>计时器(两个)</h3></li>
+<li>setInterval();参数:1,函数  2,时间,毫秒,该方法返回的是该计时器的id</li>
+<li>clearInterval(定时器的id);清理计时器</li>
+<li>setTimeout也是定时执行，但是不像setInterval那样是重复的定时执行只执行一次，</li>
+<li>clearTimeout(timeId)也是清除定时器。</li>
+</ul>
+</blockquote>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2016/07/01/JavaScript-10  BOM/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+  
+    <article id="post-JavaScript-09  DOM04" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/06/28/JavaScript-09  DOM04/">字符串及数组方法</a>
+    </h1>
+  
+
+        
+        <a href="/2016/06/28/JavaScript-09  DOM04/" class="archive-article-date">
+  	<time datetime="2016-06-27T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-06-28</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="字符串"><a href="#字符串" class="headerlink" title="字符串"></a>字符串</h3><h4 id="字符串特性"><a href="#字符串特性" class="headerlink" title="字符串特性"></a>字符串特性</h4><ul>
+<li>特性:不可变性</li>
+<li>字符串的变量如果调用了属性或者方法就是基本包装类型对象</li>
+<li>字符串中的属性:length,字符串的长度<h4 id="字符串中的方法"><a href="#字符串中的方法" class="headerlink" title="字符串中的方法"></a>字符串中的方法</h4></li>
+<li>charAt(索引);获取指定索引位置的字符串</li>
+<li>charCodeAt(索引);获取的指定索引位置的字符串的ASCII码值</li>
+<li>concat(“字符串1”,”字符串2”);拼接字符串的,返回值是拼接后的新的字符串</li>
+<li>slice(开始索引,结束索引);从开始索引位置开始截取,到结束索引的位置的前一个结束,返回的是截取后的新的字符串</li>
+<li>substring(开始的索引,结束的索引);截取(同上)</li>
+<li>substr(开始的索引,截取的长度);从指定的索引位置开始截取,截取多少个,返回一个新的字符串</li>
+<li>indexOf(“要找的字符串”,开始索引);从开始索引位置查找字符串,找到则返回索引,找不到则返回-1,返回值是索引</li>
+<li>lastIndexOf(“要找的字符串”,开始索引);从后面向前面找,索引仍然是从前面开始计算的,找到则返回指定索引,找不到则返回-1</li>
+<li>trim();去掉字符串两端的空格,中间的无法去掉</li>
+<li>to(Locale)UpperCase() //转换大写</li>
+<li>to(Locale)LowerCase() //转换小写</li>
+<li>replace(“要替换的字符串”,”新的字符串”);替换字符串的,返回新的字符串</li>
+<li>split(“指定的字符串”);是用来切割字符串中指定的字符串的,返回的是字符串的数组<h3 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h3><h4 id="数组中的属性-length"><a href="#数组中的属性-length" class="headerlink" title="数组中的属性:length"></a>数组中的属性:length</h4><h4 id="数组中的常用方法"><a href="#数组中的常用方法" class="headerlink" title="数组中的常用方法:"></a>数组中的常用方法:</h4></li>
+<li>push(元素);在数组的后面追加一个元素，返回值是追加后的数组的长度</li>
+<li>pop();删除数组最后一个元素,返回的是被删除的元素的值</li>
+<li>unshift(元素);在数组的前面插入一个元素，返回值是插入后的数组的长度</li>
+<li>shift();删除数组第一个元素,返回的是被删除的元素的值</li>
+<li>concat(数组1,数组2);拼接数组的</li>
+<li>slice(开始的索引,结束的索引);从开始索引位置截取数组元素,到结束索引位置的前一个,返回新的数组</li>
+<li>splice(开始的索引,长度);从开始的位置截取数组元素.截取指定长度的个数,返回的是截取后的新的数组</li>
+<li>reverse()反转的</li>
+<li>sort()排序,一般回传入一个回调函数,可以比较字符串也可以比较数字</li>
+<li>indexOf(元素);返回的饿时该元素的索引，如果找不到则返回-1</li>
+<li>lastIndexOf(元素);同上</li>
+<li>every(函数)方法,判断数组中的每个元素是否符合函数中的判断,如果每个元素都满足条件则返回true,否则返回false</li>
+<li>map(函数),让数组中的每个元素都执行一次函数,把得到的返回值组成一个新的数组</li>
+<li>filter(函数),让数组中的每个元素都要执行函数,把满足条件的元素存放在一个新的数组中</li>
+<li>foreach(函数);遍历的</li>
+<li>join(字符串);把数组中的每个元素之间用指定的字符串进行连接.返回一个新的字符串<h3 id="基本包装类型"><a href="#基本包装类型" class="headerlink" title="基本包装类型"></a>基本包装类型</h3></li>
+<li>基本包装类型:String,Number,Boolean</li>
+<li>基本类型:string,number,boolean,null,undefined</li>
+<li>基本类型变量无法直接调用属性和方法</li>
+<li>对象才可以直接调用属性或者方法<h3 id="Date对象"><a href="#Date对象" class="headerlink" title="Date对象"></a>Date对象</h3><blockquote>
+<p>var dt=new Date();Date方法如下：</p>
+</blockquote>
+</li>
+<li>year=dt.getFullYear();</li>
+<li>month=dt.getMonth()+1;</li>
+<li>day=dt.getDate();</li>
+<li>h=dt.getHours();</li>
+<li>m=dt.getMinutes();</li>
+<li>s=dt.getSeconds();</li>
+</ul>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2016/06/28/JavaScript-09  DOM04/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+  
   
     <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
+      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
     </nav>
   
 
