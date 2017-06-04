@@ -2144,8 +2144,8 @@ pre .id {
     transition: all .6s ease-in;
 }
 .article:hover {
-	box-sizing: 0 0 5px #4d4d4d;
-	transform: scale(1.1) translateY(3px);
+	box-sizing: 0 0 10px #4d4d4d;
+	transform: scale(1.01) translateY(3px);
 }
 .article img {
     max-width: 100%
