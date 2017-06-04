@@ -2071,6 +2071,7 @@ pre .id {
     align-items: center;
     -webkit-box-pack: center;
     -ms-flex-pack: center;
+    flex-direction: column;
     justify-content: center;
     width: 100%;
     height: 100%;
