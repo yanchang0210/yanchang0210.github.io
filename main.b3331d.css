@@ -3989,6 +3989,16 @@ a.pswp__share--download:hover {
     text-decoration: underline
 }
 .js-avatar:hover {
+    
+    transition: all 1.5s;
     transform: rotate(360deg);
-    transition: all 1s;
+    animation: animate 1.5s linear;
+}
+@keyframes animate {
+    50% {
+            transform: scale(1.2);
+    }
+    100% {
+            transform: scale(1);
+    }
 }
