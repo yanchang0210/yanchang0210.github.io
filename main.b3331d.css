@@ -2146,7 +2146,7 @@ pre .id {
 .article:hover {
 	box-shadow: 0 0 10px #4d4d4d;
 }
-.article:hover article-header {
+.article:hover article-title {
 	font-size: 3.8rem;
 }
 .article img {
