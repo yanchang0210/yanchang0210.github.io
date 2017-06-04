@@ -2080,6 +2080,7 @@ pre .id {
 }
 .tools-col .aboutme-wrap div{
 	text-align: center;
+	width: 100%;
 }
 .tools-col .aboutme-wrap div:nth-child(1) {
 	font-size: 2rem;
