@@ -3989,11 +3989,15 @@ a.pswp__share--download:hover {
     text-decoration: underline
 }
 .js-avatar {
-    transition: all 1.5s ;
+    transition: all 2s ;
     width: 100%;
     height: 100%;
 }
 .js-avatar:hover {
-
+    transition: all 2s ;
     transform: rotate(360deg);
+}
+.icon-github:hover .icon-github:before {
+    transition: all 2s ;
+    transform: scale(1.2);
 }
