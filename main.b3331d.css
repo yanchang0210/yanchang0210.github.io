@@ -2141,19 +2141,16 @@ pre .id {
     border-top: 1px solid #fff;
     border-bottom: 1px solid #fff;
     background: #fff;
-    transition: all .2s ease-in
+    transition: all .6s ease-in;
 }
-
-.article img {
-    max-width: 100%
-}
-.article-inner {
-	transition: all 1s;
-}
-.article-inner:hover {
+.article:hover {
 	box-sizing: 0 0 5px #4d4d4d;
 	transform: scale(1.1) translateY(3px);
 }
+.article img {
+    max-width: 100%
+}
+
 
 .article-inner h1.article-title,
 .article-title {
