@@ -2079,23 +2079,24 @@ pre .id {
     text-shadow: 1px 1px rgba(77, 77, 77, .45);
 }
 .tools-col .aboutme-wrap div{
-	text-align: center;
 	width: 100%;
 	margin: 2rem;
+	box-sizing: border-box;
 }
 .tools-col .aboutme-wrap div:nth-child(1) {
 	font-size: 2rem;
 	letter-spacing: 3.5rem;
+	padding-left: 1.5rem;
 }
 .tools-col .aboutme-wrap div:nth-child(2) {
-	font-size: 2.8rem;
+	font-size: 2.9rem;
 	letter-spacing: 0.2rem;
 }
 .tools-col .aboutme-wrap div:nth-child(3) {
 	font-size: 1.8rem;
 	letter-spacing: 3rem;
-	padding-left: 1.5rem;
-	box-sizing: border-box;
+	padding-left: 3rem;
+
 }
 .body-wrap>article {
     position: relative
