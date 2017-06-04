@@ -2147,6 +2147,13 @@ pre .id {
 .article img {
     max-width: 100%
 }
+.article-inner {
+	transition: all 1s;
+}
+.article-inner:hover {
+	box-sizing: 0 0 5px #4d4d4d;
+	transform: scale(1.1) translateY(3px);
+}
 
 .article-inner h1.article-title,
 .article-title {
