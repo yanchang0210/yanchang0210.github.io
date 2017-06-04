@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-06-03T13:49:07.763Z</updated>
+  <updated>2017-06-04T01:11:58.981Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://yoursite.com/2016/07/20/JavaScript-16%20%20jQuery03/"/>
     <id>http://yoursite.com/2016/07/20/JavaScript-16  jQuery03/</id>
     <published>2016-07-19T16:00:00.000Z</published>
-    <updated>2017-06-03T13:49:07.763Z</updated>
+    <updated>2017-06-04T01:11:58.981Z</updated>
     
     <content type="html"><![CDATA[<h3 id="attr方法"><a href="#attr方法" class="headerlink" title="attr方法"></a>attr方法</h3><ul>
 <li>attr()方法:可以设置属性值,两个参数:1.属性名字,2,属性值</li>
@@ -33,12 +33,12 @@
 <li>设置的时候也可以没有px</li>
 <li>设置的时候元素在设置前如果没有脱离文档流,设置的时候会自动进行脱离文档流,默认为relative</li>
 <li>如果设置前有脱离文档流,那么设置的时候直接改变位置</li>
-<li>注意:如果层和层中的标签(p)同时定位,并且,p距离左上角50px.通过按钮设置层距离左上角100px,那么p此时距离左上角为150px<h3 id="scrollLeft-和scrollTop"><a href="#scrollLeft-和scrollTop" class="headerlink" title="scrollLeft()和scrollTop()"></a>scrollLeft()和scrollTop()</h3><blockquote>
-<p>用法和之前的offset()方法类似,获取的是数字,设置可以在括号中添加值即可;</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">$(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;    </div><div class="line">    $(<span class="built_in">window</span>).scroll(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;             <span class="keyword">var</span> h=$(<span class="string">".top"</span>).height();              <span class="keyword">var</span> top=$(<span class="built_in">window</span>).scrollTop();         <span class="keyword">if</span>(top&gt;=h)&#123;            </div><div class="line">            $(<span class="string">".nav"</span>).css(&#123;<span class="string">"position"</span>:<span class="string">"fixed"</span>,<span class="string">"top"</span>:<span class="number">0</span>&#125;);            <span class="comment">//此时main为固定定位，所以设置margin-top            </span></div><div class="line">            $(<span class="string">".main"</span>).css(&#123;<span class="string">"marginTop"</span>:$(<span class="string">".nav"</span>).height()&#125;);        </div><div class="line">        &#125;<span class="keyword">else</span>&#123;           </div><div class="line">             $(<span class="string">".nav"</span>).css(&#123;<span class="string">"position"</span>:<span class="string">"static"</span>&#125;);            <span class="comment">//此时main为固定定位，所以设置margin-top            </span></div><div class="line">             $(<span class="string">".main"</span>).css(&#123;<span class="string">"marginTop"</span>:<span class="number">0</span>&#125;);        </div><div class="line">        &#125;    </div><div class="line">    &#125;);</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
-</blockquote>
-</li>
+<li>注意:如果层和层中的标签(p)同时定位,并且,p距离左上角50px.通过按钮设置层距离左上角100px,那么p此时距离左上角为150px</li>
 </ul>
+<a id="more"></a>
+<h3 id="scrollLeft-和scrollTop"><a href="#scrollLeft-和scrollTop" class="headerlink" title="scrollLeft()和scrollTop()"></a>scrollLeft()和scrollTop()</h3><blockquote>
+<p>用法和之前的offset()方法类似,获取的是数字,设置可以在括号中添加值即可;<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">$(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;    </div><div class="line">    $(<span class="built_in">window</span>).scroll(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;             <span class="keyword">var</span> h=$(<span class="string">".top"</span>).height();              <span class="keyword">var</span> top=$(<span class="built_in">window</span>).scrollTop();         <span class="keyword">if</span>(top&gt;=h)&#123;            </div><div class="line">            $(<span class="string">".nav"</span>).css(&#123;<span class="string">"position"</span>:<span class="string">"fixed"</span>,<span class="string">"top"</span>:<span class="number">0</span>&#125;);            <span class="comment">//此时main为固定定位，所以设置margin-top            </span></div><div class="line">            $(<span class="string">".main"</span>).css(&#123;<span class="string">"marginTop"</span>:$(<span class="string">".nav"</span>).height()&#125;);        </div><div class="line">        &#125;<span class="keyword">else</span>&#123;           </div><div class="line">             $(<span class="string">".nav"</span>).css(&#123;<span class="string">"position"</span>:<span class="string">"static"</span>&#125;);            <span class="comment">//此时main为固定定位，所以设置margin-top            </span></div><div class="line">             $(<span class="string">".main"</span>).css(&#123;<span class="string">"marginTop"</span>:<span class="number">0</span>&#125;);        </div><div class="line">        &#125;    </div><div class="line">    &#125;);</div><div class="line">&#125;);</div></pre></td></tr></table></figure></p>
+</blockquote>
 <h3 id="绑定事件"><a href="#绑定事件" class="headerlink" title="绑定事件"></a>绑定事件</h3><ul>
 <li>第一种:<ul>
 <li>对象.事件名字(匿名函数);</li>
@@ -88,87 +88,17 @@
     
       &lt;h3 id=&quot;attr方法&quot;&gt;&lt;a href=&quot;#attr方法&quot; class=&quot;headerlink&quot; title=&quot;attr方法&quot;&gt;&lt;/a&gt;attr方法&lt;/h3&gt;&lt;ul&gt;
 &lt;li&gt;attr()方法:可以设置属性值,两个参数:1.属性名字,2,属性值&lt;/li&gt;
-&lt;li&gt;attr
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>jQuery 常用操作</title>
-    <link href="http://yoursite.com/2016/07/15/JavaScript-15%20%20jQuery02/"/>
-    <id>http://yoursite.com/2016/07/15/JavaScript-15  jQuery02/</id>
-    <published>2016-07-14T16:00:00.000Z</published>
-    <updated>2017-06-03T13:48:31.204Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="jQuery样式操作问题"><a href="#jQuery样式操作问题" class="headerlink" title="jQuery样式操作问题"></a>jQuery样式操作问题</h3><ul>
-<li>DOM中不能获取元素的属性值</li>
-<li>jQuery中可以获取属性的值，$(),括号里如果只写属性，获取的是属性的值</li>
-<li>通过类样式操作元素<ul>
-<li>.addclass(“类样式的名字”)方法为元素添加类样式，可以在该方法中添加多个类样式，中间用空格隔开</li>
-<li>.removeclass(“类样式的名字”)方法为元素删除类样式，可以在该方法中删除多个类样式，中间用空格隔开，如果该方法内部没有参数，则删除的是全部的类样式</li>
-<li>.hasClass方法 判断当前元素是否应用了指定的类样式,返回值是布尔类型</li>
-<li>.toggleClass（“类样式的名字”）切换类样式  （开关灯案例）<h3 id="链式编程"><a href="#链式编程" class="headerlink" title="链式编程"></a>链式编程</h3></li>
-</ul>
-</li>
-<li>只有当前调用该方法的是一个对象才能继续链式编程<br>  对象调用方法后,如果返回的还是调用该方法的对象,那么可以继续的链式编程</li>
-<li>如果对象调用方法后,返回的不是对象,那么此时就不能链式编程了</li>
-<li>什么时候返回的是对象,什么时候不是<ul>
-<li>不太严禁的总结:对象调用方法的时候,进行了设置,那么一般返回的都是对象,如果是获取,那么一般返回的都是获取的内容而不是对象<h3 id="方法补充"><a href="#方法补充" class="headerlink" title="方法补充"></a>方法补充</h3></li>
-</ul>
-</li>
-<li>.next() 获取当前元素下一个兄弟元素</li>
-<li>.nextAll() 获取当前元素下面所有的兄弟元素</li>
-<li>.prev() 获取当前元素前一个兄弟元素</li>
-<li>.prevtAll() 获取当前元素前面所有的兄弟元素</li>
-<li>.siblings() 获取当前元素的所有兄弟元素，不包括自己</li>
-<li>.end() 修复断链方法</li>
-<li>.last() 获取最后一个元素</li>
-<li>:last 获取最后一个元素<h3 id="动画的方法"><a href="#动画的方法" class="headerlink" title="动画的方法"></a>动画的方法</h3></li>
-<li>.show()方法 显示</li>
-<li>.hide()方法 隐藏</li>
-<li>.slideDown()方法 滑出–显示</li>
-<li>.shideUp()方法 滑入–隐藏</li>
-<li>.fadeIn()方法 淡出–显示</li>
-<li>.fadeout()方法 淡入–隐藏</li>
-<li>参数问题<ul>
-<li>参数可以是一个数字，可以是一个字符串（slow,normal,fast）</li>
-<li>参数也可以是两个，第一个是数字或字符串，第二个是一个函数</li>
-</ul>
-</li>
-<li>animate<ul>
-<li>参数1：键值对</li>
-<li>参数2：时间</li>
-<li>参数3：函数</li>
-</ul>
-</li>
-<li>.stop() 停止当前的动画<h3 id="arguments-callee"><a href="#arguments-callee" class="headerlink" title="arguments.callee"></a>arguments.callee</h3></li>
-<li>主要是递归，可以调用所在的函数，注意：新版本的标准中不是很推荐使用<h3 id="动态的创建元素"><a href="#动态的创建元素" class="headerlink" title="动态的创建元素"></a>动态的创建元素</h3></li>
-<li>.html(“<p>这是一个p</p>“）)</li>
-<li>.append()添加方法，追加 $(“div”).append($(“<p>哈哈</p>“))</li>
-<li>.appendTo()被添加 $(“<p>哈哈</p>“).appendTo($(“div”))<h3 id="清空"><a href="#清空" class="headerlink" title="清空"></a>清空</h3></li>
-<li>.html(“”);清空</li>
-<li>.empty();清空</li>
-<li>.remove();自杀了—当前元素移除了<h3 id="表单val-方法的使用"><a href="#表单val-方法的使用" class="headerlink" title="表单val()方法的使用"></a>表单val()方法的使用</h3></li>
-<li>textarea文本域, 可以使用.val方法也可以使用.text方法</li>
-<li>在DOM中如果是获取文本域的内容,使用value属性，如果是设置文本域的内容,最好使用innerText</li>
-<li>jQuery中设置和获取文本域的内容最好使用text()方法</li>
-<li>设置某个下拉框选中<ul>
-<li>.val()方法针对下拉框的内容选中的时候,方法中传入的是某个option的value属性值<ul>
-<li>$(“#s1”).val(4)</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h3 id=&quot;jQuery样式操作问题&quot;&gt;&lt;a href=&quot;#jQuery样式操作问题&quot; class=&quot;headerlink&quot; title=&quot;jQuery样式操作问题&quot;&gt;&lt;/a&gt;jQuery样式操作问题&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;DOM中不能获取元素的属性值&lt;/li&gt;
-&lt;li&gt;
+&lt;li&gt;attr()方法:可以获取属性值,一个参数:1.属性名字&lt;h3 id=&quot;prop方法&quot;&gt;&lt;a href=&quot;#prop方法&quot; class=&quot;headerlink&quot; title=&quot;prop方法&quot;&gt;&lt;/a&gt;prop方法&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;使用同attr方法,prop()方法可以设置或者获取标签的属性值,而且可以获取复选框checked的true或者false值;&lt;/p&gt;
+&lt;h3 id=&quot;设置和获取元素的宽和高&quot;&gt;&lt;a href=&quot;#设置和获取元素的宽和高&quot; class=&quot;headerlink&quot; title=&quot;设置和获取元素的宽和高&quot;&gt;&lt;/a&gt;设置和获取元素的宽和高&lt;/h3&gt;&lt;p&gt;//直接设置数字的值即可:$(“div”).width(500);&lt;/p&gt;
+&lt;h3 id=&quot;位置操作&quot;&gt;&lt;a href=&quot;#位置操作&quot; class=&quot;headerlink&quot; title=&quot;位置操作&quot;&gt;&lt;/a&gt;位置操作&lt;/h3&gt;&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;Offset()方法返回的是对象,并且,对象中有一个left和一个top,并且值是数字类型&lt;/li&gt;
+&lt;li&gt;设置的时候也可以没有px&lt;/li&gt;
+&lt;li&gt;设置的时候元素在设置前如果没有脱离文档流,设置的时候会自动进行脱离文档流,默认为relative&lt;/li&gt;
+&lt;li&gt;如果设置前有脱离文档流,那么设置的时候直接改变位置&lt;/li&gt;
+&lt;li&gt;注意:如果层和层中的标签(p)同时定位,并且,p距离左上角50px.通过按钮设置层距离左上角100px,那么p此时距离左上角为150px&lt;/li&gt;
+&lt;/ul&gt;
     
     </summary>
     
@@ -250,6 +180,86 @@
     
       &lt;h3 id=&quot;jQuery介绍&quot;&gt;&lt;a href=&quot;#jQuery介绍&quot; class=&quot;headerlink&quot; title=&quot;jQuery介绍&quot;&gt;&lt;/a&gt;jQuery介绍&lt;/h3&gt;&lt;ul&gt;
 &lt;li&gt;JavaScript框架库（也叫函数库）：就是一个js文件，这个文件中封装了很多
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>jQuery 常用操作</title>
+    <link href="http://yoursite.com/2016/07/15/JavaScript-15%20%20jQuery02/"/>
+    <id>http://yoursite.com/2016/07/15/JavaScript-15  jQuery02/</id>
+    <published>2016-07-14T16:00:00.000Z</published>
+    <updated>2017-06-03T13:48:31.204Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="jQuery样式操作问题"><a href="#jQuery样式操作问题" class="headerlink" title="jQuery样式操作问题"></a>jQuery样式操作问题</h3><ul>
+<li>DOM中不能获取元素的属性值</li>
+<li>jQuery中可以获取属性的值，$(),括号里如果只写属性，获取的是属性的值</li>
+<li>通过类样式操作元素<ul>
+<li>.addclass(“类样式的名字”)方法为元素添加类样式，可以在该方法中添加多个类样式，中间用空格隔开</li>
+<li>.removeclass(“类样式的名字”)方法为元素删除类样式，可以在该方法中删除多个类样式，中间用空格隔开，如果该方法内部没有参数，则删除的是全部的类样式</li>
+<li>.hasClass方法 判断当前元素是否应用了指定的类样式,返回值是布尔类型</li>
+<li>.toggleClass（“类样式的名字”）切换类样式  （开关灯案例）<h3 id="链式编程"><a href="#链式编程" class="headerlink" title="链式编程"></a>链式编程</h3></li>
+</ul>
+</li>
+<li>只有当前调用该方法的是一个对象才能继续链式编程<br>  对象调用方法后,如果返回的还是调用该方法的对象,那么可以继续的链式编程</li>
+<li>如果对象调用方法后,返回的不是对象,那么此时就不能链式编程了</li>
+<li>什么时候返回的是对象,什么时候不是<ul>
+<li>不太严禁的总结:对象调用方法的时候,进行了设置,那么一般返回的都是对象,如果是获取,那么一般返回的都是获取的内容而不是对象<h3 id="方法补充"><a href="#方法补充" class="headerlink" title="方法补充"></a>方法补充</h3></li>
+</ul>
+</li>
+<li>.next() 获取当前元素下一个兄弟元素</li>
+<li>.nextAll() 获取当前元素下面所有的兄弟元素</li>
+<li>.prev() 获取当前元素前一个兄弟元素</li>
+<li>.prevtAll() 获取当前元素前面所有的兄弟元素</li>
+<li>.siblings() 获取当前元素的所有兄弟元素，不包括自己</li>
+<li>.end() 修复断链方法</li>
+<li>.last() 获取最后一个元素</li>
+<li>:last 获取最后一个元素<h3 id="动画的方法"><a href="#动画的方法" class="headerlink" title="动画的方法"></a>动画的方法</h3></li>
+<li>.show()方法 显示</li>
+<li>.hide()方法 隐藏</li>
+<li>.slideDown()方法 滑出–显示</li>
+<li>.shideUp()方法 滑入–隐藏</li>
+<li>.fadeIn()方法 淡出–显示</li>
+<li>.fadeout()方法 淡入–隐藏</li>
+<li>参数问题<ul>
+<li>参数可以是一个数字，可以是一个字符串（slow,normal,fast）</li>
+<li>参数也可以是两个，第一个是数字或字符串，第二个是一个函数</li>
+</ul>
+</li>
+<li>animate<ul>
+<li>参数1：键值对</li>
+<li>参数2：时间</li>
+<li>参数3：函数</li>
+</ul>
+</li>
+<li>.stop() 停止当前的动画<h3 id="arguments-callee"><a href="#arguments-callee" class="headerlink" title="arguments.callee"></a>arguments.callee</h3></li>
+<li>主要是递归，可以调用所在的函数，注意：新版本的标准中不是很推荐使用<h3 id="动态的创建元素"><a href="#动态的创建元素" class="headerlink" title="动态的创建元素"></a>动态的创建元素</h3></li>
+<li>.html(“<p>这是一个p</p>“）)</li>
+<li>.append()添加方法，追加 $(“div”).append($(“<p>哈哈</p>“))</li>
+<li>.appendTo()被添加 $(“<p>哈哈</p>“).appendTo($(“div”))<h3 id="清空"><a href="#清空" class="headerlink" title="清空"></a>清空</h3></li>
+<li>.html(“”);清空</li>
+<li>.empty();清空</li>
+<li>.remove();自杀了—当前元素移除了<h3 id="表单val-方法的使用"><a href="#表单val-方法的使用" class="headerlink" title="表单val()方法的使用"></a>表单val()方法的使用</h3></li>
+<li>textarea文本域, 可以使用.val方法也可以使用.text方法</li>
+<li>在DOM中如果是获取文本域的内容,使用value属性，如果是设置文本域的内容,最好使用innerText</li>
+<li>jQuery中设置和获取文本域的内容最好使用text()方法</li>
+<li>设置某个下拉框选中<ul>
+<li>.val()方法针对下拉框的内容选中的时候,方法中传入的是某个option的value属性值<ul>
+<li>$(“#s1”).val(4)</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;jQuery样式操作问题&quot;&gt;&lt;a href=&quot;#jQuery样式操作问题&quot; class=&quot;headerlink&quot; title=&quot;jQuery样式操作问题&quot;&gt;&lt;/a&gt;jQuery样式操作问题&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;DOM中不能获取元素的属性值&lt;/li&gt;
+&lt;li&gt;
     
     </summary>
     
