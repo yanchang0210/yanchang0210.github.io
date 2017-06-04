@@ -2077,9 +2077,22 @@ pre .id {
     height: 100%;
     color: #fffdd8;
     text-shadow: 1px 1px rgba(77, 77, 77, .45);
-    letter-spacing: 0.2rem;
 }
-
+.tools-col .aboutme-wrap div{
+	text-align: center;
+}
+.tools-col .aboutme-wrap div:nth-child(1) {
+	font-size: 2rem;
+	letter-spacing: 3.5rem;
+}
+.tools-col .aboutme-wrap div:nth-child(2) {
+	font-size: 3rem;
+	letter-spacing: 0.42rem;
+}
+.tools-col .aboutme-wrap div:nth-child(3) {
+	font-size: 1.8rem;
+	letter-spacing: 3rem;
+}
 .body-wrap>article {
     position: relative
 }
