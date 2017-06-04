@@ -3991,14 +3991,13 @@ a.pswp__share--download:hover {
 .js-avatar:hover {
     
     transition: all 1.5s;
-    transform: rotate(360deg) scale(1.2);
     animation: animate 1.5s linear;
 }
 @keyframes animate {
     50% {
-            transform: scale(1.2);
+            transform: scale(1.2) rotate(180deg);
     }
     100% {
-            transform: scale(1);
+            transform: scale(1) rotate(360deg);
     }
 }
