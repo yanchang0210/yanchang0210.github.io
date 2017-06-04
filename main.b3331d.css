@@ -1482,12 +1482,12 @@ pre .id {
     opacity: .7;
     width: 28px;
     height: 28px;
-    line-height: 26px
+    line-height: 26px;
     transition: all 1s;
 }
 
 #header .header-nav .social a:hover {
-    opacity: 1
+    opacity: 1;
     transform: scale(1.2)
 }
 
@@ -3996,10 +3996,10 @@ a.pswp__share--download:hover {
     height: 100%;
 }
 .js-avatar:hover {
-    transition: all 2s ;
+    // transition: all 2s;
     transform: rotate(360deg);
 }
 .icon-github:hover .icon-github:before {
-    transition: all 2s ;
+    transition: all 2s;
     transform: scale(1.2);
 }
