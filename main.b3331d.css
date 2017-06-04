@@ -978,7 +978,7 @@ html {
 .left-col #header .profilepic img {
     border-radius: 300px;
     opacity: 1;
-    -webkit-transition: all .2s ease-in
+    -webkit-transition: all 1.5s linear;
 }
 
 .left-col #header .profilepic img.show {
