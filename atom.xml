@@ -1187,15 +1187,16 @@
     <link href="http://yoursite.com/2016/06/10/JavaScript-03%20%20%E6%95%B0%E7%BB%84/"/>
     <id>http://yoursite.com/2016/06/10/JavaScript-03  数组/</id>
     <published>2016-06-09T16:00:00.000Z</published>
-    <updated>2017-06-04T03:18:35.028Z</updated>
+    <updated>2017-06-04T03:19:41.356Z</updated>
     
     <content type="html"><![CDATA[<h1 id="数组概述"><a href="#数组概述" class="headerlink" title="数组概述"></a>数组概述</h1><h3 id="数组是什么"><a href="#数组是什么" class="headerlink" title="数组是什么"></a>数组是什么</h3><p>数据的有序列表，可以存放任意类型的数据，数组的大小可以动态调整。</p>
 <h3 id="数组的定义"><a href="#数组的定义" class="headerlink" title="数组的定义"></a>数组的定义</h3><p>数组的定义(创建数组)有两种方式：</p>
 <ul>
 <li><p>字面量定义</p>
-  <figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">		<span class="keyword">var</span>  arr  =  [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>];</div><div class="line">	<span class="string">``</span><span class="string">` </span></div><div class="line"></div><div class="line">&lt;!-- more --&gt;</div><div class="line"></div><div class="line">* 对象定义(数组的构造函数)</div><div class="line"></div><div class="line">	`<span class="string">``</span>js</div><div class="line">		<span class="keyword">var</span>  arr  =  <span class="keyword">new</span> <span class="built_in">Array</span>(参数);</div><div class="line">		参数位置一个数值时为数组长度，多个数值时为数组中的元素。</div></pre></td></tr></table></figure>
+  <figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">		<span class="keyword">var</span>  arr  =  [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>];</div><div class="line">	<span class="string">``</span><span class="string">` </span></div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line">* 对象定义(数组的构造函数)</div><div class="line"></div><div class="line">	`<span class="string">``</span>js</div><div class="line">		<span class="keyword">var</span>  arr  =  <span class="keyword">new</span> <span class="built_in">Array</span>(参数);</div><div class="line">		参数位置一个数值时为数组长度，多个数值时为数组中的元素。</div></pre></td></tr></table></figure>
 </li>
 </ul>
+<a id="more"></a>
 <h1 id="数组的操作"><a href="#数组的操作" class="headerlink" title="数组的操作"></a>数组的操作</h1><h3 id="求数组的长度"><a href="#求数组的长度" class="headerlink" title="求数组的长度"></a>求数组的长度</h3><blockquote>
 <p>数组的长度=数组名.length;</p>
 <ul>
@@ -1209,7 +1210,13 @@
     
     <summary type="html">
     
-      &lt;h1 id=&quot;数组概述&quot;&gt;&lt;a href=&quot;#数组概述&quot; class=&quot;headerlink&quot; title=&quot;数组概述&quot;&gt;&lt;/a&gt;数组概述&lt;/h1&gt;&lt;h3 id=&quot;数组是什么&quot;&gt;&lt;a href=&quot;#数组是什么&quot; class=&quot;headerlink&quot; title=&quot;数组是什么&quot;&gt;
+      &lt;h1 id=&quot;数组概述&quot;&gt;&lt;a href=&quot;#数组概述&quot; class=&quot;headerlink&quot; title=&quot;数组概述&quot;&gt;&lt;/a&gt;数组概述&lt;/h1&gt;&lt;h3 id=&quot;数组是什么&quot;&gt;&lt;a href=&quot;#数组是什么&quot; class=&quot;headerlink&quot; title=&quot;数组是什么&quot;&gt;&lt;/a&gt;数组是什么&lt;/h3&gt;&lt;p&gt;数据的有序列表，可以存放任意类型的数据，数组的大小可以动态调整。&lt;/p&gt;
+&lt;h3 id=&quot;数组的定义&quot;&gt;&lt;a href=&quot;#数组的定义&quot; class=&quot;headerlink&quot; title=&quot;数组的定义&quot;&gt;&lt;/a&gt;数组的定义&lt;/h3&gt;&lt;p&gt;数组的定义(创建数组)有两种方式：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;字面量定义&lt;/p&gt;
+  &lt;figure class=&quot;highlight js&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;6&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;7&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;8&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;9&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;10&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;		&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt;  arr  =  [&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;,&lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;,&lt;span class=&quot;number&quot;&gt;3&lt;/span&gt;];&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;	&lt;span class=&quot;string&quot;&gt;``&lt;/span&gt;&lt;span class=&quot;string&quot;&gt;` &lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;* 对象定义(数组的构造函数)&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;	`&lt;span class=&quot;string&quot;&gt;``&lt;/span&gt;js&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;		&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt;  arr  =  &lt;span class=&quot;keyword&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;built_in&quot;&gt;Array&lt;/span&gt;(参数);&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;		参数位置一个数值时为数组长度，多个数值时为数组中的元素。&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
     
     </summary>
     
