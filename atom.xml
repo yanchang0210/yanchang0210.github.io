@@ -1224,12 +1224,13 @@
     <link href="http://yoursite.com/2016/06/05/JavaScript-02%20%20JavaScript%E5%85%A5%E9%97%A8/"/>
     <id>http://yoursite.com/2016/06/05/JavaScript-02  JavaScript入门/</id>
     <published>2016-06-04T16:00:00.000Z</published>
-    <updated>2017-06-04T02:43:31.140Z</updated>
+    <updated>2017-06-04T02:45:41.556Z</updated>
     
     <content type="html"><![CDATA[<h1 id="JavaScript-书写位置"><a href="#JavaScript-书写位置" class="headerlink" title="JavaScript 书写位置"></a>JavaScript 书写位置</h1><h5 id="在HTML页面中书写JS"><a href="#在HTML页面中书写JS" class="headerlink" title="在HTML页面中书写JS"></a>在HTML页面中书写JS</h5><p>  JavaScript代码可以直接嵌在网页的任何地方，不过通常我们都把JavaScript代码放到<code>&lt;head&gt;</code>中：<br>    <figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">&lt;html&gt;</div><div class="line">    &lt;head&gt;</div><div class="line">        &lt;script&gt;</div><div class="line">            alert('Hello, world');</div><div class="line">        &lt;/script&gt;</div><div class="line">    &lt;/head&gt;</div><div class="line">    &lt;body&gt;</div><div class="line">    ...</div><div class="line">    &lt;/body&gt;</div><div class="line">&lt;/html&gt;</div></pre></td></tr></table></figure></p>
-<h5 id="引入外部-js文件"><a href="#引入外部-js文件" class="headerlink" title="引入外部.js文件"></a>引入外部<code>.js</code>文件</h5><pre><code><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line">    &lt;html&gt;</div><div class="line">        &lt;head&gt;</div><div class="line">            &lt;script src="/static/js/abc.js"&gt;&lt;/script&gt;</div><div class="line">        &lt;/head&gt;</div><div class="line">        &lt;body&gt;</div><div class="line">            ...</div><div class="line">        &lt;/body&gt;</div><div class="line">    &lt;/html&gt;</div><div class="line"></div><div class="line">* JavaScript依上自下依次执行，外部引入写在`&lt;/body&gt;`前。</div><div class="line"></div><div class="line">&lt;!-- more --&gt;</div><div class="line"></div><div class="line">## 语法</div><div class="line">### 基本语法</div><div class="line">    &gt; JavaScript的语法大量借鉴C及其他类C语言的语法，语法宽松。每个语句以`;`结束，语句块用`&#123;...&#125;`。但是，JavaScript并不强制要求在每个语句的结尾加`;`，浏览器中负责执行JavaScript代码的引擎会自动在每个语句的结尾补上`;`。</div><div class="line">### 注释</div><div class="line">* 单行注释：以两个斜杠开头</div><div class="line">    ```js</div><div class="line">    //单行注释</div></pre></td></tr></table></figure>
+<h5 id="引入外部-js文件"><a href="#引入外部-js文件" class="headerlink" title="引入外部.js文件"></a>引入外部<code>.js</code>文件</h5><pre><code><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line">    &lt;html&gt;</div><div class="line">        &lt;head&gt;</div><div class="line">            &lt;script src="/static/js/abc.js"&gt;&lt;/script&gt;</div><div class="line">        &lt;/head&gt;</div><div class="line">        &lt;body&gt;</div><div class="line">            ...</div><div class="line">        &lt;/body&gt;</div><div class="line">    &lt;/html&gt;</div><div class="line"></div><div class="line">* JavaScript依上自下依次执行，外部引入写在`&lt;/body&gt;`前。</div><div class="line"></div><div class="line">&lt;!-- more --&gt;</div><div class="line"></div><div class="line">## 语法</div><div class="line">### 基本语法</div><div class="line">    &gt; JavaScript的语法大量借鉴C及其他类C语言的语法，语法宽松。每个语句以`;`结束，语句块用`&#123;...&#125;`。但是，JavaScript并不强制要求在每个语句的结尾加`;`，浏览器中负责执行JavaScript代码的引擎会自动在每个语句的结尾补上`;`。</div><div class="line">### 注释</div><div class="line">* 单行注释：以两个斜杠开头</div><div class="line"></div><div class="line">    ```js</div><div class="line">    //单行注释</div></pre></td></tr></table></figure>
 </code></pre><ul>
-<li>块级注释：以一个斜杠跟一个星开头<code>(/*)</code>，以一个星和一个斜杠结束<code>(*/)</code>。   <figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/* </span></div><div class="line">* 多行(块级)注释</div><div class="line">*/</div></pre></td></tr></table></figure>
+<li><p>块级注释：以一个斜杠跟一个星开头<code>(/*)</code>，以一个星和一个斜杠结束<code>(*/)</code>。</p>
+   <figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/* </span></div><div class="line">* 多行(块级)注释</div><div class="line">*/</div></pre></td></tr></table></figure>
 </li>
 </ul>
 <h3 id="严格区分大小写"><a href="#严格区分大小写" class="headerlink" title="严格区分大小写"></a>严格区分大小写</h3><p>JavaScript中的一切(变量、函数名和操作符)都区分大小写。</p>
@@ -1300,7 +1301,65 @@
 <blockquote>
 <p>用引号时，可单可双，唯独不可一单一双。可用.length看有几个字符。</p>
 </blockquote>
-  <figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div></pre></td><td class="code"><pre><div class="line">    var name = "zhangsan";</div><div class="line">    var name = 'zhangsan';</div><div class="line">    var name = 'zhangsan"; //错误，单引号和双引号要成对出现</div><div class="line">* 转译</div><div class="line">    &gt; 总结：无法输出的字符，先输出/，在输出字符。（“、\、换行等....）</div><div class="line">* 字符串不可变</div><div class="line">    &gt; 在内存中不会立刻消失，只能二次赋值，原有的字符在一定时间内被垃圾回收器回收。</div><div class="line">* 字符串拼接</div><div class="line">    &gt; 如果两个变量都是字符串，无论是否包含数字，只要是拼接，那么在前一个后面添加后一个字符串。（+与-情况不同，详情参考数据转换）</div><div class="line"></div><div class="line">### Boolean  类型</div><div class="line">* Boolean类型有两个字面量：true和false，区分大小写。（大写不对）</div><div class="line">    &gt; 虽然Boolean 类型的字面值只有两个，但 ECMAScript 中所有类型的值都有与这两个 Boolean 值等价的值</div><div class="line">* true</div><div class="line">    &gt; true、除0数字、“something”、Object(任何对象)为true</div><div class="line">* false</div><div class="line">    &gt; false、0 、“”、undefined 、null为false</div><div class="line">* if判断时会把（）内的值强行转换成boolean类型。</div><div class="line"></div><div class="line">### Undefined和Null  类型</div><div class="line">* Undefined是一种比较特殊的类型，表示变量未赋值，这种类型只有一种值就是undefined.</div><div class="line">* Null是第二个只有一个值的数据类型，这个特殊的值是null.</div><div class="line">    * 从逻辑角度看，null值表示一个空对象指针，使用typeof检测null值时返回`object`。</div><div class="line">    * 如果定义的变量准备在将来用于保存对象，最好将该变量初始化为null而不是其他值。</div><div class="line">* Undefined和Null的异同</div><div class="line">    * null和undefined有最大的相似性。看看null == undefined的结果(true)也就更加能说明这点。但是null ===undefined的结果(false)。不过相似归相似，还是有区别的，就是和数字运算时，10 + null结果为：10；10 + undefined结果为：NaN。</div><div class="line">    * 任何数据类型和undefined运算都是NaN;</div><div class="line">    * 任何值和null运算，null可看做0运算。</div><div class="line"></div><div class="line"># 数据类型的转换</div><div class="line">### 转换成String类型</div><div class="line">* 变量+“”  或者  变量+“abc”;</div><div class="line">* String(变量);</div><div class="line">* 变量.toSting() 	注意：undefined和null不可以</div><div class="line">    &gt; Null和undefined无toString方法。</div><div class="line"></div><div class="line">### 换成Number类型</div><div class="line">&gt; 此转换容易产生NaN，一旦被转换的变量中含有非数字字符，都容易出现NaN</div><div class="line"></div><div class="line">* 变量-*/一个数字（有非数字字符会出现NaN）</div><div class="line"></div><div class="line">    ```js</div><div class="line">    var num1 =“11”- 0;  </div><div class="line">    var num2 =“11”* 1;</div><div class="line">    var num =“11”/1;</div></pre></td></tr></table></figure>
+  <figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> name = <span class="string">"zhangsan"</span>;</div><div class="line"><span class="keyword">var</span> name = <span class="string">'zhangsan'</span>;</div><div class="line"><span class="keyword">var</span> name = <span class="string">'zhangsan"; //错误，单引号和双引号要成对出现</span></div></pre></td></tr></table></figure>
+</li>
+<li><p>转译</p>
+<blockquote>
+<p>总结：无法输出的字符，先输出/，在输出字符。（“、\、换行等….）</p>
+</blockquote>
+</li>
+<li>字符串不可变<blockquote>
+<p>在内存中不会立刻消失，只能二次赋值，原有的字符在一定时间内被垃圾回收器回收。</p>
+</blockquote>
+</li>
+<li>字符串拼接<blockquote>
+<p>如果两个变量都是字符串，无论是否包含数字，只要是拼接，那么在前一个后面添加后一个字符串。（+与-情况不同，详情参考数据转换）</p>
+</blockquote>
+</li>
+</ul>
+<h3 id="Boolean-类型"><a href="#Boolean-类型" class="headerlink" title="Boolean  类型"></a>Boolean  类型</h3><ul>
+<li>Boolean类型有两个字面量：true和false，区分大小写。（大写不对）<blockquote>
+<p>虽然Boolean 类型的字面值只有两个，但 ECMAScript 中所有类型的值都有与这两个 Boolean 值等价的值</p>
+</blockquote>
+</li>
+<li>true<blockquote>
+<p>true、除0数字、“something”、Object(任何对象)为true</p>
+</blockquote>
+</li>
+<li>false<blockquote>
+<p>false、0 、“”、undefined 、null为false</p>
+</blockquote>
+</li>
+<li>if判断时会把（）内的值强行转换成boolean类型。</li>
+</ul>
+<h3 id="Undefined和Null-类型"><a href="#Undefined和Null-类型" class="headerlink" title="Undefined和Null  类型"></a>Undefined和Null  类型</h3><ul>
+<li>Undefined是一种比较特殊的类型，表示变量未赋值，这种类型只有一种值就是undefined.</li>
+<li>Null是第二个只有一个值的数据类型，这个特殊的值是null.<ul>
+<li>从逻辑角度看，null值表示一个空对象指针，使用typeof检测null值时返回<code>object</code>。</li>
+<li>如果定义的变量准备在将来用于保存对象，最好将该变量初始化为null而不是其他值。</li>
+</ul>
+</li>
+<li>Undefined和Null的异同<ul>
+<li>null和undefined有最大的相似性。看看null == undefined的结果(true)也就更加能说明这点。但是null ===undefined的结果(false)。不过相似归相似，还是有区别的，就是和数字运算时，10 + null结果为：10；10 + undefined结果为：NaN。</li>
+<li>任何数据类型和undefined运算都是NaN;</li>
+<li>任何值和null运算，null可看做0运算。</li>
+</ul>
+</li>
+</ul>
+<h1 id="数据类型的转换"><a href="#数据类型的转换" class="headerlink" title="数据类型的转换"></a>数据类型的转换</h1><h3 id="转换成String类型"><a href="#转换成String类型" class="headerlink" title="转换成String类型"></a>转换成String类型</h3><ul>
+<li>变量+“”  或者  变量+“abc”;</li>
+<li>String(变量);</li>
+<li>变量.toSting()     注意：undefined和null不可以<blockquote>
+<p>Null和undefined无toString方法。</p>
+</blockquote>
+</li>
+</ul>
+<h3 id="换成Number类型"><a href="#换成Number类型" class="headerlink" title="换成Number类型"></a>换成Number类型</h3><blockquote>
+<p>此转换容易产生NaN，一旦被转换的变量中含有非数字字符，都容易出现NaN</p>
+</blockquote>
+<ul>
+<li><p>变量-*/一个数字（有非数字字符会出现NaN）</p>
+  <figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> num1 =“<span class="number">11</span>”- <span class="number">0</span>;  </div><div class="line"><span class="keyword">var</span> num2 =“<span class="number">11</span>”* <span class="number">1</span>;</div><div class="line"><span class="keyword">var</span> num =“<span class="number">11</span>”/<span class="number">1</span>;</div></pre></td></tr></table></figure>
 <p>  JS底层做了一个强制类型转换，把字符串转换成了Number进行运算。</p>
 </li>
 <li><p>Number(变量)（有非数字字符会出现NaN）</p>
