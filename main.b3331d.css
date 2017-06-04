@@ -3988,3 +3988,7 @@ a.pswp__share--download:hover {
     color: #ccc;
     text-decoration: underline
 }
+.js-avatar:hover {
+    transform: rotate(360deg);
+    transition: all 1s;
+}
