@@ -232,7 +232,7 @@
 <h3 id="事件"><a href="#事件" class="headerlink" title="事件"></a>事件</h3><blockquote>
 <p>事件：触发，响应，触发事件的事件源；</p>
 <h5 id="注册事件"><a href="#注册事件" class="headerlink" title="注册事件:"></a>注册事件:</h5><ul>
-<li>在html标签中  on事件名字=”js代码(函数调用)”<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">&lt;input type=<span class="string">"button"</span> value=<span class="string">"按钮"</span> onclick=<span class="string">"alert('啊哈哈');"</span>/&gt;</div><div class="line"><span class="xml"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"button"</span> <span class="attr">value</span>=<span class="string">"按钮"</span> <span class="attr">onclick</span>=<span class="string">"f1();"</span>/&gt;</span></span></div></pre></td></tr></table></figure>
+<li>在html标签中  on事件名字=”js代码(函数调用)”<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">&lt;input type=<span class="string">"button"</span> value=<span class="string">"按钮"</span> onclick=<span class="string">"alert('啊哈哈');"</span>/&gt;</div><div class="line">&lt;input type="button" value="按钮" onclick="f1();"/&gt;</div></pre></td></tr></table></figure>
 </li>
 </ul>
 </blockquote>
@@ -244,7 +244,7 @@
 </blockquote>
 </li>
 <li><p>在script标签获取元素注册事件—-采用命名函数</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"> &lt;script&gt;</div><div class="line"> <span class="built_in">document</span>.getElementById(<span class="string">"btn"</span>).onclick=clickHandle;</div><div class="line"> <span class="function"><span class="keyword">function</span> <span class="title">clickHandle</span>(<span class="params"></span>)</span>&#123;&#125;;</div><div class="line"><span class="xml"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></div></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"> &lt;script&gt;</div><div class="line"> <span class="built_in">document</span>.getElementById(<span class="string">"btn"</span>).onclick=clickHandle;</div><div class="line"> <span class="function"><span class="keyword">function</span> <span class="title">clickHandle</span>(<span class="params"></span>)</span>&#123;&#125;;</div><div class="line">&lt;/script&gt;</div></pre></td></tr></table></figure>
 </li>
 </ul>
 
