@@ -9,13 +9,13 @@
   <title>jQuery 常用操作 | 戎码一生的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="jQuery样式操作问题 DOM中不能获取元素的属性值 jQuery中可以获取属性的值，$(),括号里如果只写属性，获取的是属性的值 通过类样式操作元素 .addclass(“类样式的名字”)方法为元素添加类样式，可以在该方法中添加多个类样式，中间用空格隔开 .removeclass(“类样式的名字”)方法为元素删除类样式，可以在该方法中删除多个类样式，中间用空格隔开，如果该方法内部没有参数，则删">
-<meta name="keywords" content="前端,js,jquery,javascript,html5,开发者,程序猿,开源,IT网站,Developer,Programmer,Coder,Geek,html,css,css3,用户体验">
+<meta name="keywords" content="jQuery">
 <meta property="og:type" content="article">
 <meta property="og:title" content="jQuery 常用操作">
 <meta property="og:url" content="http://yoursite.com/2016/07/15/JavaScript-15  jQuery02/index.html">
 <meta property="og:site_name" content="戎码一生的博客">
 <meta property="og:description" content="jQuery样式操作问题 DOM中不能获取元素的属性值 jQuery中可以获取属性的值，$(),括号里如果只写属性，获取的是属性的值 通过类样式操作元素 .addclass(“类样式的名字”)方法为元素添加类样式，可以在该方法中添加多个类样式，中间用空格隔开 .removeclass(“类样式的名字”)方法为元素删除类样式，可以在该方法中删除多个类样式，中间用空格隔开，如果该方法内部没有参数，则删">
-<meta property="og:updated_time" content="2017-06-03T13:48:31.204Z">
+<meta property="og:updated_time" content="2017-06-04T01:28:46.900Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="jQuery 常用操作">
 <meta name="twitter:description" content="jQuery样式操作问题 DOM中不能获取元素的属性值 jQuery中可以获取属性的值，$(),括号里如果只写属性，获取的是属性的值 通过类样式操作元素 .addclass(“类样式的名字”)方法为元素添加类样式，可以在该方法中添加多个类样式，中间用空格隔开 .removeclass(“类样式的名字”)方法为元素删除类样式，可以在该方法中删除多个类样式，中间用空格隔开，如果该方法内部没有参数，则删">
@@ -184,10 +184,13 @@
 <li>通过类样式操作元素<ul>
 <li>.addclass(“类样式的名字”)方法为元素添加类样式，可以在该方法中添加多个类样式，中间用空格隔开</li>
 <li>.removeclass(“类样式的名字”)方法为元素删除类样式，可以在该方法中删除多个类样式，中间用空格隔开，如果该方法内部没有参数，则删除的是全部的类样式</li>
-<li>.hasClass方法 判断当前元素是否应用了指定的类样式,返回值是布尔类型</li>
-<li>.toggleClass（“类样式的名字”）切换类样式  （开关灯案例）<h3 id="链式编程"><a href="#链式编程" class="headerlink" title="链式编程"></a>链式编程</h3></li>
 </ul>
 </li>
+</ul>
+<a id="more"></a>
+<pre><code>* .hasClass方法 判断当前元素是否应用了指定的类样式,返回值是布尔类型
+* .toggleClass（“类样式的名字”）切换类样式  （开关灯案例）
+</code></pre><h3 id="链式编程"><a href="#链式编程" class="headerlink" title="链式编程"></a>链式编程</h3><ul>
 <li>只有当前调用该方法的是一个对象才能继续链式编程<br>  对象调用方法后,如果返回的还是调用该方法的对象,那么可以继续的链式编程</li>
 <li>如果对象调用方法后,返回的不是对象,那么此时就不能链式编程了</li>
 <li>什么时候返回的是对象,什么时候不是<ul>
@@ -267,6 +270,17 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">jQuery</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 
       
@@ -331,18 +345,18 @@
   
 <nav id="article-nav">
   
-    <a href="/2016/07/15/JavaScript-14  jQuery01/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2016/07/20/JavaScript-16  jQuery03/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          jQuery 介绍
+          jQuery 事件
         
       </div>
     </a>
   
   
-    <a href="/2016/07/12/JavaScript-13  JS进阶和特效03/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">正则表达式</div>
+    <a href="/2016/07/15/JavaScript-14  jQuery01/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">jQuery 介绍</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -448,6 +462,30 @@ return o(t,i(n),arguments.length<3?void 0:u(arguments[2]))}})},function(t,n,r){v
             <input type="checkbox" q-on="click:toggleTag(e)" q-attr="checked:showTags">
           </label>
           <ul class="article-tag-list" q-show="showTags">
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">js基础</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">DOM</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">BOM</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">js进阶</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">正则</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">jQuery</a>
+              </li>
             
             <div class="clearfix"></div>
           </ul>

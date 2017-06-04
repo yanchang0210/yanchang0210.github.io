@@ -8,17 +8,17 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>offset scroll和client | 戎码一生的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="offset系列基本概念 获取元素实际的宽高，left，top offsetLeft：元素距离左边的距离 offsetTop：元素距离上面的距离 offsetWidth：元素的宽+border offsetHeight：元素的高+border 如果想要获取元素的样式属性实际的值：*window.getComputedStyle()或currentStyle属性对象.style属性 可以获取属性，也">
-<meta name="keywords" content="前端,js,jquery,javascript,html5,开发者,程序猿,开源,IT网站,Developer,Programmer,Coder,Geek,html,css,css3,用户体验">
+  <meta name="description" content="offset系列基本概念 获取元素实际的宽高，left，top offsetLeft：元素距离左边的距离 offsetTop：元素距离上面的距离 offsetWidth：元素的宽+border offsetHeight：元素的高+border 如果想要获取元素的样式属性实际的值：*window.getComputedStyle()或currentStyle属性">
+<meta name="keywords" content="js进阶">
 <meta property="og:type" content="article">
 <meta property="og:title" content="offset scroll和client">
 <meta property="og:url" content="http://yoursite.com/2016/07/05/JavaScript-11  Js进阶和特效01/index.html">
 <meta property="og:site_name" content="戎码一生的博客">
-<meta property="og:description" content="offset系列基本概念 获取元素实际的宽高，left，top offsetLeft：元素距离左边的距离 offsetTop：元素距离上面的距离 offsetWidth：元素的宽+border offsetHeight：元素的高+border 如果想要获取元素的样式属性实际的值：*window.getComputedStyle()或currentStyle属性对象.style属性 可以获取属性，也">
-<meta property="og:updated_time" content="2017-06-03T13:46:40.596Z">
+<meta property="og:description" content="offset系列基本概念 获取元素实际的宽高，left，top offsetLeft：元素距离左边的距离 offsetTop：元素距离上面的距离 offsetWidth：元素的宽+border offsetHeight：元素的高+border 如果想要获取元素的样式属性实际的值：*window.getComputedStyle()或currentStyle属性">
+<meta property="og:updated_time" content="2017-06-04T01:31:46.453Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="offset scroll和client">
-<meta name="twitter:description" content="offset系列基本概念 获取元素实际的宽高，left，top offsetLeft：元素距离左边的距离 offsetTop：元素距离上面的距离 offsetWidth：元素的宽+border offsetHeight：元素的高+border 如果想要获取元素的样式属性实际的值：*window.getComputedStyle()或currentStyle属性对象.style属性 可以获取属性，也">
+<meta name="twitter:description" content="offset系列基本概念 获取元素实际的宽高，left，top offsetLeft：元素距离左边的距离 offsetTop：元素距离上面的距离 offsetWidth：元素的宽+border offsetHeight：元素的高+border 如果想要获取元素的样式属性实际的值：*window.getComputedStyle()或currentStyle属性">
   
     <link rel="alternative" href="/atom.xml" title="戎码一生的博客" type="application/atom+xml">
   
@@ -184,33 +184,46 @@
 <li>offsetTop：元素距离上面的距离</li>
 <li>offsetWidth：元素的宽+border</li>
 <li>offsetHeight：元素的高+border</li>
-<li>如果想要获取元素的样式属性实际的值：*window.getComputedStyle()或currentStyle属性<h5 id="对象-style属性"><a href="#对象-style属性" class="headerlink" title="对象.style属性"></a>对象.style属性</h5></li>
+<li>如果想要获取元素的样式属性实际的值：*window.getComputedStyle()或currentStyle属性</li>
+</ul>
+<a id="more"></a>
+<h5 id="对象-style属性"><a href="#对象-style属性" class="headerlink" title="对象.style属性"></a>对象.style属性</h5><ul>
 <li>可以获取属性，也可以设置属性（可读可写）</li>
-<li>可以获取在html标签中直接设置的样式的值，获取的都是字符串类型<h5 id="对象-offset系列属性"><a href="#对象-offset系列属性" class="headerlink" title="对象.offset系列属性"></a>对象.offset系列属性</h5></li>
+<li>可以获取在html标签中直接设置的样式的值，获取的都是字符串类型</li>
+</ul>
+<h5 id="对象-offset系列属性"><a href="#对象-offset系列属性" class="headerlink" title="对象.offset系列属性"></a>对象.offset系列属性</h5><ul>
 <li>获取的是数字类型，没有px</li>
-<li>offset系列中的属性只能获取值，不能设置值（可读不可写）<h5 id="offsetLeft-offsetTop"><a href="#offsetLeft-offsetTop" class="headerlink" title="offsetLeft offsetTop"></a>offsetLeft offsetTop</h5></li>
+<li>offset系列中的属性只能获取值，不能设置值（可读不可写）</li>
+</ul>
+<h5 id="offsetLeft-offsetTop"><a href="#offsetLeft-offsetTop" class="headerlink" title="offsetLeft offsetTop"></a>offsetLeft offsetTop</h5><ul>
 <li>offsetLeft(没有定位)，以body为基准到自身左侧边框(border-left左边)；</li>
 <li>offsetLeft(有定位)以父元素为基准到自身左侧边框(border-left左边)；</li>
 <li>offsetLeft=父元素的margin-left+padding-left+border-left;<ul>
-<li>从body到父元素的margin-left加父元素的padding+父元素的border宽度；<h5 id="offsetWidth-offsetHeight"><a href="#offsetWidth-offsetHeight" class="headerlink" title="offsetWidth offsetHeight"></a>offsetWidth offsetHeight</h5></li>
+<li>从body到父元素的margin-left加父元素的padding+父元素的border宽度；</li>
 </ul>
 </li>
+</ul>
+<h5 id="offsetWidth-offsetHeight"><a href="#offsetWidth-offsetHeight" class="headerlink" title="offsetWidth offsetHeight"></a>offsetWidth offsetHeight</h5><ul>
 <li>offsetWidth和offseHeight是包括元素的边框的</li>
-<li>如果元素的样式是在style标签中设置的，只能通过offset系列中的offsetWidth和offseHeight来获取，对象.style是无法获取的；<h3 id="scroll系列"><a href="#scroll系列" class="headerlink" title="scroll系列"></a>scroll系列</h3><h5 id="基本概念-1"><a href="#基本概念-1" class="headerlink" title="基本概念"></a>基本概念</h5></li>
+<li>如果元素的样式是在style标签中设置的，只能通过offset系列中的offsetWidth和offseHeight来获取，对象.style是无法获取的；</li>
+</ul>
+<h3 id="scroll系列"><a href="#scroll系列" class="headerlink" title="scroll系列"></a>scroll系列</h3><h5 id="基本概念-1"><a href="#基本概念-1" class="headerlink" title="基本概念"></a>基本概念</h5><ul>
 <li>scroll系列:获取元素的卷曲的值</li>
 <li>scrollWidth:获取元素内容的实际的宽度(如果元素非常少就是元素的宽度,如果有滚动条去掉滚动条的宽度)</li>
 <li>scrollHeight:获取元素内容的实际高度(同上)</li>
 <li>scrollLeft:获取元素中内容向左卷曲出去的距离,向左滚出去的距离</li>
-<li>scrollTop:获取元素中内容向上卷曲出去的距离,向上滚出去的距离<h5 id="注意点"><a href="#注意点" class="headerlink" title="注意点"></a>注意点</h5></li>
-<li>scrollWidth和scrollHeight：主要是元素中内容的实际高度，与border无关，如果有滚动条，需要去掉滚动条的宽度</li>
-<li>scrollHeight：获取元素内容的实际高度，如果元素非常少则是元素的高度，如果有滚动条，需要去掉滚动条的宽度<h5 id="兼容函数封装"><a href="#兼容函数封装" class="headerlink" title="兼容函数封装"></a>兼容函数封装</h5><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">getScroll</span>(<span class="params"></span>) </span>&#123;</div><div class="line">        <span class="keyword">return</span> &#123;</div><div class="line">            <span class="attr">left</span>: <span class="built_in">window</span>.pageXOffset || <span class="built_in">document</span>.body.scrollLeft || <span class="built_in">document</span>.documentElement.scrollLeft || <span class="number">0</span>,</div><div class="line">            <span class="attr">top</span>: <span class="built_in">window</span>.pageYOffset || <span class="built_in">document</span>.body.scrollTop || <span class="built_in">document</span>.documentElement.scrollTop || <span class="number">0</span></div><div class="line">        &#125;;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-</li>
+<li>scrollTop:获取元素中内容向上卷曲出去的距离,向上滚出去的距离</li>
 </ul>
+<h5 id="注意点"><a href="#注意点" class="headerlink" title="注意点"></a>注意点</h5><ul>
+<li>scrollWidth和scrollHeight：主要是元素中内容的实际高度，与border无关，如果有滚动条，需要去掉滚动条的宽度</li>
+<li>scrollHeight：获取元素内容的实际高度，如果元素非常少则是元素的高度，如果有滚动条，需要去掉滚动条的宽度</li>
+</ul>
+<h5 id="兼容函数封装"><a href="#兼容函数封装" class="headerlink" title="兼容函数封装"></a>兼容函数封装</h5><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">getScroll</span>(<span class="params"></span>) </span>&#123;</div><div class="line">        <span class="keyword">return</span> &#123;</div><div class="line">            <span class="attr">left</span>: <span class="built_in">window</span>.pageXOffset || <span class="built_in">document</span>.body.scrollLeft || <span class="built_in">document</span>.documentElement.scrollLeft || <span class="number">0</span>,</div><div class="line">            <span class="attr">top</span>: <span class="built_in">window</span>.pageYOffset || <span class="built_in">document</span>.body.scrollTop || <span class="built_in">document</span>.documentElement.scrollTop || <span class="number">0</span></div><div class="line">        &#125;;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <h3 id="client系列"><a href="#client系列" class="headerlink" title="client系列"></a>client系列</h3><h5 id="基本概念-2"><a href="#基本概念-2" class="headerlink" title="基本概念"></a>基本概念</h5><ul>
 <li>clientHeight：可视区域的高度</li>
 <li>clientWidth：可视区域的宽度</li>
 <li>clientY：可视区域的纵坐标</li>
-<li>clientX:可视区域的横坐标<br>##### </li>
+<li>clientX:可视区域的横坐标</li>
 </ul>
 <h3 id="e-pageX和e-pageY"><a href="#e-pageX和e-pageY" class="headerlink" title="e.pageX和e.pageY"></a>e.pageX和e.pageY</h3><blockquote>
 <p>e.clientX和e.clientY是可视区域的坐标,e.pageX和e.pageY才是真正的文档的坐标<br>pageX和pageY在谷歌和火狐浏览器中都支持,但是在IE8浏览器中不支持<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//图片跟着鼠标飞</span></div><div class="line"><span class="built_in">document</span>.onmousemove=<span class="function"><span class="keyword">function</span> (<span class="params">e</span>) </span>&#123;</div><div class="line">    my$(<span class="string">"im"</span>).style.left=EventTools.getPageX(e)+<span class="string">"px"</span>;</div><div class="line">    my$(<span class="string">"im"</span>).style.top=EventTools.getPageY(e)+<span class="string">"px"</span>;</div><div class="line">&#125;;</div><div class="line"><span class="comment">//兼容代码</span></div><div class="line"><span class="keyword">var</span> EventTools=&#123;</div><div class="line">    <span class="attr">getEvent</span>:<span class="function"><span class="keyword">function</span> (<span class="params">e</span>) </span>&#123; <span class="comment">//封装事件对象参数:window.event或者e</span></div><div class="line">        <span class="keyword">return</span> <span class="built_in">window</span>.event||e;</div><div class="line">    &#125;,</div><div class="line">    <span class="attr">getClientX</span>:<span class="function"><span class="keyword">function</span> (<span class="params">e</span>) </span>&#123;<span class="comment">//封装的是clientX无论是谷歌还是火狐还是IE8</span></div><div class="line">        <span class="keyword">return</span> <span class="keyword">this</span>.getEvent(e).clientX;</div><div class="line">    &#125;,</div><div class="line">    <span class="attr">getClientY</span>:<span class="function"><span class="keyword">function</span> (<span class="params">e</span>) </span>&#123;<span class="comment">//封装的是clientY无论是谷歌还是火狐还是IE8</span></div><div class="line">        <span class="keyword">return</span> <span class="keyword">this</span>.getEvent(e).clientY;</div><div class="line">    &#125;,</div><div class="line">    <span class="attr">getLeft</span>:<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;<span class="comment">//获取的是页面的卷曲出去的横坐标</span></div><div class="line">        <span class="keyword">return</span> <span class="built_in">window</span>.pageXOffset||<span class="built_in">document</span>.body.scrollLeft||<span class="built_in">document</span>.documentElement.scrollLeft||<span class="number">0</span>;</div><div class="line">    &#125;,</div><div class="line">    <span class="attr">getTop</span>:<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;<span class="comment">//获取的是页面的卷曲出去的纵坐标</span></div><div class="line">        <span class="keyword">return</span> <span class="built_in">window</span>.pageYOffset||<span class="built_in">document</span>.body.scrollTop||<span class="built_in">document</span>.documentElement.scrollTop||<span class="number">0</span>;</div><div class="line">    &#125;,</div><div class="line">    <span class="attr">getPageX</span>:<span class="function"><span class="keyword">function</span> (<span class="params">e</span>) </span>&#123;<span class="comment">//获取的页面的可视区的横坐标+页面卷曲出去的横坐标</span></div><div class="line">        <span class="keyword">return</span> <span class="keyword">this</span>.getEvent(e).pageX?<span class="keyword">this</span>.getEvent(e).pageX:<span class="keyword">this</span>.getClientX(e)+<span class="keyword">this</span>.getLeft();</div><div class="line">    &#125;,</div><div class="line">    <span class="attr">getPageY</span>:<span class="function"><span class="keyword">function</span> (<span class="params">e</span>) </span>&#123;<span class="comment">//获取的页面的可视区的纵坐标+页面卷曲出去的纵坐标</span></div><div class="line">        <span class="keyword">return</span> <span class="keyword">this</span>.getEvent(e).pageY?<span class="keyword">this</span>.getEvent(e).pageY:<span class="keyword">this</span>.getClientY(e)+<span class="keyword">this</span>.getTop();</div><div class="line">    &#125;</div><div class="line"></div><div class="line"></div><div class="line">&#125;;</div></pre></td></tr></table></figure></p>
@@ -250,6 +263,17 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">js进阶</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 
       
@@ -431,6 +455,30 @@ return o(t,i(n),arguments.length<3?void 0:u(arguments[2]))}})},function(t,n,r){v
             <input type="checkbox" q-on="click:toggleTag(e)" q-attr="checked:showTags">
           </label>
           <ul class="article-tag-list" q-show="showTags">
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">js基础</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">DOM</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">BOM</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">js进阶</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">正则</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">jQuery</a>
+              </li>
             
             <div class="clearfix"></div>
           </ul>

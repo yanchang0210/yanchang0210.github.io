@@ -8,17 +8,17 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>DOM 内容设置及节点介绍 | 戎码一生的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="innerText和innerHtml的区别 innerHTML和innerText都可以获取标签(元素)中的文本内容 innerHTML可以获取元素中的 标签+文本内容, innerText只能获取文本内容 innerHTML和innerText都可以设置元素中的文本内容 innerHTML可以设置文本内容也可以设置标签+文本内容,innerText只能设置文本,如果设置标签那么会转义设置和获取">
-<meta name="keywords" content="前端,js,jquery,javascript,html5,开发者,程序猿,开源,IT网站,Developer,Programmer,Coder,Geek,html,css,css3,用户体验">
+  <meta name="description" content="innerText和innerHtml的区别 innerHTML和innerText都可以获取标签(元素)中的文本内容 innerHTML可以获取元素中的 标签+文本内容, innerText只能获取文本内容 innerHTML和innerText都可以设置元素中的文本内容 innerHTML可以设置文本内容也可以设置标签+文本内容,innerText只能设置文本,如果设置标签那么会转义  设置和">
+<meta name="keywords" content="DOM">
 <meta property="og:type" content="article">
 <meta property="og:title" content="DOM 内容设置及节点介绍">
 <meta property="og:url" content="http://yoursite.com/2016/06/21/JavaScript-07  DOM02/index.html">
 <meta property="og:site_name" content="戎码一生的博客">
-<meta property="og:description" content="innerText和innerHtml的区别 innerHTML和innerText都可以获取标签(元素)中的文本内容 innerHTML可以获取元素中的 标签+文本内容, innerText只能获取文本内容 innerHTML和innerText都可以设置元素中的文本内容 innerHTML可以设置文本内容也可以设置标签+文本内容,innerText只能设置文本,如果设置标签那么会转义设置和获取">
-<meta property="og:updated_time" content="2017-06-03T13:45:23.476Z">
+<meta property="og:description" content="innerText和innerHtml的区别 innerHTML和innerText都可以获取标签(元素)中的文本内容 innerHTML可以获取元素中的 标签+文本内容, innerText只能获取文本内容 innerHTML和innerText都可以设置元素中的文本内容 innerHTML可以设置文本内容也可以设置标签+文本内容,innerText只能设置文本,如果设置标签那么会转义  设置和">
+<meta property="og:updated_time" content="2017-06-04T01:34:34.253Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="DOM 内容设置及节点介绍">
-<meta name="twitter:description" content="innerText和innerHtml的区别 innerHTML和innerText都可以获取标签(元素)中的文本内容 innerHTML可以获取元素中的 标签+文本内容, innerText只能获取文本内容 innerHTML和innerText都可以设置元素中的文本内容 innerHTML可以设置文本内容也可以设置标签+文本内容,innerText只能设置文本,如果设置标签那么会转义设置和获取">
+<meta name="twitter:description" content="innerText和innerHtml的区别 innerHTML和innerText都可以获取标签(元素)中的文本内容 innerHTML可以获取元素中的 标签+文本内容, innerText只能获取文本内容 innerHTML和innerText都可以设置元素中的文本内容 innerHTML可以设置文本内容也可以设置标签+文本内容,innerText只能设置文本,如果设置标签那么会转义  设置和">
   
     <link rel="alternative" href="/atom.xml" title="戎码一生的博客" type="application/atom+xml">
   
@@ -182,18 +182,27 @@
 <li>innerHTML和innerText都可以获取标签(元素)中的文本内容</li>
 <li>innerHTML可以获取元素中的 标签+文本内容, innerText只能获取文本内容</li>
 <li>innerHTML和innerText都可以设置元素中的文本内容</li>
-<li>innerHTML可以设置文本内容也可以设置标签+文本内容,innerText只能设置文本,如果设置标签那么会转义<h3 id="设置和获取自定义属性"><a href="#设置和获取自定义属性" class="headerlink" title="设置和获取自定义属性"></a>设置和获取自定义属性</h3><blockquote>
+<li>innerHTML可以设置文本内容也可以设置标签+文本内容,innerText只能设置文本,如果设置标签那么会转义</li>
+</ul>
+<h3 id="设置和获取自定义属性"><a href="#设置和获取自定义属性" class="headerlink" title="设置和获取自定义属性"></a>设置和获取自定义属性</h3><blockquote>
 <p>自定义属性：html标签本身没有这个属性，我们为了更方便的操作某些元素，自己加的属性；</p>
 </blockquote>
-</li>
+<a id="more"></a>
+<ul>
 <li>.setAttribute()–设置</li>
-<li>.getAttribute()–获取<h3 id="cloneNode"><a href="#cloneNode" class="headerlink" title=".cloneNode"></a>.cloneNode</h3></li>
+<li>.getAttribute()–获取</li>
+</ul>
+<h3 id="cloneNode"><a href="#cloneNode" class="headerlink" title=".cloneNode"></a>.cloneNode</h3><ul>
 <li>.cloneNode()方法,参数是布尔类型,如果是true,则会把这个标签中所有的内容全部克隆出来,如果是false,那么只能克隆部分内容;</li>
-<li>.cloneNode()方法的返回值是节点类型,如果克隆的是标签,那么返回的就是标签(对象)<h3 id="元素的隐藏方式"><a href="#元素的隐藏方式" class="headerlink" title="元素的隐藏方式"></a>元素的隐藏方式</h3></li>
+<li>.cloneNode()方法的返回值是节点类型,如果克隆的是标签,那么返回的就是标签(对象)</li>
+</ul>
+<h3 id="元素的隐藏方式"><a href="#元素的隐藏方式" class="headerlink" title="元素的隐藏方式"></a>元素的隐藏方式</h3><ul>
 <li>display:none; 不占位置</li>
 <li>opacity：0；元素透明，占位置</li>
 <li>visibility：hidden；占位置</li>
-<li>宽高设为0（不常用）<h3 id="节点"><a href="#节点" class="headerlink" title="节点"></a>节点</h3></li>
+<li>宽高设为0（不常用）</li>
+</ul>
+<h3 id="节点"><a href="#节点" class="headerlink" title="节点"></a>节点</h3><ul>
 <li>节点：包括  标签 文本 属性；<ul>
 <li>元素节点： 标签—-元素—–对象</li>
 <li>文本节点：文本内容（文字、换行、空格）—–对象</li>
@@ -216,9 +225,11 @@
 <li>nodeValue(节点的值)<ul>
 <li>如果当前的节点是标签—-null</li>
 <li>如果当前的节点是属性—-属性的值</li>
-<li>如果当前的节点是文本—-文本的内容<h3 id="节点的获取"><a href="#节点的获取" class="headerlink" title="节点的获取"></a>节点的获取</h3></li>
+<li>如果当前的节点是文本—-文本的内容</li>
 </ul>
 </li>
+</ul>
+<h3 id="节点的获取"><a href="#节点的获取" class="headerlink" title="节点的获取"></a>节点的获取</h3><ul>
 <li>.firstChild–获取当前元素中的第一个子节点</li>
 <li>.firstElementChild–获取当前元素中的第一个子元素</li>
 <li>.lastChild–获取当前元素中的最后一个子节点</li>
@@ -230,10 +241,12 @@
 <li>.previousSibling–获取当前元素的前一个兄弟节点</li>
 <li>.previousElementSibling–获取当前元素的前一个兄弟元素</li>
 <li>.nextSibling–获取当前元素的后一个兄弟节点</li>
-<li>.nextElementSibling–获取当前元素的后一个兄弟元素<h3 id="节点属性的获取"><a href="#节点属性的获取" class="headerlink" title="节点属性的获取"></a>节点属性的获取</h3></li>
-<li>.getAttributeNode()<h3 id="获取元素的兼容代码"><a href="#获取元素的兼容代码" class="headerlink" title="获取元素的兼容代码"></a>获取元素的兼容代码</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//兼容代码</span></div><div class="line"><span class="comment">//获取任意元素中的第一个子元素</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">getFirstElement</span>(<span class="params">element</span>) </span>&#123;</div><div class="line">    <span class="keyword">if</span>(element.firstElementChild)&#123;<span class="comment">//浏览器支持这个属性</span></div><div class="line">        <span class="keyword">return</span> element.firstElementChild;<span class="comment">//直接返回第一个子元素</span></div><div class="line">    &#125;<span class="keyword">else</span>&#123;</div><div class="line">        <span class="keyword">var</span> node=element.firstChild;<span class="comment">//保存第一个子节点</span></div><div class="line">        <span class="keyword">while</span> (node&amp;&amp;node.nodeType!=<span class="number">1</span>)&#123;</div><div class="line">           node= node.nextSibling;</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">return</span> node;<span class="comment">//这才是第一个子元素(标签)</span></div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"><span class="comment">//获取任意元素中的最后一个子元素</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">getLastElement</span>(<span class="params">element</span>) </span>&#123;</div><div class="line">    <span class="keyword">if</span>(element.lastElementChild)&#123;</div><div class="line">        <span class="keyword">return</span> element.lastElementChild;</div><div class="line">    &#125;<span class="keyword">else</span>&#123;</div><div class="line">        <span class="keyword">var</span> node=element.lastChild;</div><div class="line">        <span class="keyword">while</span> (node&amp;&amp;node.nodeType!=<span class="number">1</span>)&#123;</div><div class="line">            node=node.previousSibling;</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">return</span> node;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"><span class="comment">//获取任意元素的下一个兄弟元素</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">getNextElementSibling</span>(<span class="params">element</span>) </span>&#123;</div><div class="line">    <span class="keyword">if</span>(element.nextElementSibling)&#123;</div><div class="line">        <span class="keyword">return</span> element.nextElementSibling;</div><div class="line">    &#125;<span class="keyword">else</span>&#123;</div><div class="line">        <span class="keyword">var</span> node=element.nextSibling;</div><div class="line">        <span class="keyword">while</span>(node&amp;&amp;node.nodeType!=<span class="number">1</span>)&#123;</div><div class="line">            node=node.nextSibling;</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">return</span> node;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"><span class="comment">//获取任意元素的前一个兄弟元素</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">getPreviousElementSibling</span>(<span class="params">element</span>) </span>&#123;</div><div class="line">    <span class="keyword">if</span>(element.previousElementSibling)&#123;</div><div class="line">        <span class="keyword">return</span> element.previousElementSibling;</div><div class="line">    &#125;<span class="keyword">else</span>&#123;</div><div class="line">        <span class="keyword">var</span> node=element.previousSibling;</div><div class="line">        <span class="keyword">while</span>(node&amp;&amp;node.nodeType!=<span class="number">1</span>)&#123;</div><div class="line">            node=node.previousSibling;</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">return</span> node;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"><span class="comment">//能力检测获取兄弟元素标签</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">getSiblings</span>(<span class="params">element</span>) </span>&#123;    </div><div class="line">	<span class="keyword">if</span>(!element)<span class="keyword">return</span>;    </div><div class="line">	<span class="keyword">var</span> elements=[];</div><div class="line">	<span class="comment">//获取前面的兄弟节点    </span></div><div class="line">	<span class="keyword">var</span> ele=element.previousSibling;   </div><div class="line">	<span class="keyword">while</span>(ele)&#123;       </div><div class="line">		<span class="keyword">if</span>(ele.nodeType===<span class="number">1</span>)&#123;           </div><div class="line">			elements.push(ele);        </div><div class="line">			&#125;        </div><div class="line">		ele=ele.previousSibling;    </div><div class="line">	&#125;    </div><div class="line">	<span class="comment">//获取后面的兄弟节点   </span></div><div class="line">	ele=element.nextSibling;    </div><div class="line">	<span class="keyword">while</span>(ele)&#123;        </div><div class="line">		<span class="keyword">if</span>(ele.nodeType===<span class="number">1</span>)&#123;            </div><div class="line">			elements.push(ele);        </div><div class="line">		&#125;       </div><div class="line">		ele=ele.nextSibling;   </div><div class="line">	&#125;    </div><div class="line">	<span class="keyword">return</span> elements;</div><div class="line">&#125;</div></pre></td></tr></table></figure></li>
+<li>.nextElementSibling–获取当前元素的后一个兄弟元素</li>
 </ul>
-
+<h3 id="节点属性的获取"><a href="#节点属性的获取" class="headerlink" title="节点属性的获取"></a>节点属性的获取</h3><ul>
+<li>.getAttributeNode()</li>
+</ul>
+<h3 id="获取元素的兼容代码"><a href="#获取元素的兼容代码" class="headerlink" title="获取元素的兼容代码"></a>获取元素的兼容代码</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//兼容代码</span></div><div class="line"><span class="comment">//获取任意元素中的第一个子元素</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">getFirstElement</span>(<span class="params">element</span>) </span>&#123;</div><div class="line">    <span class="keyword">if</span>(element.firstElementChild)&#123;<span class="comment">//浏览器支持这个属性</span></div><div class="line">        <span class="keyword">return</span> element.firstElementChild;<span class="comment">//直接返回第一个子元素</span></div><div class="line">    &#125;<span class="keyword">else</span>&#123;</div><div class="line">        <span class="keyword">var</span> node=element.firstChild;<span class="comment">//保存第一个子节点</span></div><div class="line">        <span class="keyword">while</span> (node&amp;&amp;node.nodeType!=<span class="number">1</span>)&#123;</div><div class="line">           node= node.nextSibling;</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">return</span> node;<span class="comment">//这才是第一个子元素(标签)</span></div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"><span class="comment">//获取任意元素中的最后一个子元素</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">getLastElement</span>(<span class="params">element</span>) </span>&#123;</div><div class="line">    <span class="keyword">if</span>(element.lastElementChild)&#123;</div><div class="line">        <span class="keyword">return</span> element.lastElementChild;</div><div class="line">    &#125;<span class="keyword">else</span>&#123;</div><div class="line">        <span class="keyword">var</span> node=element.lastChild;</div><div class="line">        <span class="keyword">while</span> (node&amp;&amp;node.nodeType!=<span class="number">1</span>)&#123;</div><div class="line">            node=node.previousSibling;</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">return</span> node;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"><span class="comment">//获取任意元素的下一个兄弟元素</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">getNextElementSibling</span>(<span class="params">element</span>) </span>&#123;</div><div class="line">    <span class="keyword">if</span>(element.nextElementSibling)&#123;</div><div class="line">        <span class="keyword">return</span> element.nextElementSibling;</div><div class="line">    &#125;<span class="keyword">else</span>&#123;</div><div class="line">        <span class="keyword">var</span> node=element.nextSibling;</div><div class="line">        <span class="keyword">while</span>(node&amp;&amp;node.nodeType!=<span class="number">1</span>)&#123;</div><div class="line">            node=node.nextSibling;</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">return</span> node;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"><span class="comment">//获取任意元素的前一个兄弟元素</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">getPreviousElementSibling</span>(<span class="params">element</span>) </span>&#123;</div><div class="line">    <span class="keyword">if</span>(element.previousElementSibling)&#123;</div><div class="line">        <span class="keyword">return</span> element.previousElementSibling;</div><div class="line">    &#125;<span class="keyword">else</span>&#123;</div><div class="line">        <span class="keyword">var</span> node=element.previousSibling;</div><div class="line">        <span class="keyword">while</span>(node&amp;&amp;node.nodeType!=<span class="number">1</span>)&#123;</div><div class="line">            node=node.previousSibling;</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">return</span> node;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"><span class="comment">//能力检测获取兄弟元素标签</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">getSiblings</span>(<span class="params">element</span>) </span>&#123;    </div><div class="line">	<span class="keyword">if</span>(!element)<span class="keyword">return</span>;    </div><div class="line">	<span class="keyword">var</span> elements=[];</div><div class="line">	<span class="comment">//获取前面的兄弟节点    </span></div><div class="line">	<span class="keyword">var</span> ele=element.previousSibling;   </div><div class="line">	<span class="keyword">while</span>(ele)&#123;       </div><div class="line">		<span class="keyword">if</span>(ele.nodeType===<span class="number">1</span>)&#123;           </div><div class="line">			elements.push(ele);        </div><div class="line">			&#125;        </div><div class="line">		ele=ele.previousSibling;    </div><div class="line">	&#125;    </div><div class="line">	<span class="comment">//获取后面的兄弟节点   </span></div><div class="line">	ele=element.nextSibling;    </div><div class="line">	<span class="keyword">while</span>(ele)&#123;        </div><div class="line">		<span class="keyword">if</span>(ele.nodeType===<span class="number">1</span>)&#123;            </div><div class="line">			elements.push(ele);        </div><div class="line">		&#125;       </div><div class="line">		ele=ele.nextSibling;   </div><div class="line">	&#125;    </div><div class="line">	<span class="keyword">return</span> elements;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
       
 
       
@@ -262,6 +275,17 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">DOM</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 
       
@@ -443,6 +467,30 @@ return o(t,i(n),arguments.length<3?void 0:u(arguments[2]))}})},function(t,n,r){v
             <input type="checkbox" q-on="click:toggleTag(e)" q-attr="checked:showTags">
           </label>
           <ul class="article-tag-list" q-show="showTags">
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">js基础</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">DOM</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">BOM</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">js进阶</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">正则</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">jQuery</a>
+              </li>
             
             <div class="clearfix"></div>
           </ul>

@@ -8,17 +8,17 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>字符串及数组方法 | 戎码一生的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="字符串字符串特性 特性:不可变性 字符串的变量如果调用了属性或者方法就是基本包装类型对象 字符串中的属性:length,字符串的长度字符串中的方法 charAt(索引);获取指定索引位置的字符串 charCodeAt(索引);获取的指定索引位置的字符串的ASCII码值 concat(“字符串1”,”字符串2”);拼接字符串的,返回值是拼接后的新的字符串 slice(开始索引,结束索引);从开始索引">
-<meta name="keywords" content="前端,js,jquery,javascript,html5,开发者,程序猿,开源,IT网站,Developer,Programmer,Coder,Geek,html,css,css3,用户体验">
+  <meta name="description" content="字符串字符串特性 特性:不可变性 字符串的变量如果调用了属性或者方法就是基本包装类型对象 字符串中的属性:length,字符串的长度  字符串中的方法 charAt(索引);获取指定索引位置的字符串 charCodeAt(索引);获取的指定索引位置的字符串的ASCII码值 concat(“字符串1”,”字符串2”);拼接字符串的,返回值是拼接后的新的字符串">
+<meta name="keywords" content="DOM">
 <meta property="og:type" content="article">
 <meta property="og:title" content="字符串及数组方法">
 <meta property="og:url" content="http://yoursite.com/2016/06/28/JavaScript-09  DOM04/index.html">
 <meta property="og:site_name" content="戎码一生的博客">
-<meta property="og:description" content="字符串字符串特性 特性:不可变性 字符串的变量如果调用了属性或者方法就是基本包装类型对象 字符串中的属性:length,字符串的长度字符串中的方法 charAt(索引);获取指定索引位置的字符串 charCodeAt(索引);获取的指定索引位置的字符串的ASCII码值 concat(“字符串1”,”字符串2”);拼接字符串的,返回值是拼接后的新的字符串 slice(开始索引,结束索引);从开始索引">
-<meta property="og:updated_time" content="2017-06-03T13:45:11.459Z">
+<meta property="og:description" content="字符串字符串特性 特性:不可变性 字符串的变量如果调用了属性或者方法就是基本包装类型对象 字符串中的属性:length,字符串的长度  字符串中的方法 charAt(索引);获取指定索引位置的字符串 charCodeAt(索引);获取的指定索引位置的字符串的ASCII码值 concat(“字符串1”,”字符串2”);拼接字符串的,返回值是拼接后的新的字符串">
+<meta property="og:updated_time" content="2017-06-04T01:33:24.149Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="字符串及数组方法">
-<meta name="twitter:description" content="字符串字符串特性 特性:不可变性 字符串的变量如果调用了属性或者方法就是基本包装类型对象 字符串中的属性:length,字符串的长度字符串中的方法 charAt(索引);获取指定索引位置的字符串 charCodeAt(索引);获取的指定索引位置的字符串的ASCII码值 concat(“字符串1”,”字符串2”);拼接字符串的,返回值是拼接后的新的字符串 slice(开始索引,结束索引);从开始索引">
+<meta name="twitter:description" content="字符串字符串特性 特性:不可变性 字符串的变量如果调用了属性或者方法就是基本包装类型对象 字符串中的属性:length,字符串的长度  字符串中的方法 charAt(索引);获取指定索引位置的字符串 charCodeAt(索引);获取的指定索引位置的字符串的ASCII码值 concat(“字符串1”,”字符串2”);拼接字符串的,返回值是拼接后的新的字符串">
   
     <link rel="alternative" href="/atom.xml" title="戎码一生的博客" type="application/atom+xml">
   
@@ -181,10 +181,15 @@
         <h3 id="字符串"><a href="#字符串" class="headerlink" title="字符串"></a>字符串</h3><h4 id="字符串特性"><a href="#字符串特性" class="headerlink" title="字符串特性"></a>字符串特性</h4><ul>
 <li>特性:不可变性</li>
 <li>字符串的变量如果调用了属性或者方法就是基本包装类型对象</li>
-<li>字符串中的属性:length,字符串的长度<h4 id="字符串中的方法"><a href="#字符串中的方法" class="headerlink" title="字符串中的方法"></a>字符串中的方法</h4></li>
+<li>字符串中的属性:length,字符串的长度</li>
+</ul>
+<h4 id="字符串中的方法"><a href="#字符串中的方法" class="headerlink" title="字符串中的方法"></a>字符串中的方法</h4><ul>
 <li>charAt(索引);获取指定索引位置的字符串</li>
 <li>charCodeAt(索引);获取的指定索引位置的字符串的ASCII码值</li>
 <li>concat(“字符串1”,”字符串2”);拼接字符串的,返回值是拼接后的新的字符串</li>
+</ul>
+<a id="more"></a>
+<ul>
 <li>slice(开始索引,结束索引);从开始索引位置开始截取,到结束索引的位置的前一个结束,返回的是截取后的新的字符串</li>
 <li>substring(开始的索引,结束的索引);截取(同上)</li>
 <li>substr(开始的索引,截取的长度);从指定的索引位置开始截取,截取多少个,返回一个新的字符串</li>
@@ -194,7 +199,9 @@
 <li>to(Locale)UpperCase() //转换大写</li>
 <li>to(Locale)LowerCase() //转换小写</li>
 <li>replace(“要替换的字符串”,”新的字符串”);替换字符串的,返回新的字符串</li>
-<li>split(“指定的字符串”);是用来切割字符串中指定的字符串的,返回的是字符串的数组<h3 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h3><h4 id="数组中的属性-length"><a href="#数组中的属性-length" class="headerlink" title="数组中的属性:length"></a>数组中的属性:length</h4><h4 id="数组中的常用方法"><a href="#数组中的常用方法" class="headerlink" title="数组中的常用方法:"></a>数组中的常用方法:</h4></li>
+<li>split(“指定的字符串”);是用来切割字符串中指定的字符串的,返回的是字符串的数组</li>
+</ul>
+<h3 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h3><h4 id="数组中的属性-length"><a href="#数组中的属性-length" class="headerlink" title="数组中的属性:length"></a>数组中的属性:length</h4><h4 id="数组中的常用方法"><a href="#数组中的常用方法" class="headerlink" title="数组中的常用方法:"></a>数组中的常用方法:</h4><ul>
 <li>push(元素);在数组的后面追加一个元素，返回值是追加后的数组的长度</li>
 <li>pop();删除数组最后一个元素,返回的是被删除的元素的值</li>
 <li>unshift(元素);在数组的前面插入一个元素，返回值是插入后的数组的长度</li>
@@ -210,14 +217,17 @@
 <li>map(函数),让数组中的每个元素都执行一次函数,把得到的返回值组成一个新的数组</li>
 <li>filter(函数),让数组中的每个元素都要执行函数,把满足条件的元素存放在一个新的数组中</li>
 <li>foreach(函数);遍历的</li>
-<li>join(字符串);把数组中的每个元素之间用指定的字符串进行连接.返回一个新的字符串<h3 id="基本包装类型"><a href="#基本包装类型" class="headerlink" title="基本包装类型"></a>基本包装类型</h3></li>
+<li>join(字符串);把数组中的每个元素之间用指定的字符串进行连接.返回一个新的字符串</li>
+</ul>
+<h3 id="基本包装类型"><a href="#基本包装类型" class="headerlink" title="基本包装类型"></a>基本包装类型</h3><ul>
 <li>基本包装类型:String,Number,Boolean</li>
 <li>基本类型:string,number,boolean,null,undefined</li>
 <li>基本类型变量无法直接调用属性和方法</li>
-<li>对象才可以直接调用属性或者方法<h3 id="Date对象"><a href="#Date对象" class="headerlink" title="Date对象"></a>Date对象</h3><blockquote>
+<li>对象才可以直接调用属性或者方法</li>
+</ul>
+<h3 id="Date对象"><a href="#Date对象" class="headerlink" title="Date对象"></a>Date对象</h3><blockquote>
 <p>var dt=new Date();Date方法如下：</p>
-</blockquote>
-</li>
+<ul>
 <li>year=dt.getFullYear();</li>
 <li>month=dt.getMonth()+1;</li>
 <li>day=dt.getDate();</li>
@@ -225,6 +235,7 @@
 <li>m=dt.getMinutes();</li>
 <li>s=dt.getSeconds();</li>
 </ul>
+</blockquote>
 
       
 
@@ -254,6 +265,17 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">DOM</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 
       
@@ -435,6 +457,30 @@ return o(t,i(n),arguments.length<3?void 0:u(arguments[2]))}})},function(t,n,r){v
             <input type="checkbox" q-on="click:toggleTag(e)" q-attr="checked:showTags">
           </label>
           <ul class="article-tag-list" q-show="showTags">
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">js基础</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">DOM</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">BOM</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">js进阶</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">正则</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">jQuery</a>
+              </li>
             
             <div class="clearfix"></div>
           </ul>
