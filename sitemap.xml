@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://yoursite.com/2016/06/10/JavaScript-03%20%20%E6%95%B0%E7%BB%84/</loc>
+    
+    <lastmod>2017-06-04T03:16:30.621Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://yoursite.com/2016/06/05/JavaScript-02%20%20JavaScript%E5%85%A5%E9%97%A8/</loc>
     
     <lastmod>2017-06-04T03:14:04.389Z</lastmod>
@@ -26,13 +33,6 @@
     <loc>http://yoursite.com/2016/05/28/JavaScript-01%20%20JavaScript%20%E7%AE%80%E4%BB%8B/</loc>
     
     <lastmod>2017-06-04T01:38:18.773Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/2016/06/10/JavaScript-03%20%20%E6%95%B0%E7%BB%84/</loc>
-    
-    <lastmod>2017-06-04T01:37:00.693Z</lastmod>
     
   </url>
   
