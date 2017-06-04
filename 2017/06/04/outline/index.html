@@ -6,18 +6,22 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives: 2016 | 戎码一生的博客</title>
+  <title>戎码一生的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="走在前端的路上，一往无前">
+  <meta name="description" content="git-day01命令行概述 dos shell  常用命令 pwd (Print Working Directory) 查看当前目录 cd (Change Directory) 切换目录，如 cd /etc ls (List) 查看当前目录下内容，如 ls -al mkdir (Make Directory) 创建目录，如 mkdir blog touch 创建文件，如 touch index.">
 <meta name="keywords" content="前端,js,jquery,javascript,html5,开发者,程序猿,开源,IT网站,Developer,Programmer,Coder,Geek,html,css,css3,用户体验">
-<meta property="og:type" content="website">
+<meta property="og:type" content="article">
 <meta property="og:title" content="戎码一生的博客">
-<meta property="og:url" content="http://yoursite.com/archives/2016/index.html">
+<meta property="og:url" content="http://yoursite.com/2017/06/04/outline/index.html">
 <meta property="og:site_name" content="戎码一生的博客">
-<meta property="og:description" content="走在前端的路上，一往无前">
+<meta property="og:description" content="git-day01命令行概述 dos shell  常用命令 pwd (Print Working Directory) 查看当前目录 cd (Change Directory) 切换目录，如 cd /etc ls (List) 查看当前目录下内容，如 ls -al mkdir (Make Directory) 创建目录，如 mkdir blog touch 创建文件，如 touch index.">
+<meta property="og:image" content="http://yoursite.com/2017/06/04/outline/img/git1.jpg">
+<meta property="og:image" content="http://yoursite.com/2017/06/04/outline/img/area.jpg">
+<meta property="og:updated_time" content="2017-03-12T11:29:30.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="戎码一生的博客">
-<meta name="twitter:description" content="走在前端的路上，一往无前">
+<meta name="twitter:description" content="git-day01命令行概述 dos shell  常用命令 pwd (Print Working Directory) 查看当前目录 cd (Change Directory) 切换目录，如 cd /etc ls (List) 查看当前目录下内容，如 ls -al mkdir (Make Directory) 创建目录，如 mkdir blog touch 创建文件，如 touch index.">
+<meta name="twitter:image" content="http://yoursite.com/2017/06/04/outline/img/git1.jpg">
   
     <link rel="alternative" href="/atom.xml" title="戎码一生的博客" type="application/atom+xml">
   
@@ -155,668 +159,261 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-outline" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="git-day01"><a href="#git-day01" class="headerlink" title="git-day01"></a>git-day01</h1><h2 id="命令行概述"><a href="#命令行概述" class="headerlink" title="命令行概述"></a>命令行概述</h2><ul>
+<li>dos</li>
+<li>shell</li>
+</ul>
+<h2 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h2><ul>
+<li>pwd (Print Working Directory) 查看当前目录</li>
+<li>cd (Change Directory) 切换目录，如 cd /etc</li>
+<li>ls (List) 查看当前目录下内容，如 ls -al</li>
+<li>mkdir (Make Directory) 创建目录，如 mkdir blog</li>
+<li>touch 创建文件，如 touch index.html</li>
+<li>cat 查看文件全部内容，如 cat index.html</li>
+<li>less 查看文件，如more /etc/passwd、less /etc/passwd</li>
+<li>rm (remove) 删除文件，如 rm index.html、rm -rf  blog</li>
+<li>rmdir (Remove Directory) 删除文件夹，只能删除空文件夹，不常用</li>
+<li>mv (move) 移动文件或重命名，如 mv index.html ./demo/index.html</li>
+<li>cp (copy) 复制文件，cp index.html ./demo/index.html</li>
+<li>tab 自动补全，连按两次会将所有匹配内容显示出来</li>
+<li>> 和 &gt;&gt;重定向，如echo hello world! &gt; README.md，&gt;覆盖 &gt;&gt;追加</li>
+<li>| 管道符可以将多个命令连接使用，上一次（命令）的执行结果当成下一次（命令）的参数。</li>
+<li>grep 匹配内容，一般结合管道符使用</li>
+</ul>
+<h2 id="vi编辑器"><a href="#vi编辑器" class="headerlink" title="vi编辑器"></a>vi编辑器</h2><blockquote>
+<p>linux操作系统标配，相当于windows下的记事本。</p>
+</blockquote>
+<h3 id="vi编辑器的三种模式"><a href="#vi编辑器的三种模式" class="headerlink" title="vi编辑器的三种模式"></a>vi编辑器的三种模式</h3><blockquote>
+<p>vi编辑器提供了3种模式，分别是命令模式、插入模式、底行模式，每种模式下用户所能进行的操作是不一样的。</p>
+</blockquote>
+<ul>
+<li>3种模式的切换如下图所示：</li>
+</ul>
+<p><img src="img/git1.jpg" alt=""></p>
+<h3 id="vi常用操作"><a href="#vi常用操作" class="headerlink" title="vi常用操作"></a>vi常用操作</h3><ul>
+<li>a) 打开/创建文件， vi 文件路径</li>
+<li>b) 底行模式 :w保存，:w filenme另存为</li>
+<li>c) 底行模式 :q退出</li>
+<li>d) 底行模式 :wq保存并退出</li>
+<li>e) 底行模式 :e! 撤销更改，返回到上一次保存的状态</li>
+<li>f) 底行模式 :q! 不保存强制退出</li>
+<li>g) 底行模式 :set nu 设置行号</li>
+<li>h) 命令模式 ZZ（大写）保存并退出</li>
+<li>i) 命令模式 u辙销操作，可多次使用</li>
+<li>j) 命令模式 dd删除当前行</li>
+<li>k) 命令模式 yy复制当前行</li>
+<li>l) 命令模式 p 粘贴内容</li>
+<li>m) 命令模式 ctrl+f向前翻页</li>
+<li>n) 命令模式 ctrl+b向后翻页</li>
+<li>o) 命令模式 i进入编辑模式，当前光标处插入</li>
+<li>p) 命令模式 a进入编辑模式，当前光标后插入</li>
+<li>q) 命令模式 A进入编辑模式，光标移动到行尾</li>
+<li>r) 命令模式 o进入编辑模式，当前行下面插入新行</li>
+<li>s) 命令模式 O进入编辑模式，当前行上面插入新行</li>
+</ul>
+<h2 id="远程登录命令ssh"><a href="#远程登录命令ssh" class="headerlink" title="远程登录命令ssh"></a>远程登录命令ssh</h2><ul>
+<li>ssh命令基本原理</li>
+<li>ssh命令基本使用</li>
+</ul>
+<h2 id="版本控制概述"><a href="#版本控制概述" class="headerlink" title="版本控制概述"></a>版本控制概述</h2><ul>
+<li>本地版本控制</li>
+<li>集中版本控制</li>
+<li>分布式版本控制</li>
+</ul>
+<h2 id="git环境安装"><a href="#git环境安装" class="headerlink" title="git环境安装"></a>git环境安装</h2><ul>
+<li>window安装<ul>
+<li><a href="http://git-scm.com/download/win" target="_blank" rel="external">下载地址</a>，下载后和普通软件安装方式一样</li>
+</ul>
+</li>
+<li>linux安装<ul>
+<li>CentOS发行版：sudo yum install git</li>
+<li>Ubuntu发行版：sudo apt-get install git</li>
+</ul>
+</li>
+<li>Mac安装<ul>
+<li>打开Terminal直接输入git命令，会自动提示，按提示引导安装即可</li>
+</ul>
+</li>
+</ul>
+<h2 id="git工作原理"><a href="#git工作原理" class="headerlink" title="git工作原理"></a>git工作原理</h2><h3 id="git的三个工作区域"><a href="#git的三个工作区域" class="headerlink" title="git的三个工作区域"></a>git的三个工作区域</h3><ul>
+<li>工作目录</li>
+<li>暂存区域</li>
+<li>本地仓库</li>
+</ul>
+<p><img src="img/area.jpg" alt=""></p>
+<h3 id="git管理文件的4中状态"><a href="#git管理文件的4中状态" class="headerlink" title="git管理文件的4中状态"></a>git管理文件的4中状态</h3><ul>
+<li>未追踪untraced</li>
+<li>已暂存staged</li>
+<li>已提交commited</li>
+<li>已修改modified</li>
+</ul>
+<h2 id="git工作流程-本地创建仓库"><a href="#git工作流程-本地创建仓库" class="headerlink" title="git工作流程-本地创建仓库"></a>git工作流程-本地创建仓库</h2><ol>
+<li>配置用户信息</li>
+<li>初始化仓库</li>
+<li>添加文件到暂存区</li>
+<li>提交文件</li>
+<li>查看文件状态</li>
+<li>查看提交历史</li>
+<li>撤销文件修改</li>
+<li>回复版本</li>
+</ol>
+<h2 id="git分支操作"><a href="#git分支操作" class="headerlink" title="git分支操作"></a>git分支操作</h2><h3 id="分支概述"><a href="#分支概述" class="headerlink" title="分支概述"></a>分支概述</h3><h3 id="分支操作"><a href="#分支操作" class="headerlink" title="分支操作"></a>分支操作</h3><ol>
+<li>创建分支</li>
+<li>切换分支</li>
+<li>合并分支</li>
+<li>删除分支</li>
+</ol>
+<h2 id="Git命令"><a href="#Git命令" class="headerlink" title="Git命令"></a>Git命令</h2><ul>
+<li>配置用户信息<ul>
+<li>全局配置，软件安装目录C:\Program Files\Git\mingw64\etc\gitconfig</li>
+<li>用户配置，用户名目录C:\Users\www.gitconfig</li>
+<li>项目配置，项目目录</li>
+<li>git config –global user.name zhangsan</li>
+<li>git config –global user.email “zhangsan@163.com”</li>
+</ul>
+</li>
+<li>查看文件状态<ul>
+<li>git status</li>
+</ul>
+</li>
+<li>查看提交记录(按q键退出)<ul>
+<li>git log</li>
+</ul>
+</li>
+<li>工作区添加到暂存区<ul>
+<li>git add</li>
+</ul>
+</li>
+<li>暂存区覆盖工作区内容<ul>
+<li>git checkout</li>
+</ul>
+</li>
+<li>暂存区提交到本地仓库<ul>
+<li>git commit -m ‘bug fixed’</li>
+</ul>
+</li>
+<li>回滚特定版本<ul>
+<li>git reset –hard <commit></commit></li>
+</ul>
+</li>
+</ul>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>感谢光临，多多交流<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
       
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2016" class="archive-year">2016</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/07/20/JavaScript-16  jQuery03/" class="archive-article-date">
-  	<time datetime="2016-07-19T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-07-20</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/07/20/JavaScript-16  jQuery03/">jQuery 事件</a>
-    </h1>
-  
+      
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">jQuery</a>
-        		</li>
-      		
-		</ul>
-	</div>
+      
 
-          
-
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2017/06/04/outline/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/07/15/JavaScript-15  jQuery02/" class="archive-article-date">
-  	<time datetime="2016-07-14T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-07-15</time>
-</a>
-        </div>
-    	 
+<nav id="article-nav">
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/07/15/JavaScript-15  jQuery02/">jQuery 常用操作</a>
-    </h1>
+  
+    <a href="/2016/07/20/JavaScript-16  jQuery03/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">jQuery 事件</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+
+
+
+  
+  
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">jQuery</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/07/15/JavaScript-14  jQuery01/" class="archive-article-date">
-  	<time datetime="2016-07-14T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-07-15</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/07/15/JavaScript-14  jQuery01/">jQuery 介绍</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">jQuery</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/07/12/JavaScript-13  JS进阶和特效03/" class="archive-article-date">
-  	<time datetime="2016-07-11T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-07-12</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/07/12/JavaScript-13  JS进阶和特效03/">正则表达式</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">正则</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/07/08/JavaScript-12  Js进阶和特效02/" class="archive-article-date">
-  	<time datetime="2016-07-07T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-07-08</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/07/08/JavaScript-12  Js进阶和特效02/">事件</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">js进阶</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/07/05/JavaScript-11  Js进阶和特效01/" class="archive-article-date">
-  	<time datetime="2016-07-04T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-07-05</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/07/05/JavaScript-11  Js进阶和特效01/">offset scroll和client</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">js进阶</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/07/01/JavaScript-10  BOM/" class="archive-article-date">
-  	<time datetime="2016-06-30T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-07-01</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/07/01/JavaScript-10  BOM/">BOM</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">BOM</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/06/28/JavaScript-09  DOM04/" class="archive-article-date">
-  	<time datetime="2016-06-27T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-06-28</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/06/28/JavaScript-09  DOM04/">字符串及数组方法</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">DOM</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/06/23/JavaScript-08  DOM03/" class="archive-article-date">
-  	<time datetime="2016-06-22T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-06-23</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/06/23/JavaScript-08  DOM03/">DOM 元素获取</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">DOM</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/06/21/JavaScript-07  DOM02/" class="archive-article-date">
-  	<time datetime="2016-06-20T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-06-21</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/06/21/JavaScript-07  DOM02/">DOM 内容设置及节点介绍</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">DOM</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/06/18/JavaScript-06  DOM01/" class="archive-article-date">
-  	<time datetime="2016-06-17T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-06-18</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/06/18/JavaScript-06  DOM01/">DOM 简介</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">DOM</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/06/15/JavaScript-05  对象/" class="archive-article-date">
-  	<time datetime="2016-06-14T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-06-15</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/06/15/JavaScript-05  对象/">对象</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">js基础</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/06/12/JavaScript-04  函数/" class="archive-article-date">
-  	<time datetime="2016-06-11T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-06-12</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/06/12/JavaScript-04  函数/">函数</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">js基础</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/06/10/JavaScript-03  数组/" class="archive-article-date">
-  	<time datetime="2016-06-09T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-06-10</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/06/10/JavaScript-03  数组/">数组</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">js基础</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/06/06/JavaScript-0201  JavaScript数据类型/" class="archive-article-date">
-  	<time datetime="2016-06-05T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-06-06</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/06/06/JavaScript-0201  JavaScript数据类型/">Javascript 基础知识</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">js基础</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/06/05/JavaScript-02  JavaScript入门/" class="archive-article-date">
-  	<time datetime="2016-06-04T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-06-05</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/06/05/JavaScript-02  JavaScript入门/">Javascript 基础知识</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">js基础</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/05/28/JavaScript-01  JavaScript 简介/" class="archive-article-date">
-  	<time datetime="2016-05-27T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-05-28</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/05/28/JavaScript-01  JavaScript 简介/">Javascript 简介</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">js基础</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
 
 
           </div>
@@ -839,8 +436,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,

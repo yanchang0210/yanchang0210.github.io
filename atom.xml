@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-06-04T01:45:06.277Z</updated>
+  <updated>2017-03-12T11:29:30.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -14,6 +14,162 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title></title>
+    <link href="http://yoursite.com/2017/06/04/outline/"/>
+    <id>http://yoursite.com/2017/06/04/outline/</id>
+    <published>2017-06-04T11:57:55.529Z</published>
+    <updated>2017-03-12T11:29:30.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="git-day01"><a href="#git-day01" class="headerlink" title="git-day01"></a>git-day01</h1><h2 id="命令行概述"><a href="#命令行概述" class="headerlink" title="命令行概述"></a>命令行概述</h2><ul>
+<li>dos</li>
+<li>shell</li>
+</ul>
+<h2 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h2><ul>
+<li>pwd (Print Working Directory) 查看当前目录</li>
+<li>cd (Change Directory) 切换目录，如 cd /etc</li>
+<li>ls (List) 查看当前目录下内容，如 ls -al</li>
+<li>mkdir (Make Directory) 创建目录，如 mkdir blog</li>
+<li>touch 创建文件，如 touch index.html</li>
+<li>cat 查看文件全部内容，如 cat index.html</li>
+<li>less 查看文件，如more /etc/passwd、less /etc/passwd</li>
+<li>rm (remove) 删除文件，如 rm index.html、rm -rf  blog</li>
+<li>rmdir (Remove Directory) 删除文件夹，只能删除空文件夹，不常用</li>
+<li>mv (move) 移动文件或重命名，如 mv index.html ./demo/index.html</li>
+<li>cp (copy) 复制文件，cp index.html ./demo/index.html</li>
+<li>tab 自动补全，连按两次会将所有匹配内容显示出来</li>
+<li>> 和 &gt;&gt;重定向，如echo hello world! &gt; README.md，&gt;覆盖 &gt;&gt;追加</li>
+<li>| 管道符可以将多个命令连接使用，上一次（命令）的执行结果当成下一次（命令）的参数。</li>
+<li>grep 匹配内容，一般结合管道符使用</li>
+</ul>
+<h2 id="vi编辑器"><a href="#vi编辑器" class="headerlink" title="vi编辑器"></a>vi编辑器</h2><blockquote>
+<p>linux操作系统标配，相当于windows下的记事本。</p>
+</blockquote>
+<h3 id="vi编辑器的三种模式"><a href="#vi编辑器的三种模式" class="headerlink" title="vi编辑器的三种模式"></a>vi编辑器的三种模式</h3><blockquote>
+<p>vi编辑器提供了3种模式，分别是命令模式、插入模式、底行模式，每种模式下用户所能进行的操作是不一样的。</p>
+</blockquote>
+<ul>
+<li>3种模式的切换如下图所示：</li>
+</ul>
+<p><img src="img/git1.jpg" alt=""></p>
+<h3 id="vi常用操作"><a href="#vi常用操作" class="headerlink" title="vi常用操作"></a>vi常用操作</h3><ul>
+<li>a) 打开/创建文件， vi 文件路径</li>
+<li>b) 底行模式 :w保存，:w filenme另存为</li>
+<li>c) 底行模式 :q退出</li>
+<li>d) 底行模式 :wq保存并退出</li>
+<li>e) 底行模式 :e! 撤销更改，返回到上一次保存的状态</li>
+<li>f) 底行模式 :q! 不保存强制退出</li>
+<li>g) 底行模式 :set nu 设置行号</li>
+<li>h) 命令模式 ZZ（大写）保存并退出</li>
+<li>i) 命令模式 u辙销操作，可多次使用</li>
+<li>j) 命令模式 dd删除当前行</li>
+<li>k) 命令模式 yy复制当前行</li>
+<li>l) 命令模式 p 粘贴内容</li>
+<li>m) 命令模式 ctrl+f向前翻页</li>
+<li>n) 命令模式 ctrl+b向后翻页</li>
+<li>o) 命令模式 i进入编辑模式，当前光标处插入</li>
+<li>p) 命令模式 a进入编辑模式，当前光标后插入</li>
+<li>q) 命令模式 A进入编辑模式，光标移动到行尾</li>
+<li>r) 命令模式 o进入编辑模式，当前行下面插入新行</li>
+<li>s) 命令模式 O进入编辑模式，当前行上面插入新行</li>
+</ul>
+<h2 id="远程登录命令ssh"><a href="#远程登录命令ssh" class="headerlink" title="远程登录命令ssh"></a>远程登录命令ssh</h2><ul>
+<li>ssh命令基本原理</li>
+<li>ssh命令基本使用</li>
+</ul>
+<h2 id="版本控制概述"><a href="#版本控制概述" class="headerlink" title="版本控制概述"></a>版本控制概述</h2><ul>
+<li>本地版本控制</li>
+<li>集中版本控制</li>
+<li>分布式版本控制</li>
+</ul>
+<h2 id="git环境安装"><a href="#git环境安装" class="headerlink" title="git环境安装"></a>git环境安装</h2><ul>
+<li>window安装<ul>
+<li><a href="http://git-scm.com/download/win" target="_blank" rel="external">下载地址</a>，下载后和普通软件安装方式一样</li>
+</ul>
+</li>
+<li>linux安装<ul>
+<li>CentOS发行版：sudo yum install git</li>
+<li>Ubuntu发行版：sudo apt-get install git</li>
+</ul>
+</li>
+<li>Mac安装<ul>
+<li>打开Terminal直接输入git命令，会自动提示，按提示引导安装即可</li>
+</ul>
+</li>
+</ul>
+<h2 id="git工作原理"><a href="#git工作原理" class="headerlink" title="git工作原理"></a>git工作原理</h2><h3 id="git的三个工作区域"><a href="#git的三个工作区域" class="headerlink" title="git的三个工作区域"></a>git的三个工作区域</h3><ul>
+<li>工作目录</li>
+<li>暂存区域</li>
+<li>本地仓库</li>
+</ul>
+<p><img src="img/area.jpg" alt=""></p>
+<h3 id="git管理文件的4中状态"><a href="#git管理文件的4中状态" class="headerlink" title="git管理文件的4中状态"></a>git管理文件的4中状态</h3><ul>
+<li>未追踪untraced</li>
+<li>已暂存staged</li>
+<li>已提交commited</li>
+<li>已修改modified</li>
+</ul>
+<h2 id="git工作流程-本地创建仓库"><a href="#git工作流程-本地创建仓库" class="headerlink" title="git工作流程-本地创建仓库"></a>git工作流程-本地创建仓库</h2><ol>
+<li>配置用户信息</li>
+<li>初始化仓库</li>
+<li>添加文件到暂存区</li>
+<li>提交文件</li>
+<li>查看文件状态</li>
+<li>查看提交历史</li>
+<li>撤销文件修改</li>
+<li>回复版本</li>
+</ol>
+<h2 id="git分支操作"><a href="#git分支操作" class="headerlink" title="git分支操作"></a>git分支操作</h2><h3 id="分支概述"><a href="#分支概述" class="headerlink" title="分支概述"></a>分支概述</h3><h3 id="分支操作"><a href="#分支操作" class="headerlink" title="分支操作"></a>分支操作</h3><ol>
+<li>创建分支</li>
+<li>切换分支</li>
+<li>合并分支</li>
+<li>删除分支</li>
+</ol>
+<h2 id="Git命令"><a href="#Git命令" class="headerlink" title="Git命令"></a>Git命令</h2><ul>
+<li>配置用户信息<ul>
+<li>全局配置，软件安装目录C:\Program Files\Git\mingw64\etc\gitconfig</li>
+<li>用户配置，用户名目录C:\Users\www.gitconfig</li>
+<li>项目配置，项目目录</li>
+<li>git config –global user.name zhangsan</li>
+<li>git config –global user.email “zhangsan@163.com”</li>
+</ul>
+</li>
+<li>查看文件状态<ul>
+<li>git status</li>
+</ul>
+</li>
+<li>查看提交记录(按q键退出)<ul>
+<li>git log</li>
+</ul>
+</li>
+<li>工作区添加到暂存区<ul>
+<li>git add</li>
+</ul>
+</li>
+<li>暂存区覆盖工作区内容<ul>
+<li>git checkout</li>
+</ul>
+</li>
+<li>暂存区提交到本地仓库<ul>
+<li>git commit -m ‘bug fixed’</li>
+</ul>
+</li>
+<li>回滚特定版本<ul>
+<li>git reset –hard <commit></commit></li>
+</ul>
+</li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;git-day01&quot;&gt;&lt;a href=&quot;#git-day01&quot; class=&quot;headerlink&quot; title=&quot;git-day01&quot;&gt;&lt;/a&gt;git-day01&lt;/h1&gt;&lt;h2 id=&quot;命令行概述&quot;&gt;&lt;a href=&quot;#命令行概述&quot; class=&quot;header
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>jQuery 事件</title>
@@ -94,6 +250,97 @@
 &lt;p&gt;使用同attr方法,prop()方法可以设置或者获取标签的属性值,而且可以获取复选框checked的true或者false值;&lt;/p&gt;
 &lt;h3 id=&quot;设置和获取元素的宽和高&quot;&gt;&lt;a href=&quot;#设置和获取元素的宽和高&quot; class=&quot;headerlink&quot; title=&quot;设置和获取元素的宽和高&quot;&gt;&lt;/a&gt;设置和获取元素的宽和高&lt;/h3&gt;&lt;p&gt;//直接设置数字的值即可:$(“div”).width(500);&lt;/p&gt;
 &lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+    
+    </summary>
+    
+    
+      <category term="jQuery" scheme="http://yoursite.com/tags/jQuery/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>jQuery 常用操作</title>
+    <link href="http://yoursite.com/2016/07/15/JavaScript-15%20%20jQuery02/"/>
+    <id>http://yoursite.com/2016/07/15/JavaScript-15  jQuery02/</id>
+    <published>2016-07-14T16:00:00.000Z</published>
+    <updated>2017-06-04T01:28:46.900Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="jQuery样式操作问题"><a href="#jQuery样式操作问题" class="headerlink" title="jQuery样式操作问题"></a>jQuery样式操作问题</h3><ul>
+<li>DOM中不能获取元素的属性值</li>
+<li>jQuery中可以获取属性的值，$(),括号里如果只写属性，获取的是属性的值</li>
+<li>通过类样式操作元素<ul>
+<li>.addclass(“类样式的名字”)方法为元素添加类样式，可以在该方法中添加多个类样式，中间用空格隔开</li>
+<li>.removeclass(“类样式的名字”)方法为元素删除类样式，可以在该方法中删除多个类样式，中间用空格隔开，如果该方法内部没有参数，则删除的是全部的类样式</li>
+</ul>
+</li>
+</ul>
+<a id="more"></a>
+<pre><code>* .hasClass方法 判断当前元素是否应用了指定的类样式,返回值是布尔类型
+* .toggleClass（“类样式的名字”）切换类样式  （开关灯案例）
+</code></pre><h3 id="链式编程"><a href="#链式编程" class="headerlink" title="链式编程"></a>链式编程</h3><ul>
+<li>只有当前调用该方法的是一个对象才能继续链式编程<br>  对象调用方法后,如果返回的还是调用该方法的对象,那么可以继续的链式编程</li>
+<li>如果对象调用方法后,返回的不是对象,那么此时就不能链式编程了</li>
+<li>什么时候返回的是对象,什么时候不是<ul>
+<li>不太严禁的总结:对象调用方法的时候,进行了设置,那么一般返回的都是对象,如果是获取,那么一般返回的都是获取的内容而不是对象<h3 id="方法补充"><a href="#方法补充" class="headerlink" title="方法补充"></a>方法补充</h3></li>
+</ul>
+</li>
+<li>.next() 获取当前元素下一个兄弟元素</li>
+<li>.nextAll() 获取当前元素下面所有的兄弟元素</li>
+<li>.prev() 获取当前元素前一个兄弟元素</li>
+<li>.prevtAll() 获取当前元素前面所有的兄弟元素</li>
+<li>.siblings() 获取当前元素的所有兄弟元素，不包括自己</li>
+<li>.end() 修复断链方法</li>
+<li>.last() 获取最后一个元素</li>
+<li>:last 获取最后一个元素<h3 id="动画的方法"><a href="#动画的方法" class="headerlink" title="动画的方法"></a>动画的方法</h3></li>
+<li>.show()方法 显示</li>
+<li>.hide()方法 隐藏</li>
+<li>.slideDown()方法 滑出–显示</li>
+<li>.shideUp()方法 滑入–隐藏</li>
+<li>.fadeIn()方法 淡出–显示</li>
+<li>.fadeout()方法 淡入–隐藏</li>
+<li>参数问题<ul>
+<li>参数可以是一个数字，可以是一个字符串（slow,normal,fast）</li>
+<li>参数也可以是两个，第一个是数字或字符串，第二个是一个函数</li>
+</ul>
+</li>
+<li>animate<ul>
+<li>参数1：键值对</li>
+<li>参数2：时间</li>
+<li>参数3：函数</li>
+</ul>
+</li>
+<li>.stop() 停止当前的动画<h3 id="arguments-callee"><a href="#arguments-callee" class="headerlink" title="arguments.callee"></a>arguments.callee</h3></li>
+<li>主要是递归，可以调用所在的函数，注意：新版本的标准中不是很推荐使用<h3 id="动态的创建元素"><a href="#动态的创建元素" class="headerlink" title="动态的创建元素"></a>动态的创建元素</h3></li>
+<li>.html(“<p>这是一个p</p>“）)</li>
+<li>.append()添加方法，追加 $(“div”).append($(“<p>哈哈</p>“))</li>
+<li>.appendTo()被添加 $(“<p>哈哈</p>“).appendTo($(“div”))<h3 id="清空"><a href="#清空" class="headerlink" title="清空"></a>清空</h3></li>
+<li>.html(“”);清空</li>
+<li>.empty();清空</li>
+<li>.remove();自杀了—当前元素移除了<h3 id="表单val-方法的使用"><a href="#表单val-方法的使用" class="headerlink" title="表单val()方法的使用"></a>表单val()方法的使用</h3></li>
+<li>textarea文本域, 可以使用.val方法也可以使用.text方法</li>
+<li>在DOM中如果是获取文本域的内容,使用value属性，如果是设置文本域的内容,最好使用innerText</li>
+<li>jQuery中设置和获取文本域的内容最好使用text()方法</li>
+<li>设置某个下拉框选中<ul>
+<li>.val()方法针对下拉框的内容选中的时候,方法中传入的是某个option的value属性值<ul>
+<li>$(“#s1”).val(4)</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;jQuery样式操作问题&quot;&gt;&lt;a href=&quot;#jQuery样式操作问题&quot; class=&quot;headerlink&quot; title=&quot;jQuery样式操作问题&quot;&gt;&lt;/a&gt;jQuery样式操作问题&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;DOM中不能获取元素的属性值&lt;/li&gt;
+&lt;li&gt;jQuery中可以获取属性的值，$(),括号里如果只写属性，获取的是属性的值&lt;/li&gt;
+&lt;li&gt;通过类样式操作元素&lt;ul&gt;
+&lt;li&gt;.addclass(“类样式的名字”)方法为元素添加类样式，可以在该方法中添加多个类样式，中间用空格隔开&lt;/li&gt;
+&lt;li&gt;.removeclass(“类样式的名字”)方法为元素删除类样式，可以在该方法中删除多个类样式，中间用空格隔开，如果该方法内部没有参数，则删除的是全部的类样式&lt;/li&gt;
+&lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
     
@@ -186,97 +433,6 @@
 &lt;li&gt;jQuery优点&lt;ul&gt;
 &lt;li&gt;write less, do more&lt;/li&gt;
 &lt;li&gt;体积小，使用简单方便，链式编程，隐式迭代，插件丰富，开源，免费&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-    
-    </summary>
-    
-    
-      <category term="jQuery" scheme="http://yoursite.com/tags/jQuery/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>jQuery 常用操作</title>
-    <link href="http://yoursite.com/2016/07/15/JavaScript-15%20%20jQuery02/"/>
-    <id>http://yoursite.com/2016/07/15/JavaScript-15  jQuery02/</id>
-    <published>2016-07-14T16:00:00.000Z</published>
-    <updated>2017-06-04T01:28:46.900Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="jQuery样式操作问题"><a href="#jQuery样式操作问题" class="headerlink" title="jQuery样式操作问题"></a>jQuery样式操作问题</h3><ul>
-<li>DOM中不能获取元素的属性值</li>
-<li>jQuery中可以获取属性的值，$(),括号里如果只写属性，获取的是属性的值</li>
-<li>通过类样式操作元素<ul>
-<li>.addclass(“类样式的名字”)方法为元素添加类样式，可以在该方法中添加多个类样式，中间用空格隔开</li>
-<li>.removeclass(“类样式的名字”)方法为元素删除类样式，可以在该方法中删除多个类样式，中间用空格隔开，如果该方法内部没有参数，则删除的是全部的类样式</li>
-</ul>
-</li>
-</ul>
-<a id="more"></a>
-<pre><code>* .hasClass方法 判断当前元素是否应用了指定的类样式,返回值是布尔类型
-* .toggleClass（“类样式的名字”）切换类样式  （开关灯案例）
-</code></pre><h3 id="链式编程"><a href="#链式编程" class="headerlink" title="链式编程"></a>链式编程</h3><ul>
-<li>只有当前调用该方法的是一个对象才能继续链式编程<br>  对象调用方法后,如果返回的还是调用该方法的对象,那么可以继续的链式编程</li>
-<li>如果对象调用方法后,返回的不是对象,那么此时就不能链式编程了</li>
-<li>什么时候返回的是对象,什么时候不是<ul>
-<li>不太严禁的总结:对象调用方法的时候,进行了设置,那么一般返回的都是对象,如果是获取,那么一般返回的都是获取的内容而不是对象<h3 id="方法补充"><a href="#方法补充" class="headerlink" title="方法补充"></a>方法补充</h3></li>
-</ul>
-</li>
-<li>.next() 获取当前元素下一个兄弟元素</li>
-<li>.nextAll() 获取当前元素下面所有的兄弟元素</li>
-<li>.prev() 获取当前元素前一个兄弟元素</li>
-<li>.prevtAll() 获取当前元素前面所有的兄弟元素</li>
-<li>.siblings() 获取当前元素的所有兄弟元素，不包括自己</li>
-<li>.end() 修复断链方法</li>
-<li>.last() 获取最后一个元素</li>
-<li>:last 获取最后一个元素<h3 id="动画的方法"><a href="#动画的方法" class="headerlink" title="动画的方法"></a>动画的方法</h3></li>
-<li>.show()方法 显示</li>
-<li>.hide()方法 隐藏</li>
-<li>.slideDown()方法 滑出–显示</li>
-<li>.shideUp()方法 滑入–隐藏</li>
-<li>.fadeIn()方法 淡出–显示</li>
-<li>.fadeout()方法 淡入–隐藏</li>
-<li>参数问题<ul>
-<li>参数可以是一个数字，可以是一个字符串（slow,normal,fast）</li>
-<li>参数也可以是两个，第一个是数字或字符串，第二个是一个函数</li>
-</ul>
-</li>
-<li>animate<ul>
-<li>参数1：键值对</li>
-<li>参数2：时间</li>
-<li>参数3：函数</li>
-</ul>
-</li>
-<li>.stop() 停止当前的动画<h3 id="arguments-callee"><a href="#arguments-callee" class="headerlink" title="arguments.callee"></a>arguments.callee</h3></li>
-<li>主要是递归，可以调用所在的函数，注意：新版本的标准中不是很推荐使用<h3 id="动态的创建元素"><a href="#动态的创建元素" class="headerlink" title="动态的创建元素"></a>动态的创建元素</h3></li>
-<li>.html(“<p>这是一个p</p>“）)</li>
-<li>.append()添加方法，追加 $(“div”).append($(“<p>哈哈</p>“))</li>
-<li>.appendTo()被添加 $(“<p>哈哈</p>“).appendTo($(“div”))<h3 id="清空"><a href="#清空" class="headerlink" title="清空"></a>清空</h3></li>
-<li>.html(“”);清空</li>
-<li>.empty();清空</li>
-<li>.remove();自杀了—当前元素移除了<h3 id="表单val-方法的使用"><a href="#表单val-方法的使用" class="headerlink" title="表单val()方法的使用"></a>表单val()方法的使用</h3></li>
-<li>textarea文本域, 可以使用.val方法也可以使用.text方法</li>
-<li>在DOM中如果是获取文本域的内容,使用value属性，如果是设置文本域的内容,最好使用innerText</li>
-<li>jQuery中设置和获取文本域的内容最好使用text()方法</li>
-<li>设置某个下拉框选中<ul>
-<li>.val()方法针对下拉框的内容选中的时候,方法中传入的是某个option的value属性值<ul>
-<li>$(“#s1”).val(4)</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h3 id=&quot;jQuery样式操作问题&quot;&gt;&lt;a href=&quot;#jQuery样式操作问题&quot; class=&quot;headerlink&quot; title=&quot;jQuery样式操作问题&quot;&gt;&lt;/a&gt;jQuery样式操作问题&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;DOM中不能获取元素的属性值&lt;/li&gt;
-&lt;li&gt;jQuery中可以获取属性的值，$(),括号里如果只写属性，获取的是属性的值&lt;/li&gt;
-&lt;li&gt;通过类样式操作元素&lt;ul&gt;
-&lt;li&gt;.addclass(“类样式的名字”)方法为元素添加类样式，可以在该方法中添加多个类样式，中间用空格隔开&lt;/li&gt;
-&lt;li&gt;.removeclass(“类样式的名字”)方法为元素删除类样式，可以在该方法中删除多个类样式，中间用空格隔开，如果该方法内部没有参数，则删除的是全部的类样式&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;

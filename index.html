@@ -157,6 +157,176 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-outline" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="git-day01"><a href="#git-day01" class="headerlink" title="git-day01"></a>git-day01</h1><h2 id="命令行概述"><a href="#命令行概述" class="headerlink" title="命令行概述"></a>命令行概述</h2><ul>
+<li>dos</li>
+<li>shell</li>
+</ul>
+<h2 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h2><ul>
+<li>pwd (Print Working Directory) 查看当前目录</li>
+<li>cd (Change Directory) 切换目录，如 cd /etc</li>
+<li>ls (List) 查看当前目录下内容，如 ls -al</li>
+<li>mkdir (Make Directory) 创建目录，如 mkdir blog</li>
+<li>touch 创建文件，如 touch index.html</li>
+<li>cat 查看文件全部内容，如 cat index.html</li>
+<li>less 查看文件，如more /etc/passwd、less /etc/passwd</li>
+<li>rm (remove) 删除文件，如 rm index.html、rm -rf  blog</li>
+<li>rmdir (Remove Directory) 删除文件夹，只能删除空文件夹，不常用</li>
+<li>mv (move) 移动文件或重命名，如 mv index.html ./demo/index.html</li>
+<li>cp (copy) 复制文件，cp index.html ./demo/index.html</li>
+<li>tab 自动补全，连按两次会将所有匹配内容显示出来</li>
+<li>> 和 &gt;&gt;重定向，如echo hello world! &gt; README.md，&gt;覆盖 &gt;&gt;追加</li>
+<li>| 管道符可以将多个命令连接使用，上一次（命令）的执行结果当成下一次（命令）的参数。</li>
+<li>grep 匹配内容，一般结合管道符使用</li>
+</ul>
+<h2 id="vi编辑器"><a href="#vi编辑器" class="headerlink" title="vi编辑器"></a>vi编辑器</h2><blockquote>
+<p>linux操作系统标配，相当于windows下的记事本。</p>
+</blockquote>
+<h3 id="vi编辑器的三种模式"><a href="#vi编辑器的三种模式" class="headerlink" title="vi编辑器的三种模式"></a>vi编辑器的三种模式</h3><blockquote>
+<p>vi编辑器提供了3种模式，分别是命令模式、插入模式、底行模式，每种模式下用户所能进行的操作是不一样的。</p>
+</blockquote>
+<ul>
+<li>3种模式的切换如下图所示：</li>
+</ul>
+<p><img src="img/git1.jpg" alt=""></p>
+<h3 id="vi常用操作"><a href="#vi常用操作" class="headerlink" title="vi常用操作"></a>vi常用操作</h3><ul>
+<li>a) 打开/创建文件， vi 文件路径</li>
+<li>b) 底行模式 :w保存，:w filenme另存为</li>
+<li>c) 底行模式 :q退出</li>
+<li>d) 底行模式 :wq保存并退出</li>
+<li>e) 底行模式 :e! 撤销更改，返回到上一次保存的状态</li>
+<li>f) 底行模式 :q! 不保存强制退出</li>
+<li>g) 底行模式 :set nu 设置行号</li>
+<li>h) 命令模式 ZZ（大写）保存并退出</li>
+<li>i) 命令模式 u辙销操作，可多次使用</li>
+<li>j) 命令模式 dd删除当前行</li>
+<li>k) 命令模式 yy复制当前行</li>
+<li>l) 命令模式 p 粘贴内容</li>
+<li>m) 命令模式 ctrl+f向前翻页</li>
+<li>n) 命令模式 ctrl+b向后翻页</li>
+<li>o) 命令模式 i进入编辑模式，当前光标处插入</li>
+<li>p) 命令模式 a进入编辑模式，当前光标后插入</li>
+<li>q) 命令模式 A进入编辑模式，光标移动到行尾</li>
+<li>r) 命令模式 o进入编辑模式，当前行下面插入新行</li>
+<li>s) 命令模式 O进入编辑模式，当前行上面插入新行</li>
+</ul>
+<h2 id="远程登录命令ssh"><a href="#远程登录命令ssh" class="headerlink" title="远程登录命令ssh"></a>远程登录命令ssh</h2><ul>
+<li>ssh命令基本原理</li>
+<li>ssh命令基本使用</li>
+</ul>
+<h2 id="版本控制概述"><a href="#版本控制概述" class="headerlink" title="版本控制概述"></a>版本控制概述</h2><ul>
+<li>本地版本控制</li>
+<li>集中版本控制</li>
+<li>分布式版本控制</li>
+</ul>
+<h2 id="git环境安装"><a href="#git环境安装" class="headerlink" title="git环境安装"></a>git环境安装</h2><ul>
+<li>window安装<ul>
+<li><a href="http://git-scm.com/download/win" target="_blank" rel="external">下载地址</a>，下载后和普通软件安装方式一样</li>
+</ul>
+</li>
+<li>linux安装<ul>
+<li>CentOS发行版：sudo yum install git</li>
+<li>Ubuntu发行版：sudo apt-get install git</li>
+</ul>
+</li>
+<li>Mac安装<ul>
+<li>打开Terminal直接输入git命令，会自动提示，按提示引导安装即可</li>
+</ul>
+</li>
+</ul>
+<h2 id="git工作原理"><a href="#git工作原理" class="headerlink" title="git工作原理"></a>git工作原理</h2><h3 id="git的三个工作区域"><a href="#git的三个工作区域" class="headerlink" title="git的三个工作区域"></a>git的三个工作区域</h3><ul>
+<li>工作目录</li>
+<li>暂存区域</li>
+<li>本地仓库</li>
+</ul>
+<p><img src="img/area.jpg" alt=""></p>
+<h3 id="git管理文件的4中状态"><a href="#git管理文件的4中状态" class="headerlink" title="git管理文件的4中状态"></a>git管理文件的4中状态</h3><ul>
+<li>未追踪untraced</li>
+<li>已暂存staged</li>
+<li>已提交commited</li>
+<li>已修改modified</li>
+</ul>
+<h2 id="git工作流程-本地创建仓库"><a href="#git工作流程-本地创建仓库" class="headerlink" title="git工作流程-本地创建仓库"></a>git工作流程-本地创建仓库</h2><ol>
+<li>配置用户信息</li>
+<li>初始化仓库</li>
+<li>添加文件到暂存区</li>
+<li>提交文件</li>
+<li>查看文件状态</li>
+<li>查看提交历史</li>
+<li>撤销文件修改</li>
+<li>回复版本</li>
+</ol>
+<h2 id="git分支操作"><a href="#git分支操作" class="headerlink" title="git分支操作"></a>git分支操作</h2><h3 id="分支概述"><a href="#分支概述" class="headerlink" title="分支概述"></a>分支概述</h3><h3 id="分支操作"><a href="#分支操作" class="headerlink" title="分支操作"></a>分支操作</h3><ol>
+<li>创建分支</li>
+<li>切换分支</li>
+<li>合并分支</li>
+<li>删除分支</li>
+</ol>
+<h2 id="Git命令"><a href="#Git命令" class="headerlink" title="Git命令"></a>Git命令</h2><ul>
+<li>配置用户信息<ul>
+<li>全局配置，软件安装目录C:\Program Files\Git\mingw64\etc\gitconfig</li>
+<li>用户配置，用户名目录C:\Users\www.gitconfig</li>
+<li>项目配置，项目目录</li>
+<li>git config –global user.name zhangsan</li>
+<li>git config –global user.email “zhangsan@163.com”</li>
+</ul>
+</li>
+<li>查看文件状态<ul>
+<li>git status</li>
+</ul>
+</li>
+<li>查看提交记录(按q键退出)<ul>
+<li>git log</li>
+</ul>
+</li>
+<li>工作区添加到暂存区<ul>
+<li>git add</li>
+</ul>
+</li>
+<li>暂存区覆盖工作区内容<ul>
+<li>git checkout</li>
+</ul>
+</li>
+<li>暂存区提交到本地仓库<ul>
+<li>git commit -m ‘bug fixed’</li>
+</ul>
+</li>
+<li>回滚特定版本<ul>
+<li>git reset –hard <commit></commit></li>
+</ul>
+</li>
+</ul>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/06/04/outline/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+  
     <article id="post-JavaScript-16  jQuery03" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -211,6 +381,75 @@
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2016/07/20/JavaScript-16  jQuery03/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+  
+    <article id="post-JavaScript-15  jQuery02" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/07/15/JavaScript-15  jQuery02/">jQuery 常用操作</a>
+    </h1>
+  
+
+        
+        <a href="/2016/07/15/JavaScript-15  jQuery02/" class="archive-article-date">
+  	<time datetime="2016-07-14T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-07-15</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="jQuery样式操作问题"><a href="#jQuery样式操作问题" class="headerlink" title="jQuery样式操作问题"></a>jQuery样式操作问题</h3><ul>
+<li>DOM中不能获取元素的属性值</li>
+<li>jQuery中可以获取属性的值，$(),括号里如果只写属性，获取的是属性的值</li>
+<li>通过类样式操作元素<ul>
+<li>.addclass(“类样式的名字”)方法为元素添加类样式，可以在该方法中添加多个类样式，中间用空格隔开</li>
+<li>.removeclass(“类样式的名字”)方法为元素删除类样式，可以在该方法中删除多个类样式，中间用空格隔开，如果该方法内部没有参数，则删除的是全部的类样式</li>
+</ul>
+</li>
+</ul>
+        
+          <a class="article-more-a" href="/2016/07/15/JavaScript-15  jQuery02/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">jQuery</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2016/07/15/JavaScript-15  jQuery02/">展开全文 >></a>
         </p>
       
 
@@ -281,75 +520,6 @@
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2016/07/15/JavaScript-14  jQuery01/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-  
-    <article id="post-JavaScript-15  jQuery02" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/07/15/JavaScript-15  jQuery02/">jQuery 常用操作</a>
-    </h1>
-  
-
-        
-        <a href="/2016/07/15/JavaScript-15  jQuery02/" class="archive-article-date">
-  	<time datetime="2016-07-14T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-07-15</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="jQuery样式操作问题"><a href="#jQuery样式操作问题" class="headerlink" title="jQuery样式操作问题"></a>jQuery样式操作问题</h3><ul>
-<li>DOM中不能获取元素的属性值</li>
-<li>jQuery中可以获取属性的值，$(),括号里如果只写属性，获取的是属性的值</li>
-<li>通过类样式操作元素<ul>
-<li>.addclass(“类样式的名字”)方法为元素添加类样式，可以在该方法中添加多个类样式，中间用空格隔开</li>
-<li>.removeclass(“类样式的名字”)方法为元素删除类样式，可以在该方法中删除多个类样式，中间用空格隔开，如果该方法内部没有参数，则删除的是全部的类样式</li>
-</ul>
-</li>
-</ul>
-        
-          <a class="article-more-a" href="/2016/07/15/JavaScript-15  jQuery02/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">jQuery</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2016/07/15/JavaScript-15  jQuery02/">展开全文 >></a>
         </p>
       
 
@@ -630,76 +800,6 @@
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2016/07/01/JavaScript-10  BOM/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-  
-    <article id="post-JavaScript-09  DOM04" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/06/28/JavaScript-09  DOM04/">字符串及数组方法</a>
-    </h1>
-  
-
-        
-        <a href="/2016/06/28/JavaScript-09  DOM04/" class="archive-article-date">
-  	<time datetime="2016-06-27T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-06-28</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="字符串"><a href="#字符串" class="headerlink" title="字符串"></a>字符串</h3><h4 id="字符串特性"><a href="#字符串特性" class="headerlink" title="字符串特性"></a>字符串特性</h4><ul>
-<li>特性:不可变性</li>
-<li>字符串的变量如果调用了属性或者方法就是基本包装类型对象</li>
-<li>字符串中的属性:length,字符串的长度</li>
-</ul>
-<h4 id="字符串中的方法"><a href="#字符串中的方法" class="headerlink" title="字符串中的方法"></a>字符串中的方法</h4><ul>
-<li>charAt(索引);获取指定索引位置的字符串</li>
-<li>charCodeAt(索引);获取的指定索引位置的字符串的ASCII码值</li>
-<li>concat(“字符串1”,”字符串2”);拼接字符串的,返回值是拼接后的新的字符串</li>
-</ul>
-        
-          <a class="article-more-a" href="/2016/06/28/JavaScript-09  DOM04/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">DOM</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2016/06/28/JavaScript-09  DOM04/">展开全文 >></a>
         </p>
       
 
