@@ -2081,7 +2081,7 @@ pre .id {
 .tools-col .aboutme-wrap div{
 	text-align: center;
 	width: 100%;
-	margin: 8rem;
+	margin: 5rem;
 }
 .tools-col .aboutme-wrap div:nth-child(1) {
 	font-size: 2rem;
@@ -2089,7 +2089,7 @@ pre .id {
 }
 .tools-col .aboutme-wrap div:nth-child(2) {
 	font-size: 3rem;
-	letter-spacing: 0.42rem;
+	letter-spacing: 0.3rem;
 }
 .tools-col .aboutme-wrap div:nth-child(3) {
 	font-size: 1.8rem;
