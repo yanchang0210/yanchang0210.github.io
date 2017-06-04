@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-06-04T01:28:28.461Z</updated>
+  <updated>2017-06-04T01:45:06.277Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://yoursite.com/2016/07/20/JavaScript-16%20%20jQuery03/"/>
     <id>http://yoursite.com/2016/07/20/JavaScript-16  jQuery03/</id>
     <published>2016-07-19T16:00:00.000Z</published>
-    <updated>2017-06-04T01:28:28.461Z</updated>
+    <updated>2017-06-04T01:45:06.277Z</updated>
     
     <content type="html"><![CDATA[<h3 id="attr方法"><a href="#attr方法" class="headerlink" title="attr方法"></a>attr方法</h3><ul>
 <li>attr()方法:可以设置属性值,两个参数:1.属性名字,2,属性值</li>
